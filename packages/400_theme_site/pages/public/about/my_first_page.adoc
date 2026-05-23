@@ -1,0 +1,42 @@
+---
+title:                                  First Page
+tagline:                                Your first custom J1 page
+
+date:                                   2026-05-21
+
+description: >
+                                        First custom page for a clean J1 development setup.
+keywords: >
+                                        Jekyll, J1, first page, starter
+
+categories:                             [ About ]
+tags:                                   [ Starter ]
+
+image:
+  path:                                 /assets/image/module/attic/1920x1280/j1-launch.jpg
+  width:                                1920
+  height:                               1280
+
+comments:                               false
+regenerate:                             false
+permalink:                              /pages/public/about/my_first_page/
+
+resources:                              []
+---
+
+// Page Initializer
+// =============================================================================
+:page-liquid:
+
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+{% include {{load_attributes}} scope="global" %}
+
+[role="dropcap"]
+This is your first custom page in the clean J1 development system.
+
+[role="mt-5"]
+== Next steps
+
+* Edit this file to replace starter text with your own content.
+* Add more pages under `pages/public/`.
+* Add matching navigation entries in `_data/modules/navigator_menu.yml`.
