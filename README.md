@@ -242,6 +242,26 @@ Install latest NPM and Yarn packages for NodeJS:
 
 # Setting up the project
 
+## Decap CMS Local Backend (Important)
+
+If CMS fields appear empty after a restart, the Decap proxy is likely running
+from the wrong directory. In that case, Decap reads/writes against the wrong
+repo root and collection entries can look blank.
+
+Always start the Decap backend with an explicit repository root:
+
+``` sh
+GIT_REPO_DIRECTORY=/Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean npx decap-server
+```
+
+Expected log line:
+
+``` text
+Decap CMS File System Proxy Server configured with /Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean
+```
+
+If the CMS still looks stale after restart, hard-refresh the `/admin` page.
+
 Running the J1 Theme project is very simple:
 
 * Downlad the repo

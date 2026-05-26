@@ -33,6 +33,7 @@
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign seo_tag_defaults  = plugins.defaults.seo-tags.defaults %}
 {% assign seo_tag_settings  = plugins.seo-tags.settings %}
+{% assign mk_brand_data     = site.data.branding.mk_brand %}
 
 {% comment %} Set config options
 -------------------------------------------------------------------------------- {% endcomment %}
@@ -217,6 +218,19 @@
 {% endif %}
 
 {{translation}}
+
+{% assign site_background_image = mk_brand_data.site_background_image | default: '/assets/uploads/branding/site-background.svg' %}
+{% if site_background_image != '' %}
+<style>
+  #wrapper-inner {
+    background-image: url('{{ site_background_image }}');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+</style>
+{% endif %}
 
 <!-- [INFO   ] [j1.layout.meta_data_generator.html    ] [ meta tag for provider APIs: youtube ] -->
 {% if page.youtube %}

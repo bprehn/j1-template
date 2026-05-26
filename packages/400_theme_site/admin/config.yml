@@ -30,6 +30,7 @@ collections:
           - { label: Brand Tagline, name: brand_tagline, widget: string, required: false }
           - { label: Brand Description, name: brand_description, widget: text, required: false }
           - { label: Primary Logo, name: logo_primary, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
+          - { label: Site Background Image, name: site_background_image, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
           - { label: Logo Mark (SVG), name: logo_mark, widget: string, required: false, hint: "Path to mark logo, e.g. /assets/image/icon/mk/mk-logo-mark.svg" }
           - { label: Wordmark (SVG), name: logo_wordmark, widget: string, required: false, hint: "Path to wordmark logo, e.g. /assets/image/icon/mk/mk-wordmark.svg" }
           - { label: Favicon Path, name: favicon, widget: string, required: false }
