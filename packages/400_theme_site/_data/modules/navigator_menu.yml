@@ -872,7 +872,7 @@
       href:                             /pages/public/tools/previewer/current_theme/
       icon:                             eye
     - local_themes:                     enabled
-      title:                            Jekyll One
+      title:                            Mount Kato
       icon:                             alpha-j-box
     - bootswatch_themes:                enabled
       title:                            Bootswatch

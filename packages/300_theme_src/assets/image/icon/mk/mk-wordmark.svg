@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 240" role="img" aria-labelledby="title desc">
+  <title id="title">Mount Kato Wordmark</title>
+  <desc id="desc">Placeholder wordmark for Mount Kato.</desc>
+  <rect x="0" y="0" width="980" height="240" rx="24" fill="#0f2a43" />
+  <path d="M48 178L112 70L146 124L182 58L246 178H48Z" fill="#ffffff" />
+  <text x="286" y="146" fill="#ffffff" font-size="86" font-family="Helvetica, Arial, sans-serif" font-weight="700" letter-spacing="2">MOUNT KATO</text>
+</svg>

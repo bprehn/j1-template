@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Mount Kato Social Square</title>
+  <desc id="desc">Square social avatar placeholder for Mount Kato.</desc>
+  <rect x="0" y="0" width="1200" height="1200" rx="180" fill="#0f2a43" />
+  <path d="M170 860L450 360L600 610L760 320L1030 860H170Z" fill="#ffffff" />
+  <text x="600" y="1030" text-anchor="middle" fill="#8ec7ff" font-size="250" font-family="Helvetica, Arial, sans-serif" font-weight="800">MK</text>
+</svg>

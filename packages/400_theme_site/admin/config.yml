@@ -7,7 +7,7 @@ backend:
 local_backend: true
 
 site_url: http://localhost:40000
-logo_url: /assets/image/icon/j1/j1-512x512.png
+logo_url: /assets/image/icon/mk/mk-512x512.png
 
 media_folder: assets/uploads
 public_folder: /assets/uploads
@@ -17,8 +17,8 @@ search: true
 
 collections:
   - name: about_pages
-    label: About Pages
-    label_singular: About Page
+    label: MK Site Pages
+    label_singular: MK Site Page
     folder: pages/public/about
     create: true
     extension: adoc
@@ -42,8 +42,8 @@ collections:
       - { label: Body, name: body, widget: text }
 
   - name: portfolio_entries
-    label: Portfolio Entries
-    label_singular: Portfolio Entry
+    label: MK Portfolio
+    label_singular: MK Portfolio Entry
     folder: collections/_portfolio
     create: true
     extension: adoc
@@ -58,8 +58,8 @@ collections:
       - { label: Body, name: body, widget: text }
 
   - name: people_entries
-    label: People Entries
-    label_singular: Person
+    label: MK Team
+    label_singular: MK Team Member
     folder: collections/_people
     create: true
     extension: adoc
