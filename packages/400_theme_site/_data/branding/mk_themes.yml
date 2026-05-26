@@ -1,0 +1,8 @@
+mk_light:
+  name: MK Light
+  css: /assets/theme/j1/core/css/themes/unolight/bootstrap.css
+mk_dark:
+  name: MK Dark
+  css: /assets/theme/j1/core/css/themes/unodark/bootstrap.css
+  primary_color: ""
+  secondary_color: ""

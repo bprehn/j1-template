@@ -29,6 +29,8 @@ collections:
           - { label: Short Name, name: short_name, widget: string }
           - { label: Brand Tagline, name: brand_tagline, widget: string, required: false }
           - { label: Brand Description, name: brand_description, widget: text, required: false }
+          - { label: Primary Color, name: primary_color, widget: string, required: false, hint: "Hex color, e.g. #0057B8" }
+          - { label: Secondary Color, name: secondary_color, widget: string, required: false, hint: "Hex color, e.g. #F2A900" }
           - { label: Primary Logo, name: logo_primary, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
           - { label: Logo Mark (SVG), name: logo_mark, widget: string, required: false, hint: "Path to mark logo, e.g. /assets/image/icon/mk/mk-logo-mark.svg" }
           - { label: Wordmark (SVG), name: logo_wordmark, widget: string, required: false, hint: "Path to wordmark logo, e.g. /assets/image/icon/mk/mk-wordmark.svg" }
@@ -37,6 +39,30 @@ collections:
           - { label: Social Circle Image, name: social_circle, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
           - { label: Contact Email, name: contact_email, widget: string, required: false }
           - { label: Website URL, name: website_url, widget: string, required: false }
+
+  - name: mk_themes
+    label: MK Themes
+    label_singular: MK Theme
+    delete: false
+    files:
+      - name: mk_themes_profile
+        label: MK Themes Profile
+        file: packages/400_theme_site/_data/branding/mk_themes.yml
+        fields:
+          - label: MK Light Theme
+            name: mk_light
+            widget: object
+            fields:
+              - { label: Theme Name, name: name, widget: string }
+              - { label: CSS Path, name: css, widget: string, hint: "Use /assets/theme/j1/core/css/themes/unolight/bootstrap.css" }
+          - label: MK Dark Theme
+            name: mk_dark
+            widget: object
+            fields:
+              - { label: Theme Name, name: name, widget: string }
+              - { label: CSS Path, name: css, widget: string, hint: "Use /assets/theme/j1/core/css/themes/unodark/bootstrap.css" }
+              - { label: Primary Color, name: primary_color, widget: string, required: false, hint: "Hex color for MK Dark, e.g. #0B1F2A" }
+              - { label: Secondary Color, name: secondary_color, widget: string, required: false, hint: "Hex color for MK Dark, e.g. #1CA6D9" }
 
   - name: about_pages
     label: MK Site Pages
