@@ -11,6 +11,8 @@ brand_description: Nestled in the scenic Minnesota River Valley, Mount Kato Ski
   cozy food and drinks in our Chalet Food Court or Lift Bar and Grill.
 logo_primary: /assets/uploads/branding/mountkatologofullcolor.svg
 site_background_image: /assets/uploads/branding/site-background.svg
+wrapper_background_home_only: false
+wrapper_background_fixed_mobile: false
 logo_mark: /assets/image/icon/mk/mk-logo-mark.svg
 logo_wordmark: /assets/image/icon/mk/mk-wordmark.svg
 favicon: /assets/image/icon/mk/favicon.ico
