@@ -9,7 +9,7 @@ local_backend: true
 site_url: http://localhost:40000
 logo_url: /assets/image/icon/mk/mk-512x512.png
 
-media_folder: assets/uploads
+media_folder: packages/400_theme_site/assets/uploads
 public_folder: /assets/uploads
 
 publish_mode: editorial_workflow
@@ -23,7 +23,7 @@ collections:
     files:
       - name: mk_brand_profile
         label: MK Brand Profile
-        file: _data/branding/mk_brand.yml
+        file: packages/400_theme_site/_data/branding/mk_brand.yml
         fields:
           - { label: Site Name, name: site_name, widget: string }
           - { label: Short Name, name: short_name, widget: string }
@@ -41,7 +41,7 @@ collections:
   - name: about_pages
     label: MK Site Pages
     label_singular: MK Site Page
-    folder: pages/public/about
+    folder: packages/400_theme_site/pages/public/about
     create: true
     extension: adoc
     format: yaml-frontmatter
@@ -66,7 +66,7 @@ collections:
   - name: portfolio_entries
     label: MK Portfolio
     label_singular: MK Portfolio Entry
-    folder: collections/_portfolio
+    folder: packages/400_theme_site/collections/_portfolio
     create: true
     extension: adoc
     format: yaml-frontmatter
@@ -82,7 +82,7 @@ collections:
   - name: people_entries
     label: MK Team
     label_singular: MK Team Member
-    folder: collections/_people
+    folder: packages/400_theme_site/collections/_people
     create: true
     extension: adoc
     format: yaml-frontmatter
