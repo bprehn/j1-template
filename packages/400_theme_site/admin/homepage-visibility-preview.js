@@ -18,7 +18,13 @@
     { key: 'banner_home_parallax', label: 'Parallax Banner' },
     { key: 'panel_home_service', label: 'Service Panel' },
     { key: 'panel_home_plan', label: 'Plan Panel' },
-    { key: 'panel_home_news', label: 'News Panel' }
+    { key: 'panel_home_news', label: 'News Panel' },
+    { key: 'google_adsense_template', label: 'Google Adsense (Template)' },
+    { key: 'google_adsense_slot', label: 'Google Adsense (Slot)' },
+    { key: 'custom_content_static_accordion', label: 'Custom Content (Static Accordion)' },
+    { key: 'custom_content_template_accordion', label: 'Custom Content (Template Accordion)' },
+    { key: 'custom_content_people_panel', label: 'Custom Content (People Panel)' },
+    { key: 'custom_content_collection_panel', label: 'Custom Content (Collection Panel)' }
   ];
 
   function isEnabled(value) {

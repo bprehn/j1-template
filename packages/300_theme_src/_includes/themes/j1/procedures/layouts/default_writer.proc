@@ -47,6 +47,7 @@
           {% if key == 'path' %}        {% assign path = value %}       {% endif %}
           {% if key == 'file' %}        {% assign file = value %}       {% endif %}
           {% if key == 'id' %}          {% assign id = value %}         {% endif %}
+          {% if key == 'visibility_key' %} {% assign visibility_key = value %} {% endif %}
           {% if key == 'class' %}       {% assign class = value %}      {% endif %}
           {% if key == 'data' %}        {% assign data = value %}       {% endif %}
         {% endif %}
@@ -60,7 +61,16 @@
     {% comment %} Apply homepage lane visibility overrides from data file
     ---------------------------------------------------------------------------- {% endcomment %}
     {% if page.layout == 'home' and home_lane_visibility and id %}
-      {% assign home_lane_override = home_lane_visibility[id] %}
+      {% assign visibility_lookup_key = id %}
+      {% if visibility_key and visibility_key != '' %}
+        {% assign visibility_lookup_key = visibility_key %}
+      {% endif %}
+
+      {% assign home_lane_override = home_lane_visibility[visibility_lookup_key] %}
+      {% if home_lane_override == nil %}
+        {% assign home_lane_override = home_lane_visibility[id] %}
+      {% endif %}
+
       {% unless home_lane_override == nil or home_lane_override == '' %}
         {% if home_lane_override == 'true' %}
           {% assign home_lane_override = true %}

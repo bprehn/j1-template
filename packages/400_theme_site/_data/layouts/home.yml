@@ -215,6 +215,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               google_adsense_container
+      visibility_key:                   google_adsense_template
       region:                           body-main
       type:                             sync
       base:                             _includes/google
@@ -249,6 +250,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               google_adsense_container
+      visibility_key:                   google_adsense_slot
       region:                           body-main
       type:                             sync
       base:                             _includes/google
@@ -310,6 +312,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               custom_content
+      visibility_key:                   custom_content_static_accordion
       region:                           body-main
       type:                             sync
       base:                             _includes/custom
@@ -319,6 +322,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               custom_content
+      visibility_key:                   custom_content_template_accordion
       region:                           body-main
       type:                             sync
       base:                             _includes/custom
@@ -328,6 +332,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               custom_content
+      visibility_key:                   custom_content_people_panel
       region:                           body-main
       type:                             sync
       base:                             _includes/custom
@@ -337,6 +342,7 @@ lanes:
   - lane:
       enabled:                          false
       id:                               custom_content
+      visibility_key:                   custom_content_collection_panel
       region:                           body-main
       type:                             sync
       base:                             _includes/custom

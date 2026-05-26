@@ -86,6 +86,12 @@ collections:
           - { label: Service Panel, name: panel_home_service, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Plan Panel, name: panel_home_plan, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: News Panel, name: panel_home_news, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Google Adsense (Template), name: google_adsense_template, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Google Adsense (Slot), name: google_adsense_slot, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Content (Static Accordion), name: custom_content_static_accordion, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Content (Template Accordion), name: custom_content_template_accordion, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Content (People Panel), name: custom_content_people_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Content (Collection Panel), name: custom_content_collection_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
 
   - name: about_pages
     label: MK Site Pages
