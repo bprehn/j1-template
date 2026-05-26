@@ -29,6 +29,8 @@
 {% comment %} Main
 -------------------------------------------------------------------------------- {% endcomment %}
 
+{% assign home_lane_visibility = site.data.layouts.home_visibility %}
+
 <!-- [INFO   ] [j1.layout.content_writer.proc         ] [ start processing: load CONTENT portion for layout: {{page.layout}} ] -->
 {% for lane in items %}
   {% for items in lane %}
@@ -55,6 +57,15 @@
     {% comment %}  Skip all regions should NOT placed
     ---------------------------------------------------------------------------- {% endcomment %}
     {% unless region == placement %} {% continue %} {% endunless %}
+
+    {% comment %} Apply homepage lane visibility overrides from data file
+    ---------------------------------------------------------------------------- {% endcomment %}
+    {% if page.layout == 'home' and home_lane_visibility and id %}
+      {% assign home_lane_override = home_lane_visibility[id] %}
+      {% unless home_lane_override == nil %}
+        {% assign enabled = home_lane_override %}
+      {% endunless %}
+    {% endif %}
 
 
     {% comment %}  Skip all lanes DISABLED

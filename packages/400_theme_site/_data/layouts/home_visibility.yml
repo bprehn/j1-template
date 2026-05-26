@@ -1,0 +1,13 @@
+# Homepage lane visibility controls used by Decap CMS.
+# These flags override lane.enabled values in _data/layouts/home.yml for layout: home.
+
+header: true
+custom_header: false
+banner_home_teaser: true
+banner_divider_1: false
+banner_home_image: false
+panel_home_intro: false
+banner_home_parallax: false
+panel_home_service: true
+panel_home_plan: false
+panel_home_news: true
