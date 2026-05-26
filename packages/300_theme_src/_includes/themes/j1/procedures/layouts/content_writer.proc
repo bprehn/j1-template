@@ -62,7 +62,12 @@
     ---------------------------------------------------------------------------- {% endcomment %}
     {% if page.layout == 'home' and home_lane_visibility and id %}
       {% assign home_lane_override = home_lane_visibility[id] %}
-      {% unless home_lane_override == nil %}
+      {% unless home_lane_override == nil or home_lane_override == '' %}
+        {% if home_lane_override == 'true' %}
+          {% assign home_lane_override = true %}
+        {% elsif home_lane_override == 'false' %}
+          {% assign home_lane_override = false %}
+        {% endif %}
         {% assign enabled = home_lane_override %}
       {% endunless %}
     {% endif %}

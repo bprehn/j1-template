@@ -74,16 +74,16 @@ collections:
         label: Home Lane Visibility
         file: packages/400_theme_site/_data/layouts/home_visibility.yml
         fields:
-          - { label: Header (Attic), name: header, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Custom Header, name: custom_header, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Teaser Banner, name: banner_home_teaser, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Divider Banner, name: banner_divider_1, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Image Banner, name: banner_home_image, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Intro Panel, name: panel_home_intro, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Parallax Banner, name: banner_home_parallax, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Service Panel, name: panel_home_service, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: Plan Panel, name: panel_home_plan, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
-          - { label: News Panel, name: panel_home_news, widget: select, options: [{ label: Enable, value: true }, { label: Disable, value: false }], required: true }
+          - { label: Header (Attic), name: header, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Header, name: custom_header, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Teaser Banner, name: banner_home_teaser, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Divider Banner, name: banner_divider_1, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Image Banner, name: banner_home_image, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Intro Panel, name: panel_home_intro, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Parallax Banner, name: banner_home_parallax, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Service Panel, name: panel_home_service, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Plan Panel, name: panel_home_plan, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: News Panel, name: panel_home_news, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
 
   - name: about_pages
     label: MK Site Pages
