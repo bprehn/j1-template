@@ -29,8 +29,6 @@ collections:
           - { label: Short Name, name: short_name, widget: string }
           - { label: Brand Tagline, name: brand_tagline, widget: string, required: false }
           - { label: Brand Description, name: brand_description, widget: text, required: false }
-          - { label: Primary Color, name: primary_color, widget: string, required: false, hint: "Hex color, e.g. #0057B8" }
-          - { label: Secondary Color, name: secondary_color, widget: string, required: false, hint: "Hex color, e.g. #F2A900" }
           - { label: Primary Logo, name: logo_primary, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
           - { label: Logo Mark (SVG), name: logo_mark, widget: string, required: false, hint: "Path to mark logo, e.g. /assets/image/icon/mk/mk-logo-mark.svg" }
           - { label: Wordmark (SVG), name: logo_wordmark, widget: string, required: false, hint: "Path to wordmark logo, e.g. /assets/image/icon/mk/mk-wordmark.svg" }
@@ -55,6 +53,8 @@ collections:
             fields:
               - { label: Theme Name, name: name, widget: string }
               - { label: CSS Path, name: css, widget: string, hint: "Use /assets/theme/j1/core/css/themes/unolight/bootstrap.css" }
+              - { label: Primary Color, name: primary_color, widget: string, required: false, hint: "Hex color for MK Light, e.g. #1CA6D9" }
+              - { label: Secondary Color, name: secondary_color, widget: string, required: false, hint: "Hex color for MK Light, e.g. #00487F" }
           - label: MK Dark Theme
             name: mk_dark
             widget: object

@@ -1,7 +1,14 @@
 site_name: Mount Kato
 short_name: MK
 brand_tagline: Ski | Ride | Tube
-brand_description: Nestled in the scenic Minnesota River Valley, Mount Kato Ski Area welcomes winter enthusiasts of all ages and abilities. With 19 runs, a welcoming learning area, and exciting terrain parks, we have something to thrill every skier and snowboarder in the family. From first-timers to seasoned veterans cruising down the slopes, Mount Kato fosters a passion for winter sports. Our dedicated instructors are ready to guide you, whether it is your first lesson or your hundredth. And when you need a break, warm up with cozy food and drinks in our Chalet Food Court or Lift Bar and Grill.
+brand_description: Nestled in the scenic Minnesota River Valley, Mount Kato Ski
+  Area welcomes winter enthusiasts of all ages and abilities. With 19 runs, a
+  welcoming learning area, and exciting terrain parks, we have something to
+  thrill every skier and snowboarder in the family. From first-timers to
+  seasoned veterans cruising down the slopes, Mount Kato fosters a passion for
+  winter sports. Our dedicated instructors are ready to guide you, whether it is
+  your first lesson or your hundredth. And when you need a break, warm up with
+  cozy food and drinks in our Chalet Food Court or Lift Bar and Grill.
 logo_primary: /assets/uploads/branding/mountkatologofullcolor.svg
 logo_mark: /assets/image/icon/mk/mk-logo-mark.svg
 logo_wordmark: /assets/image/icon/mk/mk-wordmark.svg
