@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
-  <title id="title">Mount Kato Social Circle</title>
-  <desc id="desc">Circular social avatar placeholder for Mount Kato.</desc>
-  <circle cx="600" cy="600" r="600" fill="#0f2a43" />
-  <path d="M200 835L460 390L600 620L760 360L1000 835H200Z" fill="#ffffff" />
-  <text x="600" y="1020" text-anchor="middle" fill="#8ec7ff" font-size="230" font-family="Helvetica, Arial, sans-serif" font-weight="800">MK</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" baseProfile="tiny" version="1.2" viewBox="0 0 900 900">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <circle cx="447.5" cy="458.1" r="434.5" fill="#00487f"/>
+  <polygon points="676.3 278.2 596 319.7 447.2 176.9 300.5 318.7 223.3 278.8 46.7 579.7 112.7 579.7 242.6 356.7 311.6 390.1 446.8 261 585.9 393.1 653.1 356 778.3 578.9 848.2 578.9 676.3 278.2" fill="#fff"/>
 </svg>
