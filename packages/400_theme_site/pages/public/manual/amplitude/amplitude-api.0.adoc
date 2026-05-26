@@ -23,6 +23,7 @@ image:
 
 regenerate:                             false
 personalization:                        true
+published:                              false
 permalink:                              /pages/public/manuals/amplitude/amplitude_api/
 
 resources:                              [ amplitudejs ]
