@@ -1,13 +1,13 @@
 ---
 title:                                  Advanced Modals
-title_extention:                        Advanced Bootstrap V5 Modals for J1 Template
+title_extention:                        Advanced Bootstrap V5 Modals for MK development site
 tagline:                                Best Visitor Experience for Your Web
 
 date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        J1 Template supports a rich set of advanced Bootstrap Modals
+                                        MK development site supports a rich set of advanced Bootstrap Modals
                                         that add dialogs to your web pages for user notifications.
                                         The advanced Modals highlight important information to your
                                         visitors. Modals are positioned over everything else in the
@@ -71,7 +71,7 @@ resource_options:
 [role="dropcap"]
 A *modal* is a small pop-up window that appears on top of a web page. It
 is used to show important information, ask a question, or get a response
-from the visitor. The J1 Template comes with a rich set of advanced
+from the visitor. The MK development site comes with a rich set of advanced
 Bootstrap modals that you can drop into any page.
 
 Because a modal appears on top of the page, the rest of the content is
@@ -94,7 +94,7 @@ include::{documentdir}/419_advanced_modals_demo.asciidoc[]
 == Modal Examples
 
 Modals are a good way to draw your reader's attention to important
-information. The J1 Template provides extra modal styles that match the
+information. The MK development site provides extra modal styles that match the
 *tone* of the message -- from a friendly note to a serious warning. You
 can pick a style that fits the importance of what you want to say:
 
@@ -119,7 +119,7 @@ Bootstrap is a powerful framework for building responsive websites. But
 even Bootstrap can be improved. One example is the way *tables* are
 shown on small screens like phones and tablets.
 
-The J1 Template adds a new design for *responsive tables*, built on top
+The MK development site adds a new design for *responsive tables*, built on top
 of Bootstrap. The design uses simple CSS styles to make tables easy to
 read on every device and browser. This is especially helpful for
 visitors using mobile phones, where space is limited and standard

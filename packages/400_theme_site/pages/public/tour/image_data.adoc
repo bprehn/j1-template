@@ -7,7 +7,7 @@ date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        The image modules supported by J1 Template offer valuable
+                                        The image modules supported by MK development site offer valuable
                                         features based on powerful Open Source libraries like
                                         Masterslider, lightGallery, or Justified Gallery for high-end, masonry-styled preview maps.
 keywords: >
@@ -71,7 +71,7 @@ resource_options:
 // Page content
 // -----------------------------------------------------------------------------
 [role="dropcap"]
-Welcome to the J1 Template tour page about *images*. This page shows the
+Welcome to the MK development site tour page about *images*. This page shows the
 features the template offers for displaying image content on a web page:
 
 * *Lightboxes* -- enlarge an image in a focused overlay,
@@ -109,7 +109,7 @@ rest of the page, so the picture gets all the attention. The trick was
 made popular by a JavaScript library called *Lightbox 2* in 2005, and
 the name has been used for similar tools ever since.
 
-The J1 Template offers three lightbox options:
+The MK development site offers three lightbox options:
 
 * *PhotoSwipe Lightbox V5* (default)
 * *Lightbox V3* (optional)
@@ -168,13 +168,13 @@ adapts to every screen size, from desktop to phone.
 === Text Sliders
 
 A slider does not have to show images -- it can also show *text*. The
-J1 Template includes several styles of *text sliders* you can use as
+MK development site includes several styles of *text sliders* you can use as
 small banners or animated messages on a page.
 
 [TIP]
 ====
 A text slider is a great way to highlight important statements at the
-top of an article or section. The J1 Template offers different
+top of an article or section. The MK development site offers different
 animations to match your style.
 ====
 
@@ -324,7 +324,7 @@ Galleries are perfect for product photos, portfolios, and event
 pictures. Visitors can scroll through the gallery, click a single
 image to enlarge it, or swipe through them on a touchscreen.
 
-The J1 Template offers two gallery styles:
+The MK development site offers two gallery styles:
 
 * *Grid-styled* galleries
 * *Masonry-styled* galleries
@@ -379,7 +379,7 @@ orientations. A simple grid would have to crop them or leave gaps.
 JustifiedGallery solves this by keeping each image in its original
 shape and adjusting the widths so every row fills the page neatly.
 
-The J1 Template combines JustifiedGallery with the lightbox so
+The MK development site combines JustifiedGallery with the lightbox so
 visitors can click any photo for an enlarged view. You will recognise
 this layout from many websites across the Internet.
 
@@ -390,15 +390,15 @@ gallery::jg_mega_cities[role="mt-4 mb-4"]
 [role="mt-5"]
 == What next
 
-We hope you enjoyed exploring what the J1 Template can do with images.
+We hope you enjoyed exploring what the MK development site can do with images.
 But there is much more  -- next up is *audio*.
 
-The J1 Template plays both *audio* and *video* on web pages using
+The MK development site plays both *audio* and *video* on web pages using
 *HTML5*, the modern web standard. HTML5 plays audio and video right
 in the browser, so visitors do not need any extra software.
 
 Older players such as *Flash Player*, *QuickTime*, and *Silverlight*
-are no longer needed. The J1 Template plays media files from your own
+are no longer needed. The MK development site plays media files from your own
 website *and* from online sources on the Internet.
 
 Curious? Have a look at the link:{url-tour--audio_data}[Audio Player]

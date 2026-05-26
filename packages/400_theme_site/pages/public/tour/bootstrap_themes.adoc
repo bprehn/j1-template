@@ -7,7 +7,7 @@ date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        J1 Template offers various unique functionalities compared to other Jekyll themes and templates. Bootstrap themes for the J1 Template are based on the free and Open Source CSS front-end framework Bootstrap of version V5. The
+                                        MK development site offers various unique functionalities compared to other Jekyll themes and templates. Bootstrap themes for the MK development site are based on the free and Open Source CSS front-end framework Bootstrap of version V5. The
                                         Bootstrap themes for the J1 enable the presentation of different versions (skins) of the same site using already prepared Bootstrap CSS templates.
 keywords: >
                                         open source, free, template, jekyll, jekyllone, web,
@@ -63,7 +63,7 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-Themes for the J1 Template are based on the Open Source CSS framework
+Themes for the MK development site are based on the Open Source CSS framework
 *Bootstrap* (version 5). A theme is like a *skin* for your website -- it
 changes the *look* of your pages without changing the content. With themes,
 you can show the same site in many different styles.
@@ -110,14 +110,14 @@ you do not have to build everything from scratch.
 
 Bootswatch also offers an
 link:{url-bootswatch--api}[Integration API, {browser-window--new}] that
-makes it easy to add their themes to an existing site. The J1 Template
+makes it easy to add their themes to an existing site. The MK development site
 uses this API so you can pick a Bootswatch theme right from the menu of
 your website.
 
 [role="mt-4"]
 === Apply a Style
 
-The default theme of the J1 Template is called *Uno*. It comes with both
+The default theme of the MK development site is called *Uno*. It comes with both
 a *light* and a *dark* version and works well for many kinds of websites.
 *Uno* is a good starting point. If you want a different look, you can
 combine *Uno* with another theme to get your site ready quickly.
@@ -129,7 +129,7 @@ different theme is used.
 [WARNING]
 ====
 When you switch from one theme to another *while the site is running*, the
-J1 Template tries to apply the new styles to all parts of the page (such
+MK development site tries to apply the new styles to all parts of the page (such
 as fonts, headings, lists, and paragraphs). This works for *most* common
 elements, but *not yet* for every single one.
 ====
@@ -141,7 +141,7 @@ applied automatically to every page of your website.
 [role="mt-5"]
 == What next
 
-The J1 Template is a great starting point for many kinds of websites.
+The MK development site is a great starting point for many kinds of websites.
 One handy feature it offers is *code highlighting*. Code highlighting
 adds colors to source code so it is easier to read and understand.
 
@@ -150,7 +150,7 @@ uses different colors for different parts of the code. For example, in
 JavaScript, keywords like *if*, *for*, or *function* get one color, while
 text strings and variables get another.
 
-The J1 Template uses a code highlighter called *Rouge*. Rouge is written in
+The MK development site uses a code highlighter called *Rouge*. Rouge is written in
 Ruby and supports more than 100 programming languages. It produces colored
 HTML output that works in every modern web browser.
 

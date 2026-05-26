@@ -7,7 +7,7 @@ date:                                   2026-05-07
 # last_modified:                        2026-01-01
 
 description: >
-                                        J1 Template provides playing audio on web pages
+                                        MK development site provides playing audio on web pages
                                         by HTML5 and supports custom players created
                                         by AmplitudeJS to playback audio individually.
 keywords: >
@@ -81,7 +81,7 @@ match it to the design of your website.
 
 This is where *Amplitude* comes in. Amplitude lets web designers
 build *custom audio players* that look exactly the way they want. With
-the J1 Template, Amplitude is already integrated, so you can drop a
+the MK development site, Amplitude is already integrated, so you can drop a
 nice-looking player into any page without writing complex JavaScript.
 
 [subs=attributes]
@@ -108,9 +108,9 @@ audio::/assets/audio/sound-effects/ambient-piano.mp3[role="mt-4 mb-5"]
 [role="mt-5"]
 == Amplitude player
 
-The J1 Template supports *native audio* files (such as MP3) and uses
+The MK development site supports *native audio* files (such as MP3) and uses
 custom players built with *Amplitude*. The default look matches the
-*Uno* theme of the J1 Template, so the players blend in with the rest
+*Uno* theme of the MK development site, so the players blend in with the rest
 of your site.
 
 Three sizes of Amplitude players are built in:
@@ -122,7 +122,7 @@ Three sizes of Amplitude players are built in:
 [role="mt-4"]
 [NOTE]
 ====
-The Amplitude players in the J1 Template work well on mobile devices.
+The Amplitude players in the MK development site work well on mobile devices.
 On phones and tablets, *touch* gestures replace mouse clicks, so the
 players feel natural to use.
 ====
@@ -130,7 +130,7 @@ players feel natural to use.
 [role="mt-5"]
 === Native player
 
-Native players are the built-in Amplitude players for the J1 Template.
+Native players are the built-in Amplitude players for the MK development site.
 They do not require plugins to play audio files, such as MP3, and serve
 as a replacement for the HTML5 audio element.
 
@@ -191,13 +191,13 @@ best choice when audio is the main focus of the page.
 === Player over YouTube
 
 You can also use the Amplitude player to play the *audio track* of a
-*YouTube video*. The J1 Template adds a small plugin called *ytp* to
+*YouTube video*. The MK development site adds a small plugin called *ytp* to
 Amplitude that enables this feature.
 
 [role="mt-4 mb-5"]
 [NOTE]
 ====
-The YouTube audio player is only available in the J1 Template and only
+The YouTube audio player is only available in the MK development site and only
 in the *large* player size. Behind the scenes, the plugin loads a
 YouTube *iframe* and copies the look of the Amplitude controls. You
 can build a *playlist* of YouTube videos the same way you would build
@@ -230,15 +230,15 @@ amplitude::diana_krall_yt_large[role="mb-4"]
 [role="mt-5"]
 == What next
 
-We hope you enjoyed exploring the J1 audio features. The J1 Template
+We hope you enjoyed exploring the J1 audio features. The MK development site
 can do much more with multimedia, of course -- starting with *video*.
 
-The J1 Template supports playing video on web pages with *HTML5 video*,
+The MK development site supports playing video on web pages with *HTML5 video*,
 the modern web standard. Every modern browser supports the HTML5 video
 tag `<video>` out of the box, so you no longer need older plugins like
 *Flash Player*, *QuickTime*, or *Silverlight*.
 
-The J1 Template plays videos from your own website *and* from online
+The MK development site plays videos from your own website *and* from online
 sources on the Internet (such as YouTube).
 
 Curious? Have a look at the next page:

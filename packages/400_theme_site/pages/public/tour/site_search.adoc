@@ -1,13 +1,13 @@
 ---
 title:                                  Search Engine
-title_extention:                        Integrated full-text search for J1 Template
+title_extention:                        Integrated full-text search for MK development site
 tagline:                                Integrated full-text search
 
 date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        The search option for the J1 Template is based on the
+                                        The search option for the MK development site is based on the
                                         search engine Lunr and is fully integrated with the template.
                                         Lunr is designed to be lightweight yet full-featured to provide great search experience. Using Lunr for a Jekyll
                                         website, there is no need to integrate complex external,
@@ -64,7 +64,7 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-The J1 Template comes with a built-in *site search*. Site search lets
+The MK development site comes with a built-in *site search*. Site search lets
 your visitors quickly find pages and posts on your website by typing a
 few words into a search box. The search runs *inside the visitor's
 browser* -- you do not have to set up a separate server.
@@ -72,7 +72,7 @@ browser* -- you do not have to set up a separate server.
 The search engine behind it is called *Lunr* (spoken: Lunar). Lunr is small
 and fast, written in JavaScript by
 http://lunrjs.com[Oliver Nightingale, {browser-window--new}], and is
-fully integrated with the J1 Template.
+fully integrated with the MK development site.
 
 [subs=attributes]
 ++++
@@ -112,7 +112,7 @@ search queries.
 === Indexing documents
 
 *Site search* searches *all* the pages of your website. To do this
-quickly, the J1 Template builds a *search index* (a sort of organised
+quickly, the MK development site builds a *search index* (a sort of organised
 list) when your site is generated. The index is loaded into the
 visitor's browser, so searches happen *without* an internet connection
 to a remote server.
@@ -396,7 +396,7 @@ Example: Search
 summary of what the document is about.
 
 Example: site_search is based on the search engine Lunr, fully
-integrated with J1 Template ...
+integrated with MK development site ...
 
 |===
 
@@ -481,12 +481,12 @@ prefix every word with a plus sign:
 [role="mt-5"]
 == What next
 
-You have reached the end of the tour through J1 Template. We hope you
-enjoyed it and got a good first impression of what the J1 Template can
+You have reached the end of the tour through MK development site. We hope you
+enjoyed it and got a good first impression of what the MK development site can
 do for your website.
 
 If you want to learn more, the next step is *J1 in a Day* -- a *tutorial*
-that teaches you how to build a modern website with the J1 Template. The
+that teaches you how to build a modern website with the MK development site. The
 tutorial covers the basics of both *Jekyll* and *J1* that every site owner
 should know.
 
@@ -499,7 +499,7 @@ The *J1 in a Day* tutorial covers:
 
 * The basics of modern static websites,
 * Building a working site in just a few minutes,
-* Using the J1 Template development system,
+* Using the MK development site development system,
 * Project management for a static website,
 * Creating content for J1-based static websites.
 

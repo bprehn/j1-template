@@ -16,6 +16,28 @@ publish_mode: editorial_workflow
 search: true
 
 collections:
+  - name: branding_assets
+    label: MK Branding Assets
+    label_singular: MK Branding Asset
+    delete: false
+    files:
+      - name: mk_brand_profile
+        label: MK Brand Profile
+        file: _data/branding/mk_brand.yml
+        fields:
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Short Name, name: short_name, widget: string }
+          - { label: Brand Tagline, name: brand_tagline, widget: string, required: false }
+          - { label: Brand Description, name: brand_description, widget: text, required: false }
+          - { label: Primary Logo, name: logo_primary, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
+          - { label: Logo Mark (SVG), name: logo_mark, widget: string, required: false, hint: "Path to mark logo, e.g. /assets/image/icon/mk/mk-logo-mark.svg" }
+          - { label: Wordmark (SVG), name: logo_wordmark, widget: string, required: false, hint: "Path to wordmark logo, e.g. /assets/image/icon/mk/mk-wordmark.svg" }
+          - { label: Favicon Path, name: favicon, widget: string, required: false }
+          - { label: Social Square Image, name: social_square, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
+          - { label: Social Circle Image, name: social_circle, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/branding" }
+          - { label: Contact Email, name: contact_email, widget: string, required: false }
+          - { label: Website URL, name: website_url, widget: string, required: false }
+
   - name: about_pages
     label: MK Site Pages
     label_singular: MK Site Page
@@ -36,7 +58,7 @@ collections:
       - label: Permalink
         name: permalink
         widget: string
-        hint: "Use the J1 path style, e.g. /pages/public/about/my-page/"
+        hint: "Use the site path style, e.g. /pages/public/about/my-page/"
       - { label: Comments Enabled, name: comments, widget: boolean, required: false, default: false }
       - { label: Regenerate, name: regenerate, widget: boolean, required: false, default: false }
       - { label: Body, name: body, widget: text }

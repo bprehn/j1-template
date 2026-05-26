@@ -7,7 +7,7 @@ date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        J1 Template provides playing video on web pages
+                                        MK development site provides playing video on web pages
                                         by HTML5 Video and supports custom players created
                                         by VidoeJS to playback video individually.
 keywords: >
@@ -77,7 +77,7 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-The J1 Template plays *video* on web pages using *HTML5 video* -- the
+The MK development site plays *video* on web pages using *HTML5 video* -- the
 modern web standard. Every up-to-date browser already knows how to play
 HTML5 video, so your visitors do not need to install any extra software
 or plugin.
@@ -105,7 +105,7 @@ HTML5 video lets you place video files directly on your website. The
 browser does the rest: it loads the file, plays it, and shows the
 standard playback controls.
 
-The J1 Template supports two kinds of video sources:
+The MK development site supports two kinds of video sources:
 
 * *Local video* -- video files stored on your own website,
 * *Online video* -- video from a streaming service such as YouTube.
@@ -156,7 +156,7 @@ videojs::/assets/video//html5/peck_pocketed.mp4[poster="/assets/video/poster/htm
 [role="mt-5"]
 === YouTube
 
-The J1 Template can also embed videos straight from YouTube. Just give
+The MK development site can also embed videos straight from YouTube. Just give
 the YouTube video ID and the player appears on your page.
 
 Sky Elements uses the night sky as its canvas. A large group of drones
@@ -171,14 +171,14 @@ youtube::brEXrQBIj68[poster="//img.youtube.com/vi/brEXrQBIj68/maxresdefault.jpg"
 == Galleries of Video
 
 A *video gallery* is a collection of videos shown together, often around
-a theme or topic. The gallery module in the J1 Template is called
+a theme or topic. The gallery module in the MK development site is called
 *lightGallery* -- a fast and modular plugin for building good-looking
 image and video galleries.
 
 When you combine a gallery with a *lightbox*, your visitors can browse
 the videos easily and watch them in a focused, full-screen view. You
 can place a video gallery anywhere -- on a regular page, in a blog
-post, or on a landing page. The J1 Template combines *justifiedGallery*
+post, or on a landing page. The MK development site combines *justifiedGallery*
 (for the layout) with *lightGallery* (for the lightbox), making it
 easy to build a video gallery in just a few lines.
 
@@ -199,7 +199,7 @@ gallery of *YouTube videos*.
 === Local Video
 
 Have videos you took with your phone or camera? You can show them on
-your website using the J1 Template's lightGallery integration.
+your website using the MK development site's lightGallery integration.
 
 [role="mb-5"]
 [NOTE]
@@ -220,7 +220,7 @@ gallery::jg_video_html5[role="mb-4"]
 === YouTube
 
 link:{url-youtube--home}[YouTube, {browser-window--new}] is the largest
-video platform on the Internet. With the J1 Template, you can pick a
+video platform on the Internet. With the MK development site, you can pick a
 selection of YouTube videos and show them as a single gallery on your
 page -- great for music collections, tutorials, or interviews.
 
@@ -236,11 +236,11 @@ important* element is still the text -- and how that text looks.
 
 Many website templates do not handle text well on different screen
 sizes. They resize boxes and images, but the text size stays the same.
-The J1 Template fixes this with *responsive text*: text that
+The MK development site fixes this with *responsive text*: text that
 automatically scales in size and line height to stay easy to read on
 every device.
 
-In the J1 Template, *typography* -- the way text looks -- is treated as
+In the MK development site, *typography* -- the way text looks -- is treated as
 one of the most important branding elements of your website. Good
 typography gives your site a clear character, almost like a logo.
 

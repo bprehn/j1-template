@@ -34,7 +34,7 @@ resource_options:
       padding_top:                      630
       slides:
         - url:                          /assets/image/module/attic/1920x1280/j1-launch.jpg
-          alt:                          J1 Template Mockup
+          alt:                          MK development site Mockup
 ---
 
 // Page Initializer
@@ -171,7 +171,7 @@ _Bootswatch_. Bootswatch offers many ready-made themes that work
 directly with websites built on Bootstrap V5.
 
 The Bootswatch service uses *permanent* cookies to remember which theme
-you picked. So, to use the themes feature in J1 Template, you need to
+you picked. So, to use the themes feature in MK development site, you need to
 accept *permanent* cookies for *personalization*.
 endif::[]
 

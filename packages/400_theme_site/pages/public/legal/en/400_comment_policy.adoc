@@ -33,7 +33,7 @@ resource_options:
       padding_top:                      630
       slides:
         - url:                          /assets/image/module/attic/1920x1280/j1-mockup.jpg
-          alt:                          J1 Template Mockup
+          alt:                          MK development site Mockup
 ---
 
 // Page Initializer
@@ -45,7 +45,7 @@ resource_options:
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
-:j1--site-name:                         Jekyll One
+:j1--site-name:                         Mount Kato
 :disqus:                                false
 :hyvor:                                 true
 

@@ -8,7 +8,7 @@ date:                                   2026-05-07
 
 description: >
                                         Rouge is a native Ruby themeable syntax highlighter fully
-                                        integrated with J1 Template. The highlighter supports 100+
+                                        integrated with MK development site. The highlighter supports 100+
                                         different languages and generates HTML output using standard
                                         ANSI 256-colors displayed by all current browsers.
 keywords: >
@@ -65,7 +65,7 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-*Rouge* is a code highlighter built into the J1 Template. *Code highlighting*
+*Rouge* is a code highlighter built into the MK development site. *Code highlighting*
 adds colors to source code so it is easier to read. Different parts of the
 code -- such as keywords, text strings, comments, or numbers -- get
 different colors.
@@ -89,7 +89,7 @@ and try out other themes from the menu.
 [role="mt-5"]
 == Select a Theme
 
-The J1 Template uses two default Rouge themes -- one for *light mode*
+The MK development site uses two default Rouge themes -- one for *light mode*
 and one for *dark mode*:
 
 * *Light mode* uses the IgorPro theme `igorpro`.
@@ -109,7 +109,7 @@ rouge:
   theme_dark:                           uno.dark
 ----
 
-To preview *all* themes supported by *J1 Template*, click the button
+To preview *all* themes supported by *MK development site*, click the button
 *AVAILABLE THEMES* below and pick one from the list.
 
 ++++
@@ -214,14 +214,14 @@ end
 [role="mt-5"]
 == What next
 
-The J1 Template also comes with its own *site search*. Site search lets
+The MK development site also comes with its own *site search*. Site search lets
 your visitors find pages and posts on your site by typing words into a
 search box. The search runs *inside the browser* -- you do not need an
 external search engine like Google or Bing.
 
 The search engine is called *Lunr*. It is small, fast, and was written
 in JavaScript by http://lunrjs.com[Oliver Nightingale, {browser-window--new}].
-The J1 Template builds a search index for your whole site automatically,
+The MK development site builds a search index for your whole site automatically,
 so search works out of the box.
 
 A good search box is part of a good user experience -- it helps your

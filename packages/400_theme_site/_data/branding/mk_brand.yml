@@ -1,0 +1,12 @@
+site_name: Mount Kato
+short_name: MK
+brand_tagline: Mountain Operations Dev Environment
+brand_description: Mount Kato development site for content, design, and feature iteration.
+logo_primary: /assets/image/icon/mk/mk-512x512.png
+logo_mark: /assets/image/icon/mk/mk-logo-mark.svg
+logo_wordmark: /assets/image/icon/mk/mk-wordmark.svg
+favicon: /assets/image/icon/mk/favicon.ico
+social_square: /assets/image/icon/mk/mk-social-square.svg
+social_circle: /assets/image/icon/mk/mk-social-circle.svg
+contact_email: ""
+website_url: http://localhost:40000

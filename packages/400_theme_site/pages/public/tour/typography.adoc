@@ -7,7 +7,7 @@ date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        J1 Template places the character font as one of the
+                                        MK development site places the character font as one of the
                                         most crucial branding elements for any website. The
                                         text take on an important role of acting not only as
                                         plain text but also as something like images.
@@ -71,7 +71,7 @@ resource_options:
 //
 [role="dropcap"]
 *Typography* is the way text looks on a web page -- the fonts, the sizes,
-the spacing, and the line height. The J1 Template treats typography as one
+the spacing, and the line height. The MK development site treats typography as one
 of the most important *branding elements* of your website. Good typography
 makes a page easier to read and gives your site its own visual character,
 almost like the way a logo or an image does.
@@ -94,7 +94,7 @@ the screen. On a big monitor it looks bigger, on a phone it looks smaller
 -- but it always stays easy to read.
 
 Many website templates do not support responsive text. They resize images
-and boxes, but the text size stays fixed. The J1 Template fixes this. It
+and boxes, but the text size stays fixed. The MK development site fixes this. It
 adjusts both the font size *and* the line height so reading stays
 comfortable on every device.
 
@@ -209,7 +209,7 @@ Responsive text comes in *five* sizes, named `r-text-100` through
 Behind the scenes, the sizes are based on the *Fibonacci series* -- a
 famous sequence of numbers that often appears in nature and in design.
 The Fibonacci numbers give pleasing proportions, which is why they are
-also popular in typography. The J1 Template translates these numbers
+also popular in typography. The MK development site translates these numbers
 into CSS rules so the text scales smoothly with the browser size.
 
 The table below shows how each scale factor compares to the base size.
@@ -270,11 +270,11 @@ explorer of the truth, the master-builder of human happiness.
 [role="mt-5"]
 == What next
 
-Have you enjoyed trying out the responsive text? The J1 Template can do
+Have you enjoyed trying out the responsive text? The MK development site can do
 much more for the look of your pages. The next topic is *icons* -- small
 visual symbols that can support the meaning of your text.
 
-The J1 Template includes several popular icon sets out-of-the-box:
+The MK development site includes several popular icon sets out-of-the-box:
 
 * *Material Design Icons* (MDI)
 * *FontAwesome Icons* V5 (FA)

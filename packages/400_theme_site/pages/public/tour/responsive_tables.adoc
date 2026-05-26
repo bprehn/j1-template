@@ -6,7 +6,7 @@ tagline:                                Present tables at its best
 date:                                   2026-05-07
 #last_modified:                         2026-01-01
 description: >
-                                        J1 Template supports a new design for responsive tables
+                                        MK development site supports a new design for responsive tables
                                         based on Bootstrap. The approach used is using pure CSS
                                         styles on top of the classic Bootstrap styles for simplicity
                                         and portability to be viewed best  on all devices and browsers.
@@ -68,7 +68,7 @@ resource_options:
 A *responsive* table is a table that looks good on every screen size --
 big desktop monitors, laptops, tablets, and small mobile phones. Building
 tables that work well on every device is hard, and many template systems
-struggle with it. The J1 Template offers a fresh design for responsive
+struggle with it. The MK development site offers a fresh design for responsive
 tables that builds on top of *Bootstrap*.
 
 The design uses simple CSS styles together with the standard Bootstrap
@@ -88,7 +88,7 @@ tables look good in every modern browser, on every device.
 [role="mt-5"]
 == Table types
 
-The J1 Template provides *two* types of responsive tables. Pick the one
+The MK development site provides *two* types of responsive tables. Pick the one
 that fits your content best:
 
 .Types of Responsive Tables
@@ -98,7 +98,7 @@ that fits your content best:
 
 |`rtable`
 |*Bootstrap Table*
-|This is the default table used by the J1 Template. It uses the standard
+|This is the default table used by the MK development site. It uses the standard
 Bootstrap table classes and adds *responsive text* (see
 link:{url-tour--typography}[Typography]). On smaller screens, the text
 size shrinks automatically so the columns still fit. The default text
@@ -310,7 +310,7 @@ Post's front matter by specifying a new date/time in the format
 [role="mt-5"]
 == What next
 
-The J1 Template offers many features that other Jekyll templates do not.
+The MK development site offers many features that other Jekyll templates do not.
 *Themes* are one of them. A *theme* is a set of styles -- a *skin* -
 that changes the look of your whole website at once.
 

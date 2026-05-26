@@ -1,13 +1,13 @@
 [role="mt-5"]
 == Select a Theme
 
-For the default themes `Uno` of J1 Template, the following _Rouge_ themes
+For the default themes `Uno` of MK development site, the following _Rouge_ themes
 are used:
 
 * theme_light: based on theme `igorpro`
 * theme_dark:  based on theme `monokai.sublime`
 
-The *default* themes used for the J1 Template can be configured with
+The *default* themes used for the MK development site can be configured with
 the global *template config* file `~/_data/j1_config.yml`.
 
 [source, yaml]
@@ -21,7 +21,7 @@ rouge:
   theme_dark:                           uno.dark
 ----
 
-To preview *all* themes supported by *J1 Template*, make your selection
+To preview *all* themes supported by *MK development site*, make your selection
 from the button *AVAILABLE THEMES* below.
 
 ++++

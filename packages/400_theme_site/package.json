@@ -2,7 +2,7 @@
   "private": true,
   "name": "site",
   "version": "2026.0.14",
-  "description": "Project sources for J1 Template",
+  "description": "Project sources for Mount Kato dev site",
   "main": "_config.yml",
   "homepage": "https://jekyll.one",
   "author": {

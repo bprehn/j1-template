@@ -1,15 +1,15 @@
 ---
 title:                                  Extensions
-title_extention:                        Enhanced Asciidoc Markups for J1 Template
+title_extention:                        Enhanced Asciidoc Markups for MK development site
 tagline:                                Enhanced Asciidoc Markups
 
 date:                                   2026-05-07
 #last_modified:                         2026-01-01
 
 description: >
-                                        J1 Template implements some handy Ruby-based enhancements
+                                        MK development site implements some handy Ruby-based enhancements
                                         for the markup language Asciidoc. Markup extensions for
-                                        is a unique feature of Jekyll One compared to other Jekyll
+                                        is a unique feature of Mount Kato compared to other Jekyll
                                         themes and templates.
 keywords: >
                                         open source, free, template, jekyll, jekyllone, web,
@@ -74,7 +74,7 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-J1 Template adds a few extra features on top of the Asciidoc markup
+MK development site adds a few extra features on top of the Asciidoc markup
 language. These extras are called *extensions*. They give you new
 shortcuts and macros that plain Asciidoc does not have on its own.
 Adding extensions like this is a feature you will not find in most
@@ -109,7 +109,7 @@ also work in *posts* and *collections*.
 [role="mt-5"]
 == Asciidoc Result Extension
 
-J1 Template adds a small JavaScript helper called the *View Result
+MK development site adds a small JavaScript helper called the *View Result
 Extension*. It puts a `VIEW` toggle button at the top right of any
 listing block (a code or example box).
 
@@ -325,7 +325,7 @@ ____
 == Lightboxes
 
 A *lightbox* is a popup that shows an image in full size when the user
-clicks on its thumbnail. To make using lightboxes easier, J1 Template
+clicks on its thumbnail. To make using lightboxes easier, MK development site
 provides the `lightbox::` block macro. This macro embeds one or more
 images and turns the J1 default lightbox on automatically.
 
@@ -454,7 +454,7 @@ Country flags are often used for language pickers or to mark content
 that belongs to a specific country. A small flag icon is much easier to
 recognize than a country name written out.
 
-J1 Template ships with full country-flag support for Asciidoc
+MK development site ships with full country-flag support for Asciidoc
 documents.
 
 You can place a flag inline using the `flag:` macro:
@@ -549,7 +549,7 @@ flag:es[rectangle, xl]
 == Icon Fonts
 
 An *icon font* is a special font where each letter is a small picture
-(an icon). J1 Template includes full icon support for Asciidoc
+(an icon). MK development site includes full icon support for Asciidoc
 documents and bundles three popular icon-font sets:
 
 * Material Design Icons link:{url-mdi--home}[ (MDI), {browser-window--new}]
@@ -793,7 +793,7 @@ Bootstrap gives you a complete set of styles for responsive layouts,
 including tables. But standard Bootstrap tables can still be hard to
 read on small screens.
 
-J1 Template builds on top of Bootstrap and adds extra CSS styles for
+MK development site builds on top of Bootstrap and adds extra CSS styles for
 *responsive tables*. The result is a table layout that stays readable
 on phones and tablets without losing portability.
 
