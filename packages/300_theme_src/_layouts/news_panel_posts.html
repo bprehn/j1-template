@@ -49,7 +49,7 @@ debug:                                  false                                   
   {% comment %} Collect the BODY-BANNER region
   ------------------------------------------------------------------------------ {% endcomment %}
     <!-- [INFO   ] [j1.layout.blog_archive.html    ] [ call default_writer for region: 'body-header' ] -->
-  <header id="header">
+  <header id="header" class="shadow">
     {% include  {{default_writer}} region='body-header' items=lanes_collate %}
   </header>
   <!-- [INFO   ] [j1.layout.blog_archive.html    ] [ end processing default_writer for region: 'body-header' ] -->

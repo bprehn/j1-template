@@ -1,0 +1,10 @@
+# ------------------------------------------------------------------------------
+# ~/_config.production.yml
+# Production overrides loaded in addition to _config.yml
+#
+# Usage:
+#   bundle exec jekyll build --config _config.yml,_config.production.yml
+# ------------------------------------------------------------------------------
+
+environment:                            production
+map_mode:                               legacy
