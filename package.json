@@ -67,6 +67,7 @@
     "publish": "npm --silent run publish:*",
     "setup": "npm --silent run setup-start && npm --silent run setup-base && run-s -s setup-create-log-folders && run-s -s setup:*",
     "site": "lerna run --parallel develop",
+    "utilsrv": "lerna --parallel --scope utilsrv run utilsrv",
     "run": "lerna run --parallel",
     "reset": "run-s -s reset:*",
     "ver": "cross-var echo \"project version: $npm_package_version\" && echo package versions: && lerna ls && cd ./packages/500_theme_gem && bump current | shx sed \"s/Current version:/Gem version:    /\"",
