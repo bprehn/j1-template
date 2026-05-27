@@ -1,0 +1,32 @@
+<!--
+ # -----------------------------------------------------------------------------
+ # ~/_includes/custom/templates/mk_trail_map_lite.html
+ # Lightweight interactive trail map prototype
+ # -----------------------------------------------------------------------------
+-->
+
+<link rel="stylesheet" href="{{ '/assets/custom/mk-trail-map-lite/css/trail-map-lite.css' | relative_url }}">
+
+<section id="panel_mk_trail_map_lite" class="trail-map-lite-section g-2 elevated-z1">
+  <div class="container py-4 py-lg-5">
+    <div class="trail-map-lite-header mb-3 mb-lg-4">
+      <h2 class="g-font-weight-500 mb-0">Interactive Trail Map</h2>
+      <p class="tagline mb-0"><b>centered SVG, responsive fit</b></p>
+      <div class="d-inline-block g-width-50 g-height-2 bg-primary mb-2"></div>
+      <p class="mb-0 trail-map-lite-copy">
+        A centered SVG rendering that stays fully contained in the available media view.
+      </p>
+    </div>
+
+    <div class="trail-map-lite">
+      <div class="trail-map-lite-frame">
+        <iframe
+          class="trail-map-lite-svg-frame"
+          src="{{ '/assets/image/custom/mk-trail-map/map/ai2svg.svg' | relative_url }}"
+          title="Mount Kato winter trail map overview"
+          loading="eager">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>

@@ -27,7 +27,11 @@ settings:
 
   # GLOBAL settings
   #
-  enabled:                              true                                    # enable|disable sitemap generation
+  # NOTE:
+  #   Keep disabled for local development to avoid the long sitemap
+  #   generation phase during rebuilds.
+  #
+  enabled:                              false                                   # enable|disable sitemap generation
 
   # PLUGIN settings
   #
