@@ -93,6 +93,127 @@ collections:
           - { label: Custom Content (People Panel), name: custom_content_people_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Custom Content (Collection Panel), name: custom_content_collection_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
 
+  - name: homepage_slider
+    label: Homepage Slider
+    label_singular: Homepage Slider
+    delete: false
+    files:
+      - name: home_slider_profile
+        label: Home Slider Profile
+        file: packages/400_theme_site/index.html
+        extension: html
+        format: yaml-frontmatter
+        fields:
+          - { label: Layout, name: layout, widget: hidden, default: home }
+          - { label: Compress, name: compress, widget: hidden, default: true }
+          - { label: Title, name: title, widget: string }
+          - { label: Title Extension, name: title_extention, widget: string, required: false }
+          - { label: Tagline, name: tagline, widget: string, required: false }
+          - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ss", required: false }
+          - { label: Last Modified, name: last_modified, widget: datetime, format: "YYYY-MM-DD HH:mm:ss", required: false }
+          - { label: Description, name: description, widget: text, required: false }
+          - { label: Keywords, name: keywords, widget: text, required: false }
+          - { label: Categories, name: categories, widget: list, required: false }
+          - { label: Tags, name: tags, widget: list, required: false }
+          - label: Robots
+            name: robots
+            widget: object
+            required: false
+            fields:
+              - { label: Index, name: index, widget: boolean, required: false, default: true }
+              - { label: Follow, name: follow, widget: boolean, required: false, default: true }
+          - label: Image Meta
+            name: image
+            widget: object
+            required: false
+            fields:
+              - { label: Path, name: path, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/home-slider" }
+              - { label: Width, name: width, widget: number, value_type: int, required: false }
+              - { label: Height, name: height, widget: number, value_type: int, required: false }
+          - { label: TTS, name: tts, widget: boolean, required: false, default: true }
+          - { label: TOC, name: toc, widget: boolean, required: false, default: false }
+          - { label: FAB Menu ID, name: fab_menu_id, widget: string, required: false }
+          - { label: Scrollbar, name: scrollbar, widget: boolean, required: false, default: false }
+          - { label: Comments, name: comments, widget: boolean, required: false, default: false }
+          - { label: Canonical, name: canonical, widget: boolean, required: false, default: false }
+          - { label: Personalization, name: personalization, widget: boolean, required: false, default: false }
+          - { label: Exclude From Search, name: exclude_from_search, widget: boolean, required: false, default: false }
+          - { label: Regenerate, name: regenerate, widget: boolean, required: false, default: false }
+          - label: Resources
+            name: resources
+            widget: list
+            required: false
+            default: [scroller]
+            field: { label: Resource, name: resource, widget: string }
+          - label: Resource Options
+            name: resource_options
+            widget: list
+            required: true
+            min: 1
+            max: 1
+            hint: "Configure attic slides for the homepage header slider."
+            default:
+              - attic:
+                  slides:
+                    - url: /assets/image/module/attic/1920x1280/j1-launch.jpg
+                      alt: Homepage hero image
+                      title: Mount Kato
+                      tagline: Welcome to the mountain
+            fields:
+              - label: Attic
+                name: attic
+                widget: object
+                fields:
+                  - label: Slides
+                    name: slides
+                    widget: list
+                    summary: "{{fields.title}}"
+                    hint: "Add slide image, title, tagline, and optional photo credit/link."
+                    default:
+                      - url: /assets/image/module/attic/1920x1280/j1-launch.jpg
+                        alt: Homepage hero image
+                        title: Mount Kato
+                        tagline: Welcome to the mountain
+                    fields:
+                      - { label: Image, name: url, widget: image, required: true, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/home-slider" }
+                      - { label: Image Alt, name: alt, widget: string, required: false }
+                      - { label: Title, name: title, widget: string, required: false }
+                      - { label: Tagline, name: tagline, widget: string, required: false }
+                      - label: Photo Credit
+                        name: badge
+                        widget: object
+                        required: false
+                        collapsed: true
+                        hint: "Used for photographer credit badge; add author and external link."
+                        fields:
+                          - { label: Type, name: type, widget: select, required: false, options: [{ label: Unsplash, value: unsplash }], default: unsplash }
+                          - { label: Photographer Name, name: author, widget: string, required: false }
+                          - label: Photographer Link
+                            name: href
+                            widget: string
+                            required: false
+                            hint: "External URL to photographer profile (must start with http:// or https://)"
+                            pattern:
+                              - '^https?://.+'
+                              - "Use a full URL starting with http:// or https://"
+                      - label: Caption
+                        name: caption
+                        widget: object
+                        required: false
+                        collapsed: true
+                        hint: "Optional text caption with optional link."
+                        fields:
+                          - { label: Caption Text, name: text, widget: string, required: false }
+                          - label: Caption Link
+                            name: href
+                            widget: string
+                            required: false
+                            hint: "Optional external or internal link; external links must start with http:// or https://"
+                            pattern:
+                              - '^(https?://.+|/.+)?$'
+                              - "Use either an absolute URL (http/https) or a site-relative path starting with /"
+          - { label: Body, name: body, widget: text, required: false }
+
   - name: about_pages
     label: MK Site Pages
     label_singular: MK Site Page
