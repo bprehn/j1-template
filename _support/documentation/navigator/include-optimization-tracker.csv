@@ -1,0 +1,7 @@
+wave,page_path,include_path,change_type,reason,risk_level,status,test_notes
+1,pages/public/about/hours/index.html,_includes/themes/j1/modules/navigator/generator.html,refactor,reduce duplicated branching,medium,planned,
+1,pages/public/plans/tickets/index.html,_includes/custom/content/tickets.html,cleanup,remove stale markup and unused params,low,planned,
+1,pages/public/about/contact/index.html,_includes/custom/content/contact-form.html,hardening,normalize fields and validation hooks,medium,planned,
+2,pages/public/learn/lessons/index.html,_includes/themes/j1/modules/*,consolidate,align include argument patterns,medium,planned,
+2,pages/public/features/rentals/index.html,_includes/custom/content/rentals.html,cleanup,split reusable sections for cards and CTA,low,planned,
+3,pages/public/manual/faq/index.html,_includes/custom/content/faq.html,refactor,extract reusable accordion block,medium,planned,

@@ -1,0 +1,11 @@
+priority,wave,old_url,new_url,content_type,target_source_path,target_public_path,asset_bucket,asset_target_path,status,redirect_type,redirect_to,owner,notes,qa_check,go_live
+P0,1,https://mountkato.com/,https://new.mountkato.com/,page,pages/public/index.html,/,image,banner,page_draft,301,/,Marketing,Homepage content and hero alignment,not_started,no
+P0,1,https://mountkato.com/tickets,https://new.mountkato.com/tickets/,page,pages/public/plans/tickets/index.html,/tickets/,icon,module,todo,301,/tickets/,Operations,Link to external ticketing preserved,not_started,no
+P0,1,https://mountkato.com/hours,https://new.mountkato.com/hours/,page,pages/public/about/hours/index.html,/hours/,image,page,in_progress,301,/hours/,Operations,Needs seasonal schedule table,not_started,no
+P1,2,https://mountkato.com/lessons,https://new.mountkato.com/learn/lessons/,page,pages/public/learn/lessons/index.html,/learn/lessons/,image,page,todo,301,/learn/lessons/,Snowsports,Use collection if recurring programs,not_started,no
+P1,2,https://mountkato.com/rentals,https://new.mountkato.com/features/rentals/,page,pages/public/features/rentals/index.html,/features/rentals/,image,module,todo,301,/features/rentals/,Operations,Add equipment policy docs,not_started,no
+P1,2,https://mountkato.com/events,https://new.mountkato.com/blog/events/,collection,collections/_portfolio/events/*.adoc,/blog/events/,image,collection,todo,301,/blog/events/,Marketing,Move repeating events into collection entries,not_started,no
+P1,2,https://mountkato.com/contact,https://new.mountkato.com/about/contact/,page,pages/public/about/contact/index.html,/about/contact/,icon,page,todo,301,/about/contact/,Admin,Validate forms and map embeds,not_started,no
+P2,3,https://mountkato.com/faq,https://new.mountkato.com/manual/faq/,page,pages/public/manual/faq/index.html,/manual/faq/,image,module,todo,301,/manual/faq/,Support,Split long FAQ into sections,not_started,no
+P2,3,https://mountkato.com/privacy,https://new.mountkato.com/legal/privacy/,page,pages/public/legal/en/privacy/index.html,/legal/privacy/,none,none,todo,301,/legal/privacy/,Legal,Legal sign-off required,not_started,no
+P2,3,https://mountkato.com/old-campaign,https://new.mountkato.com/,retire,none,none,none,none,todo,301,/,Marketing,Retire page and redirect to homepage,not_started,no
