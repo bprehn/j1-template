@@ -19,19 +19,12 @@
 
 {% comment %} liquid procedures
 -------------------------------------------------------------------------------- {% endcomment %}
-{% include themes/{{site.template.name}}/procedures/global/set_base_vars_folders.proc %}
-
 {% comment %}
 jadams, 2019-08-23: globals set via layouts/default.html (!!!)
 NO need to load this again
---------------------------------------------------------------------------------
-{% include themes/{{site.template.name}}/procedures/global/set_base_vars_folders.proc %}
---------------------------------------------------------------------------------
 {% endcomment %}
 
 {% capture collect_module_defaults %}themes/{{site.template.name}}/procedures/layouts/collect_module_defaults.proc{% endcapture %}
-{% capture collect_frontmatter_options %}themes/{{site.template.name}}/procedures/global/collect_frontmatter_options.proc{% endcapture %}
-{% capture collect_page_options %}themes/{{site.template.name}}/procedures/global/collect_page_options.proc{% endcapture %}
 
 {% comment %} process YML config data
 ================================================================================ {% endcomment %}
@@ -63,17 +56,6 @@ NO need to load this again
 
 {% if resource_settings.enabled and placement == 'body-footer' %}
 
-  {% comment %} Module default values collected by J1 Adapter
-  ------------------------------------------------------------------------------ {% endcomment %}
-
-  {% comment %} collect frontmatter|page options (page)
-  ------------------------------------------------------------------------------ {% endcomment %}
-  {% include {{collect_frontmatter_options}} module=resource_settings.id %}
-  {% assign frontmatter_options = {{frontmatter_options}} %}
-
-  {% include {{collect_page_options}} %}
-  {% assign page_options = {{page_options}} %}
-
   {% assign layout_valid = false %}
   {% for layout in resource_settings.layout %}
     {% assign layout = layout|downcase %}
@@ -90,6 +72,21 @@ NO need to load this again
   {% endif %}
 
   {% if layout_valid and resource_valid and resource_settings.enabled %}
+
+    {% comment %} collect module specific frontmatter options (page)
+    -------------------------------------------------------------------------- {% endcomment %}
+    {% assign frontmatter_options = nil %}
+    {% if resource_settings.id == 'attic' and page.attic %}
+      {% assign frontmatter_options = page.attic | replace:'=>',':' %}
+    {% elsif page.resource_options %}
+      {% for options in page.resource_options %}
+        {% assign module_options = options[resource_settings.id] %}
+        {% if module_options %}
+          {% assign frontmatter_options = module_options | replace:'=>',':' %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
 
     {% comment %} process all data keys
     <!-- [INFO   ] [j1.layout.module_writer.proc          ] [ data_value: '{{data_value}}' ] -->

@@ -33,14 +33,16 @@
 <!-- [INFO   ] [j1.layout_module_generator.html       ] [ resource DATA to be loaded: {{resources_collate}} ] -->
 {% endif %}
 
-<!-- [INFO   ] [j1.layout_module_generator.html       ] [ start processing. collect data for region: {{region}}, layout: {{page.layout}} ] -->
 {% for item in items %}
-  {% for element in item %}
-    {% if element[0] == 'resource' %}
-      {% assign resource = element[1] %}
-      <!-- [INFO   ] [j1.layout_module_generator.html       ] [ process resource: {{resource.id}} ] -->
-      {% include {{module_writer}} region=region global=globals resource=resource %}
-    {% endif %}
-  {% endfor %}
+  {% assign resource = item.resource %}
+  {% if resource %}
+    {% include {{module_writer}} region=region global=globals resource=resource %}
+  {% else %}
+    {% for element in item %}
+      {% if element[0] == 'resource' %}
+        {% assign resource = element[1] %}
+        {% include {{module_writer}} region=region global=globals resource=resource %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
-<!-- [INFO   ] [j1.layout_module_generator.html       ] [ end processing ] -->

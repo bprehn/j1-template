@@ -897,6 +897,15 @@ j1.adapter.navigator = ((j1, window) => {
       style += '</style>';
       $('head').append(style);
 
+      // Ensure solid/fixed navbars get an explicit background when overlay mode is off.
+      style  = '<style id="dynNavSolid">';
+      style += '  nav.navbar.navigator.navbar-fixed.light:not(.navbar-transparent) {';
+      style += '    background-color: ' + navBarOptions.background_color_full + ' !important;';
+      style += '    border-bottom: solid 0px !important;';
+      style += '  }';
+      style += '</style>';
+      $('head').append(style);
+
       // style  = '<style>';
       // style += '  @media screen and (min-width: ' + gridBreakpoint_lg + ') {';
       // style += '    nav.navbar.navigator.navbar-scrolled.light {';

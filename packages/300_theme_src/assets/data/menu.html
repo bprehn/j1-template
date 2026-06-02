@@ -175,9 +175,28 @@ See: https://stackoverflow.com/questions/39935447/is-there-any-way-to-exclude-ma
 
     {% comment %} Resolve per-top-level menu visibility from CMS config
     ---------------------------------------------------------------------------- {% endcomment %}
-    {% assign menu_item_slug = menu.item | downcase | replace: ' ', '_' %}
-    {% assign menu_item_key = 'show_' | append: menu_item_slug | append: '_menu' %}
-    {% assign show_menu_item = nav_menu_visibility[menu_item_key] %}
+    {% assign show_menu_item = true %}
+
+    {% if menu.item == 'Mountain' %}
+      {% assign show_menu_item = nav_menu_visibility.show_mountain_menu %}
+    {% elsif menu.item == 'Tour' %}
+      {% assign show_menu_item = nav_menu_visibility.show_tour_menu %}
+    {% elsif menu.item == 'Learn' %}
+      {% assign show_menu_item = nav_menu_visibility.show_learn_menu %}
+    {% elsif menu.item == 'Blog' %}
+      {% assign show_menu_item = nav_menu_visibility.show_blog_menu %}
+    {% elsif menu.item == 'Manual' %}
+      {% assign show_menu_item = nav_menu_visibility.show_manual_menu %}
+    {% elsif menu.item == 'Chat' %}
+      {% assign show_menu_item = nav_menu_visibility.show_chat_menu %}
+    {% elsif menu.item == 'Online' %}
+      {% assign show_menu_item = nav_menu_visibility.show_online_menu %}
+    {% elsif menu.item == 'Theme' %}
+      {% assign show_menu_item = nav_menu_visibility.show_theme_menu %}
+    {% elsif menu.item == 'About' %}
+      {% assign show_menu_item = nav_menu_visibility.show_about_menu %}
+    {% endif %}
+
     {% if show_menu_item == nil %}
       {% assign show_menu_item = true %}
     {% endif %}

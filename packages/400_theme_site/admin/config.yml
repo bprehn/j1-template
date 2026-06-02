@@ -465,6 +465,7 @@ collections:
             widget: object
             hint: "Enable or disable each top-level header menu item. Changes apply after Save/Publish and site rebuild."
             fields:
+              - { label: Show Mountain Menu, name: show_mountain_menu, widget: boolean, default: true }
               - { label: Show Tour Menu, name: show_tour_menu, widget: boolean, default: true }
               - { label: Show Learn Menu, name: show_learn_menu, widget: boolean, default: true }
               - { label: Show Blog Menu, name: show_blog_menu, widget: boolean, default: true }

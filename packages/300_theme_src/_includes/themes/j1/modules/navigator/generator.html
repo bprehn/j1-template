@@ -102,6 +102,10 @@
   {% assign nav_bar_color = 'light' %}
 {% endif %}
 
+{% if nav_style != 'overlay' and nav_bar_options.background_color_full %}
+  {% capture nav_bar_inline_style %}background-color: {{nav_bar_options.background_color_full}}; border-bottom: 0;{% endcapture %}
+{% endif %}
+
 {% capture nav_bar_default_css_classes %}navbar navigator navbar-expand-{{nav_navbar_media_breakpoint}} navbar-default d-flex shadow {% endcapture %}
 
 {% comment %} Main
@@ -116,7 +120,7 @@
 {% endfor %}
 
 <!-- [INFO   ] [~/_includes/themes/j1/modules/navigator/generator.html ] [ start processing: navigation ] -->
-<nav id="{{nav_bar_id}}" class="{{nav_bar_default_css_classes}} {{nav_bar_color}} {{nav_bar_fixed}} {{nav_bar_style}}">
+<nav id="{{nav_bar_id}}" class="{{nav_bar_default_css_classes}} {{nav_bar_color}} {{nav_bar_fixed}} {{nav_bar_style}}"{% if nav_bar_inline_style %} style="{{nav_bar_inline_style}}"{% endif %}>
 
   {% comment %} Place brand image
   ------------------------------------------------------------------------------ {% endcomment %}

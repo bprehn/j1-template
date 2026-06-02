@@ -38,6 +38,10 @@ settings:
   #
   nav_bar:
     enabled:                            true
+    style:                              solid
+    color:                              light
+    background_color_full:              rgba(255, 255, 255, 0.8)
+    background_color_scrolled:          var(--md-blue)
 
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)

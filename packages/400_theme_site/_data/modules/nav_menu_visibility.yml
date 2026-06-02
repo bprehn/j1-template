@@ -1,9 +1,10 @@
 settings:
-  show_tour_menu: true
-  show_learn_menu: false
-  show_blog_menu: false
-  show_manual_menu: true
+  show_tour_menu: false
   show_chat_menu: false
-  show_online_menu: true
-  show_theme_menu: true
-  show_about_menu: true
+  show_online_menu: false
+  show_mountain_menu: true
+  show_about_menu: false
+  show_manual_menu: false
+  show_theme_menu: false
+  show_blog_menu: false
+  show_learn_menu: false

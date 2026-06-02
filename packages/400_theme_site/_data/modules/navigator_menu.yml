@@ -881,6 +881,13 @@
 # ------------------------------------------------------------------------------
 # Menu ABOUT
 #
+- item:                                 Mountain
+  sublevel:
+
+    - title:                            About Mountain
+      icon:                             information-outline
+      href:                             /pages/public/mountain/about/
+
 - item:                                 About
   sublevel:
 

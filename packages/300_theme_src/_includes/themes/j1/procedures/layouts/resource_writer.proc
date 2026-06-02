@@ -24,7 +24,8 @@
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign environment       = site.environment %}
 {% assign placement         = include.region %}
-{% assign resource_globals  = include.global %}
+{% assign base_path         = include.base_path %}
+{% assign location          = include.location %}
 {% assign resource_settings = include.resource %}
 
 {% comment %} helpers
@@ -37,13 +38,6 @@
 
 {% comment %} main
 -------------------------------------------------------------------------------- {% endcomment %}
-{% for global in resource_globals %}
-  {% assign key   = global[0] %}
-  {% assign value = global[1] %}
-  {% if key == 'base_path' %} {% assign base_path = value %} {% endif %}
-  {% if key == 'location' %}  {% assign location = value %}  {% endif %}
-{% endfor %}
-
 {% if page.debug %}
 <!-- [DEBUG  ] [j1.layout.resource_writer.proc        ] [ placement detected as: {{is_placed}} ] -->
 {% endif %}
@@ -65,9 +59,6 @@
 if placement == 'head' or placement == 'body'
 -------------------------------------------------------------------------------- {% endcomment %}
 {% if placement == resource_region %}
-
-<!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ resource_id: '{{resource_settings.id}}', script_load: '{{script_load}}' ] -->
-<!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ placement_region: '{{placement}}', resource_region: '{{resource_region}}' ] -->
 
   {% assign layout_valid = false %}
   {% for layout in resource_settings.layout %}
@@ -112,9 +103,6 @@ if placement == 'head' or placement == 'body'
       {% comment %} process data key of type 'files'
       -------------------------------------------------------------------------- {% endcomment %}
       {% if data_key == 'files' and layout_valid %}
-
-        <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ layout: '{{page.layout}}', comment: '{{resource_settings.comment}}' ] -->
-        <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ place resource|s of type '{{data_key}}' for resource_id: '{{resource_settings.id}}' ] -->
 
         {% for file in data_value %}
 
@@ -171,9 +159,6 @@ if placement == 'head' or placement == 'body'
       {% if data_key == 'css' and layout_valid %}
         {% for locator in data_value %}
 
-          <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ layout: '{{page.layout}}', comment: '{{resource_settings.comment}}' ] -->
-          <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ place resource|s of type '{{data_key}}' for resource_id: '{{resource_settings.id}}' ] -->
-
           {% include {{select_location}} location=location locator=locator %}
           {% assign my_location = {{location_source}} %}
 
@@ -216,9 +201,6 @@ if placement == 'head' or placement == 'body'
       {% if data_key == 'js' and layout_valid %}
         {% for locator in data_value %}
 
-          <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ layout: '{{page.layout}}' , comment: '{{resource_settings.comment}}' ] -->
-          <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ place resource|s of type '{{data_key}}' for resource_id: '{{resource_settings.id}}' ] -->
-
           {% include {{select_location}} location=location locator=locator %}
           {% assign my_location = {{location_source}} %}
 
@@ -238,8 +220,6 @@ if placement == 'head' or placement == 'body'
     {% comment %} END process all data keys
     ---------------------------------------------------------------------------- {% endcomment %}
     {% assign is_placed = true %}
-
-    <!-- [INFO   ] [j1.layout.resource_writer.proc        ] [ placement for all data_keys finished ] -->
 
   {% endif %}
 {% endif %} {% endif %}
