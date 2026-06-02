@@ -51,6 +51,7 @@ exclude_from_search:                    true
 {% assign speak2me_settings         = modules.speak2me.settings %}
 {% assign toggler_defaults          = modules.defaults.theme_toggler.defaults %}
 {% assign toggler_settings          = modules.theme_toggler.settings %}
+{% assign quicklinks_visibility     = modules.quicklinks_visibility.settings %}
 
 {% assign environment               = site.environment %}
 
@@ -75,12 +76,43 @@ exclude_from_search:                    true
 {% comment %} Set quicklinks properties
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign icon_family               = quicklinks_options.icon_family | downcase %}
+{% assign show_home_icon            = quicklinks_visibility.show_home_icon %}
+{% assign show_shop_icon            = quicklinks_visibility.show_shop_icon %}
+{% assign show_disqus_icon          = quicklinks_visibility.show_disqus_icon %}
+{% assign show_github_icon          = quicklinks_visibility.show_github_icon %}
+{% assign show_facebook_icon        = quicklinks_visibility.show_facebook_icon %}
+{% assign show_buymeacoffee_icon    = quicklinks_visibility.show_buymeacoffee_icon %}
+{% assign show_site_search_toggle   = quicklinks_visibility.show_site_search_icon %}
+{% assign show_cookie_toggle        = quicklinks_visibility.show_cookieconsent_icon %}
+{% assign show_translate_toggle     = quicklinks_visibility.show_translate_icon %}
+{% assign show_speak2me_toggle      = quicklinks_visibility.show_speak2me_icon %}
+{% assign show_theme_toggle         = quicklinks_visibility.show_theme_toggler_icon %}
+
+{% if show_home_icon == nil %}{% assign show_home_icon = true %}{% endif %}
+{% if show_shop_icon == nil %}{% assign show_shop_icon = true %}{% endif %}
+{% if show_disqus_icon == nil %}{% assign show_disqus_icon = true %}{% endif %}
+{% if show_github_icon == nil %}{% assign show_github_icon = true %}{% endif %}
+{% if show_facebook_icon == nil %}{% assign show_facebook_icon = true %}{% endif %}
+{% if show_buymeacoffee_icon == nil %}{% assign show_buymeacoffee_icon = true %}{% endif %}
+{% if show_site_search_toggle == nil %}{% assign show_site_search_toggle = true %}{% endif %}
+{% if show_cookie_toggle == nil %}{% assign show_cookie_toggle = true %}{% endif %}
+{% if show_translate_toggle == nil %}{% assign show_translate_toggle = true %}{% endif %}
+{% if show_speak2me_toggle == nil %}{% assign show_speak2me_toggle = true %}{% endif %}
+{% if show_theme_toggle == nil %}{% assign show_theme_toggle = true %}{% endif %}
 
 {% comment %} Link buttons
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign home_icon                 = quicklinks_options.home_icon %}
 {% assign home_url                  = quicklinks_options.home_url %}
 {% assign home_label                = quicklinks_options.home_label %}
+
+{% assign shop_icon                 = quicklinks_options.shop_icon %}
+{% assign shop_url                  = quicklinks_options.shop_url %}
+{% assign shop_label                = quicklinks_options.shop_label %}
+{% assign shop_external             = false %}
+{% if shop_url contains 'http://' or shop_url contains 'https://' %}
+  {% assign shop_external           = true %}
+{% endif %}
 
 {% assign disqus_icon               = quicklinks_options.disqus_icon %}
 {% assign disqus_url                = quicklinks_options.disqus_url %}
@@ -159,11 +191,24 @@ exclude_from_search:                    true
 
 {% comment %} Show|Hide QuickLink icons
 -------------------------------------------------------------------------------- {% endcomment %}
-{% assign show_site_search_icon     = lunr_search_options.enabled %}
+{% assign show_site_search_icon     = false %}
 {% assign show_docsearch_icon       = doc_search_options.enabled %}
-{% assign show_translator_icon      = translator_options.enabled %}
-{% assign show_speak2me_icon        = speak2me_options.enabled %}
-{% assign show_theme_toggler_icon   = toggler_options.enabled %}
+{% assign show_translator_icon      = false %}
+{% assign show_speak2me_icon        = false %}
+{% assign show_theme_toggler_icon   = false %}
+
+{% if lunr_search_options.enabled and show_site_search_toggle %}
+  {% assign show_site_search_icon = true %}
+{% endif %}
+{% if translator_options.enabled and show_translate_toggle %}
+  {% assign show_translator_icon = true %}
+{% endif %}
+{% if speak2me_options.enabled and show_speak2me_toggle %}
+  {% assign show_speak2me_icon = true %}
+{% endif %}
+{% if toggler_options.enabled and show_theme_toggle %}
+  {% assign show_theme_toggler_icon = true %}
+{% endif %}
 
 {% assign show_control_center_icon  = cc_app_config_options.enabled %}
 {% assign show_auth_manager_icon    = authentication_enabled %}
@@ -182,7 +227,7 @@ exclude_from_search:                    true
   {% assign consent_icon_enabled = false %}
 {% endif %}
 
-{% if consent_enabled and consent_icon_enabled %}
+{% if consent_enabled and consent_icon_enabled and show_cookie_toggle %}
   {% assign show_cookieconsent_icon = true %}
 {% else %}
   {% assign show_cookieconsent_icon = false %}
@@ -255,11 +300,12 @@ exclude_from_search:                    true
 
       {% comment %} Link buttons
       -------------------------------------------------------------------------- {% endcomment %}
-      {% if home_url != "none" %}<li id="quickLinksHomeButton" class="nav-icon"><a id="home_id" href="{{home_url}}" title="{{home_label}}" aria-label="{{home_label}}"><i class="nav-icon {{icon_family}} {{icon_family}}-{{home_icon}} {{icon_size}}"></i></a></li>{% endif %}
-      {% if disqus_url != "none" %}<li id="quickLinksDisqusButton" class="nav-icon"><a id="disqus_id" href="{{disqus_url}}" aria-label="{{disqus_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{disqus_icon}} {{icon_size}}"></i></a></li>{% endif %}
-      {% if github_url != "none" %}<li id="quickLinksGithubButton" class="nav-icon"><a id="github_id" href="{{github_url}}" aria-label="{{github_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{github_icon}} {{icon_size}}"></i></a></li>{% endif %}
-      {% if facebook_url != "none" %}<li id="quickLinksFacebookButton" class="nav-icon"><a id="facebook_id" href="{{facebook_url}}" aria-label="{{facebook_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{facebook_icon}} {{icon_size}}"></i></a></li>{% endif %}
-      {% if buymeacoffee_url != "none" %}<li id="quickLinksBuyMeAcoffeebutton" class="nav-icon"><a id="buymeacoffee_id" href="{{buymeacoffee_url}}" target="blank" aria-label="{{buymeacoffee_label}}"><i class="nav-icon {{icon_family}} {{icon_family}}-{{buymeacoffee_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_home_icon and home_url != "none" %}<li id="quickLinksHomeButton" class="nav-icon"><a id="home_id" href="{{home_url}}" title="{{home_label}}" aria-label="{{home_label}}"><i class="nav-icon {{icon_family}} {{icon_family}}-{{home_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_shop_icon and shop_url != "none" %}<li id="quickLinksShopButton" class="nav-icon"><a id="shop_id" href="{{shop_url}}" title="{{shop_label}}" aria-label="{{shop_label}}"{% if shop_external %} target="_blank" rel="noopener noreferrer"{% endif %}><i class="nav-icon {{icon_family}} {{icon_family}}-{{shop_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_disqus_icon and disqus_url != "none" %}<li id="quickLinksDisqusButton" class="nav-icon"><a id="disqus_id" href="{{disqus_url}}" aria-label="{{disqus_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{disqus_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_github_icon and github_url != "none" %}<li id="quickLinksGithubButton" class="nav-icon"><a id="github_id" href="{{github_url}}" aria-label="{{github_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{github_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_facebook_icon and facebook_url != "none" %}<li id="quickLinksFacebookButton" class="nav-icon"><a id="facebook_id" href="{{facebook_url}}" aria-label="{{facebook_label}}" target="blank"><i class="nav-icon {{icon_family}} {{icon_family}}-{{facebook_icon}} {{icon_size}}"></i></a></li>{% endif %}
+      {% if show_buymeacoffee_icon and buymeacoffee_url != "none" %}<li id="quickLinksBuyMeAcoffeebutton" class="nav-icon"><a id="buymeacoffee_id" href="{{buymeacoffee_url}}" target="blank" aria-label="{{buymeacoffee_label}}"><i class="nav-icon {{icon_family}} {{icon_family}}-{{buymeacoffee_icon}} {{icon_size}}"></i></a></li>{% endif %}
 
       {% comment %} Action buttons
       -------------------------------------------------------------------------- {% endcomment %}

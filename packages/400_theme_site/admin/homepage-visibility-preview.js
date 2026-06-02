@@ -6,6 +6,11 @@
       return false;
     }
 
+    if (window.CMS.registerPreviewStyle && !window.__mkPreviewStyleRegistered) {
+      window.CMS.registerPreviewStyle('/admin/preview-overrides.css');
+      window.__mkPreviewStyleRegistered = true;
+    }
+
     var h = window.h;
 
   var lanes = [

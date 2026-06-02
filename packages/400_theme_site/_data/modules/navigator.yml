@@ -50,6 +50,9 @@ settings:
   #
   nav_quicklinks:
     enabled:                            true
+    shop_icon:                          cart-variant
+    shop_url:                           https://mountkato.com/?keyword=Tickets
+    shop_label:                         Shop
 
   # ----------------------------------------------------------------------------
   # NavTopsearch

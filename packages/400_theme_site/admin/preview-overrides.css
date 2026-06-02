@@ -1,0 +1,39 @@
+/*
+ * Decap CMS preview pane overrides
+ * Keep preview images responsive and contained to viewport.
+ */
+html,
+body {
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100% !important;
+}
+
+img,
+picture img,
+video,
+canvas,
+svg {
+  height: auto !important;
+  max-height: min(68vh, 760px);
+  object-fit: contain;
+}
+
+/*
+ * Safety net for legacy/default page preview rendering.
+ * Backstretch keeps multiple IMG layers; show only the top one in CMS preview.
+ */
+.backstretch img {
+  display: none !important;
+}
+
+.backstretch img:last-child {
+  display: block !important;
+}

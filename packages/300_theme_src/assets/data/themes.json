@@ -55,8 +55,8 @@ exclude_from_search:                    true
   [
     {"name": "UnoLight",    "css": "{{asset_path}}/core/css/themes/unolight/bootstrap.css"},
     {"name": "UnoDark",     "css": "{{asset_path}}/core/css/themes/unodark/bootstrap.css"},
-    {"name": "{{ mk_themes_data.mk_light.name | default: 'MK Light' }}", "css": "{{ mk_themes_data.mk_light.css | default: '/assets/theme/j1/core/css/themes/unolight/bootstrap.css' }}", "primary_color": "{{ mk_themes_data.mk_light.primary_color | default: '' | strip }}", "secondary_color": "{{ mk_themes_data.mk_light.secondary_color | default: '' | strip }}"},
-    {"name": "{{ mk_themes_data.mk_dark.name | default: 'MK Dark' }}", "css": "{{ mk_themes_data.mk_dark.css | default: '/assets/theme/j1/core/css/themes/unodark/bootstrap.css' }}", "primary_color": "{{ mk_themes_data.mk_dark.primary_color | default: mk_themes_data.mk_light.primary_color | default: '' | strip }}", "secondary_color": "{{ mk_themes_data.mk_dark.secondary_color | default: mk_themes_data.mk_light.secondary_color | default: '' | strip }}"},
+    {"name": "{{ mk_themes_data.mk_light.name | default: 'MK Light' }}", "css": "{{ mk_themes_data.mk_light.css | default: '/assets/theme/j1/core/css/themes/unolight/bootstrap.css' }}"},
+    {"name": "{{ mk_themes_data.mk_dark.name | default: 'MK Dark' }}", "css": "{{ mk_themes_data.mk_dark.css | default: '/assets/theme/j1/core/css/themes/unodark/bootstrap.css' }}"},
     {"name": "Bootstrap",   "css": "{{asset_path}}/core/css/themes/bootstrap/bootstrap.css"}
   ]
 }
@@ -66,8 +66,8 @@ exclude_from_search:                    true
   [
     {"name": "UnoLight",    "css": "{{asset_path}}/core/css/themes/unolight/bootstrap.min.css"},
     {"name": "UnoDark",     "css": "{{asset_path}}/core/css/themes/unodark/bootstrap.min.css"},
-    {"name": "{{ mk_themes_data.mk_light.name | default: 'MK Light' }}", "css": "{{ mk_themes_data.mk_light.css | default: '/assets/theme/j1/core/css/themes/unolight/bootstrap.css' }}", "primary_color": "{{ mk_themes_data.mk_light.primary_color | default: '' | strip }}", "secondary_color": "{{ mk_themes_data.mk_light.secondary_color | default: '' | strip }}"},
-    {"name": "{{ mk_themes_data.mk_dark.name | default: 'MK Dark' }}", "css": "{{ mk_themes_data.mk_dark.css | default: '/assets/theme/j1/core/css/themes/unodark/bootstrap.css' }}", "primary_color": "{{ mk_themes_data.mk_dark.primary_color | default: mk_themes_data.mk_light.primary_color | default: '' | strip }}", "secondary_color": "{{ mk_themes_data.mk_dark.secondary_color | default: mk_themes_data.mk_light.secondary_color | default: '' | strip }}"},
+    {"name": "{{ mk_themes_data.mk_light.name | default: 'MK Light' }}", "css": "{{ mk_themes_data.mk_light.css | default: '/assets/theme/j1/core/css/themes/unolight/bootstrap.css' }}"},
+    {"name": "{{ mk_themes_data.mk_dark.name | default: 'MK Dark' }}", "css": "{{ mk_themes_data.mk_dark.css | default: '/assets/theme/j1/core/css/themes/unodark/bootstrap.css' }}"},
     {"name": "Bootstrap",   "css": "{{asset_path}}/core/css/themes/bootstrap/bootstrap.min.css"}
   ]
 }

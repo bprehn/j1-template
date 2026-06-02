@@ -1,0 +1,12 @@
+settings:
+  show_shop_icon: true
+  show_cookieconsent_icon: true
+  show_buymeacoffee_icon: false
+  show_translate_icon: false
+  show_facebook_icon: true
+  show_theme_toggler_icon: true
+  show_github_icon: true
+  show_disqus_icon: false
+  show_home_icon: true
+  show_site_search_icon: true
+  show_speak2me_icon: false

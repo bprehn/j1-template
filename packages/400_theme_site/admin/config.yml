@@ -76,7 +76,7 @@ collections:
         label: Home Lane Visibility
         file: packages/400_theme_site/_data/layouts/home_visibility.yml
         fields:
-          - { label: Header (Attic), name: header, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Home Slider (Attic Header), name: header, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true, hint: "Primary on/off switch for the homepage slider in the attic/header area." }
           - { label: Custom Header, name: custom_header, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Teaser Banner, name: banner_home_teaser, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Divider Banner, name: banner_divider_1, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
@@ -115,6 +115,110 @@ collections:
           - { label: Keywords, name: keywords, widget: text, required: false }
           - { label: Categories, name: categories, widget: list, required: false }
           - { label: Tags, name: tags, widget: list, required: false }
+          - label: Attic Slider (Primary)
+            name: attic
+            widget: object
+            required: true
+            hint: "Primary workflow: 1) Add/edit slides only in this section, 2) click + Add in Slides for each image, 3) Save/Publish, 4) ensure Home Visibility -> Home Slider (Attic Header) is Enable. Ignore Resource Options below unless troubleshooting legacy fallback."
+            fields:
+              - label: Slides
+                name: slides
+                widget: list
+                label_singular: Slide
+                collapsed: false
+                allow_add: true
+                min: 1
+                summary: "{{fields.title}}"
+                hint: "One list item = one slide. Scroll to the end of this section and click Add Slide to add another image."
+                default:
+                  - url: /assets/image/module/attic/1920x1280/j1-launch.jpg
+                    alt: Homepage hero image
+                    title: Mount Kato
+                    tagline: Welcome to the mountain
+                fields:
+                  - { label: Image, name: url, widget: image, required: true, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/home-slider. Recommended image size: 1920 x 1280" }
+                  - { label: Image Alt, name: alt, widget: string, required: false }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Tagline, name: tagline, widget: string, required: false }
+                  - label: Photo Credit
+                    name: badge
+                    widget: object
+                    required: false
+                    collapsed: true
+                    hint: "Used for photographer credit badge; add author and external link."
+                    fields:
+                      - { label: Type, name: type, widget: select, required: false, options: [{ label: Unsplash, value: unsplash }], default: unsplash }
+                      - { label: Photographer Name, name: author, widget: string, required: false }
+                      - label: Photographer Link
+                        name: href
+                        widget: string
+                        required: false
+                        hint: "External URL to photographer profile (must start with http:// or https://)"
+                        pattern:
+                          - '^https?://.+'
+                          - "Use a full URL starting with http:// or https://"
+                  - label: Caption
+                    name: caption
+                    widget: object
+                    required: false
+                    collapsed: true
+                    hint: "Optional text caption with optional link."
+                    fields:
+                      - { label: Caption Text, name: text, widget: string, required: false }
+                      - label: Caption Link
+                        name: href
+                        widget: string
+                        required: false
+                        hint: "Optional external or internal link; external links must start with http:// or https://"
+                        pattern:
+                          - '^(https?://.+|/.+)?$'
+                          - "Use either an absolute URL (http/https) or a site-relative path starting with /"
+              - label: Transition Effect
+                name: transition
+                widget: select
+                required: false
+                hint: "Image transition effect used by the J1 attic slider."
+                options:
+                  - { label: Fade, value: fade }
+                  - { label: Push Left, value: pushLeft }
+                  - { label: Push Right, value: pushRight }
+                  - { label: Push Up, value: pushUp }
+                  - { label: Push Down, value: pushDown }
+                  - { label: Cover Left, value: coverLeft }
+                  - { label: Cover Right, value: coverRight }
+                  - { label: Cover Up, value: coverUp }
+                  - { label: Cover Down, value: coverDown }
+                  - { label: Uncover Left, value: uncoverLeft }
+                  - { label: Uncover Right, value: uncoverRight }
+                  - { label: Uncover Up, value: uncoverUp }
+                  - { label: Uncover Down, value: uncoverDown }
+                default: fade
+              - label: Transition Speed (ms)
+                name: transitionDuration
+                widget: number
+                value_type: int
+                required: false
+                min: 200
+                max: 10000
+                step: 100
+                default: 1200
+                hint: "Duration of the transition animation in milliseconds."
+              - label: Slide Display Time (ms)
+                name: duration
+                widget: number
+                value_type: int
+                required: false
+                min: 1000
+                max: 30000
+                step: 250
+                default: 5000
+                hint: "How long each image is shown before changing to the next one."
+              - label: Loop Slider
+                name: loop
+                widget: boolean
+                required: false
+                default: true
+                hint: "Enable continuous looping back to the first slide after the last slide."
           - label: Robots
             name: robots
             widget: object
@@ -127,7 +231,7 @@ collections:
             widget: object
             required: false
             fields:
-              - { label: Path, name: path, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/home-slider" }
+              - { label: Path, name: path, widget: image, required: false, media_library: { config: { multiple: false } }, hint: "Recommended upload path: assets/uploads/home-slider. Recommended image size: 1920 x 1280" }
               - { label: Width, name: width, widget: number, value_type: int, required: false }
               - { label: Height, name: height, widget: number, value_type: int, required: false }
           - { label: TTS, name: tts, widget: boolean, required: false, default: true }
@@ -145,13 +249,13 @@ collections:
             required: false
             default: [scroller]
             field: { label: Resource, name: resource, widget: string }
-          - label: Resource Options
+          - label: Resource Options (Legacy Fallback - Read Only)
             name: resource_options
             widget: list
             required: true
             min: 1
             max: 1
-            hint: "Configure attic slides for the homepage header slider."
+            hint: "Read-only fallback for older runtime compatibility. Do not edit slider content here; always use Attic Slider (Primary)."
             default:
               - attic:
                   slides:
@@ -164,11 +268,61 @@ collections:
                 name: attic
                 widget: object
                 fields:
+                  - label: Transition Effect
+                    name: transition
+                    widget: select
+                    required: false
+                    hint: "Image transition effect used by the J1 attic slider."
+                    options:
+                      - { label: Fade, value: fade }
+                      - { label: Push Left, value: pushLeft }
+                      - { label: Push Right, value: pushRight }
+                      - { label: Push Up, value: pushUp }
+                      - { label: Push Down, value: pushDown }
+                      - { label: Cover Left, value: coverLeft }
+                      - { label: Cover Right, value: coverRight }
+                      - { label: Cover Up, value: coverUp }
+                      - { label: Cover Down, value: coverDown }
+                      - { label: Uncover Left, value: uncoverLeft }
+                      - { label: Uncover Right, value: uncoverRight }
+                      - { label: Uncover Up, value: uncoverUp }
+                      - { label: Uncover Down, value: uncoverDown }
+                    default: fade
+                  - label: Transition Speed (ms)
+                    name: transitionDuration
+                    widget: number
+                    value_type: int
+                    required: false
+                    min: 200
+                    max: 10000
+                    step: 100
+                    default: 1200
+                    hint: "Duration of the transition animation in milliseconds."
+                  - label: Slide Display Time (ms)
+                    name: duration
+                    widget: number
+                    value_type: int
+                    required: false
+                    min: 1000
+                    max: 30000
+                    step: 250
+                    default: 5000
+                    hint: "How long each image is shown before changing to the next one."
+                  - label: Loop Slider
+                    name: loop
+                    widget: boolean
+                    required: false
+                    default: true
+                    hint: "Enable continuous looping back to the first slide after the last slide."
                   - label: Slides
                     name: slides
                     widget: list
+                    label_singular: Slide
+                    collapsed: false
+                    allow_add: true
+                    min: 1
                     summary: "{{fields.title}}"
-                    hint: "Add slide image, title, tagline, and optional photo credit/link."
+                    hint: "Add one item per image. You can add multiple images, each with title, tagline, photo credit, and links."
                     default:
                       - url: /assets/image/module/attic/1920x1280/j1-launch.jpg
                         alt: Homepage hero image
@@ -270,3 +424,52 @@ collections:
       - { label: Description, name: description, widget: text, required: false }
       - { label: Tags, name: tags, widget: list, required: false }
       - { label: Body, name: body, widget: text }
+
+  - name: quicklinks_visibility
+    label: Header Quicklinks Visibility
+    label_singular: Header Quicklinks Visibility
+    delete: false
+    files:
+      - name: quicklinks_visibility_profile
+        label: Quicklinks Visibility
+        file: packages/400_theme_site/_data/modules/quicklinks_visibility.yml
+        fields:
+          - label: Visibility Settings
+            name: settings
+            widget: object
+            hint: "Enable or disable each header quicklink icon. Changes apply after Save/Publish and site rebuild."
+            fields:
+              - { label: Primary · Show Home Icon, name: show_home_icon, widget: boolean, default: true, hint: "Main home quicklink." }
+              - { label: Primary · Show Shop Icon, name: show_shop_icon, widget: boolean, default: true, hint: "Shopping/tickets quicklink." }
+              - { label: Social · Show Disqus Icon, name: show_disqus_icon, widget: boolean, default: true }
+              - { label: Social · Show GitHub Icon, name: show_github_icon, widget: boolean, default: true }
+              - { label: Social · Show Facebook Icon, name: show_facebook_icon, widget: boolean, default: true }
+              - { label: Social · Show Buy Me a Coffee Icon, name: show_buymeacoffee_icon, widget: boolean, default: true }
+              - { label: Utility · Show Site Search Icon, name: show_site_search_icon, widget: boolean, default: true, hint: "Requires Lunr search to be enabled." }
+              - { label: Utility · Show Cookie Consent Icon, name: show_cookieconsent_icon, widget: boolean, default: true, hint: "Requires cookie consent module + cookie icon setting enabled." }
+              - { label: Utility · Show Translate Icon, name: show_translate_icon, widget: boolean, default: true, hint: "Requires translator module enabled." }
+              - { label: Utility · Show Speak2Me Icon, name: show_speak2me_icon, widget: boolean, default: true, hint: "Requires Speak2Me module enabled." }
+              - { label: Utility · Show Theme Toggler Icon, name: show_theme_toggler_icon, widget: boolean, default: true, hint: "Requires theme toggler module enabled." }
+
+  - name: nav_menu_visibility
+    label: Header Navigation Visibility
+    label_singular: Header Navigation Visibility
+    delete: false
+    files:
+      - name: nav_menu_visibility_profile
+        label: Navigation Menu Visibility
+        file: packages/400_theme_site/_data/modules/nav_menu_visibility.yml
+        fields:
+          - label: Visibility Settings
+            name: settings
+            widget: object
+            hint: "Enable or disable each top-level header menu item. Changes apply after Save/Publish and site rebuild."
+            fields:
+              - { label: Show Tour Menu, name: show_tour_menu, widget: boolean, default: true }
+              - { label: Show Learn Menu, name: show_learn_menu, widget: boolean, default: true }
+              - { label: Show Blog Menu, name: show_blog_menu, widget: boolean, default: true }
+              - { label: Show Manual Menu, name: show_manual_menu, widget: boolean, default: true }
+              - { label: Show Chat Menu, name: show_chat_menu, widget: boolean, default: true }
+              - { label: Show Online Menu, name: show_online_menu, widget: boolean, default: true }
+              - { label: Show Theme Menu, name: show_theme_menu, widget: boolean, default: true }
+              - { label: Show About Menu, name: show_about_menu, widget: boolean, default: true }

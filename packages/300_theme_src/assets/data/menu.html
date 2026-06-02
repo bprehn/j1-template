@@ -43,6 +43,7 @@ exclude_from_search:                    true
 {% assign navigator_settings    = modules.navigator.settings %}
 {% assign navigator_defaults    = modules.defaults.navigator.defaults %}
 {% assign navigator_menu_config = modules.navigator_menu %}
+{% assign nav_menu_visibility   = modules.nav_menu_visibility.settings %}
 
 {% assign themes_defaults       = modules.defaults.themes.defaults %}
 {% assign themes_settings       = modules.themes.settings %}
@@ -171,6 +172,17 @@ See: https://stackoverflow.com/questions/39935447/is-there-any-way-to-exclude-ma
     {% endif %}
 
     {% for menu in navigator_menu_config %}
+
+    {% comment %} Resolve per-top-level menu visibility from CMS config
+    ---------------------------------------------------------------------------- {% endcomment %}
+    {% assign menu_item_slug = menu.item | downcase | replace: ' ', '_' %}
+    {% assign menu_item_key = 'show_' | append: menu_item_slug | append: '_menu' %}
+    {% assign show_menu_item = nav_menu_visibility[menu_item_key] %}
+    {% if show_menu_item == nil %}
+      {% assign show_menu_item = true %}
+    {% endif %}
+
+    {% if show_menu_item %}
 
     {% comment %} Identify the menu (item) type
     ---------------------------------------------------------------------------- {% endcomment %}
@@ -479,6 +491,8 @@ See: https://stackoverflow.com/questions/39935447/is-there-any-way-to-exclude-ma
         {% assign menu_type = '' %}
 
     {% endcase %}
+
+    {% endif %}
 
   {% endfor %}
   <!-- [INFO   ] [~/assets/data/menu.html         ][nav_menu_settings: end menu] -->

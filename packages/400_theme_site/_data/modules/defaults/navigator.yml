@@ -183,6 +183,10 @@ defaults:
     home_url:                           /                                       # URL|none (disables the home button)
     home_label:                         Home
 
+    shop_icon:                          cart-variant
+    shop_url:                           none
+    shop_label:                         Shop
+
     disqus_icon:                        disqus
     disqus_url:                         none
     disqus_label:                       Disqus

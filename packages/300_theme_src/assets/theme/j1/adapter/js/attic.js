@@ -391,13 +391,24 @@ j1.adapter.attic = ((j1, window) => {
               } else if (typeof instance.images[index].badge != 'undefined') {
 
                 if (bType === 'unsplash') {
+                  var hasAuthor = (typeof bAuthor === 'string' && bAuthor.trim() !== '');
+                  var hasLink = (typeof bLink === 'string' && bLink.trim() !== '');
+                  var badgeAuthorText = hasAuthor ? bAuthor : 'Add photo credit';
+                  var badgeHref = hasLink
+                    ? bLink + '?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge'
+                    : '';
+                  var badgeTitle = hasAuthor
+                    ? 'Free high-resolution photos from ' + badgeAuthorText
+                    : 'Add photographer name and link in CMS';
+                  var badgeRel = 'noopener noreferrer';
+                  var badgeTarget = '_blank';
+                  var badgeOpenTag = hasLink
+                    ? '<a class="attic__badge_unsplash link-no-decoration" href="' + badgeHref + '" target="' + badgeTarget + '" rel="' + badgeRel + '" title="' + badgeTitle + '" aria-label="' + badgeTitle + '">'
+                    : '<span class="attic__badge_unsplash link-no-decoration" title="' + badgeTitle + '" aria-label="' + badgeTitle + '">';
+                  var badgeCloseTag = hasLink ? '</a>' : '</span>';
                   var badgeHTML = ''
                       + '<div class="attic__badge animate__animated animate__fadeIn animate__slower">'
-                      + ' <a class="attic__badge_unsplash link-no-decoration"'
-                      + '  href="' +bLink+ '?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"'
-                      + '  target="_blank"'
-                      + '  rel="noopener noreferrer"'
-                      + '  title="Free high-resolution photos from ' +bAuthor+ '">'
+                      + ' ' + badgeOpenTag
                       + '  <span class="attic__badge_unsplash_icon">'
                       + '    <svg xmlns="http://www.w3.org/2000/svg"'
                       + '	   class="attic__badge_unsplash_icon-size"'
@@ -405,8 +416,8 @@ j1.adapter.attic = ((j1, window) => {
                       + '      <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>'
                       + '    </svg>'
                       + '  </span>'
-                      + '  <span class="attic__badge_unsplash_text">' +bAuthor+ '</span>'
-                      + ' </a>'
+                      + '  <span class="attic__badge_unsplash_text">' + badgeAuthorText + '</span>'
+                      + ' ' + badgeCloseTag
                       + '</div>';
                       $('.attic-caption').html(badgeHTML).hide();
                 }

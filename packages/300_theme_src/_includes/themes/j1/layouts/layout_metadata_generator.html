@@ -219,49 +219,14 @@
 
 {{translation}}
 
-{% assign site_background_image = mk_brand_data.site_background_image | default: '/assets/uploads/branding/site-background.svg' %}
-{% assign wrapper_background_home_only = mk_brand_data.wrapper_background_home_only | default: false %}
-{% assign wrapper_background_fixed_mobile = mk_brand_data.wrapper_background_fixed_mobile | default: false %}
-
-{% if wrapper_background_home_only == 'true' %}
-  {% assign wrapper_background_home_only = true %}
-{% elsif wrapper_background_home_only == 'false' %}
-  {% assign wrapper_background_home_only = false %}
-{% endif %}
-
-{% if wrapper_background_fixed_mobile == 'true' %}
-  {% assign wrapper_background_fixed_mobile = true %}
-{% elsif wrapper_background_fixed_mobile == 'false' %}
-  {% assign wrapper_background_fixed_mobile = false %}
-{% endif %}
-
-{% assign apply_wrapper_background = true %}
-{% if wrapper_background_home_only and page.layout != 'home' %}
-  {% assign apply_wrapper_background = false %}
-{% endif %}
-
-{% if site_background_image != '' and apply_wrapper_background %}
+{% if mk_brand_data.site_background_image and mk_brand_data.site_background_image != '' %}
 <style>
   #wrapper-inner {
-    background-image: url('{{ site_background_image }}');
+    background-image: url('{{ mk_brand_data.site_background_image }}');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-size: cover;
-  }
-
-  {% unless wrapper_background_fixed_mobile %}
-  @media (max-width: 991.98px) {
-    #wrapper-inner {
-      background-attachment: scroll;
-    }
-  }
-  {% endunless %}
-
-  @media (prefers-reduced-motion: reduce) {
-    #wrapper-inner {
-      background-attachment: scroll;
-    }
   }
 </style>
 {% endif %}

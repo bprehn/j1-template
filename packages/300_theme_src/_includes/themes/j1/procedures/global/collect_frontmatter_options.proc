@@ -57,3 +57,12 @@
     {% endif %}
   {% endfor %}
 {% endfor %}
+
+{% comment %}
+  Prefer a top-level `attic` object for scroller module settings when present.
+  This keeps slider editing clear in CMS while preserving legacy
+  `resource_options` compatibility as fallback.
+{% endcomment %}
+{% if module == 'attic' and page.attic %}
+  {% assign frontmatter_options = {{page.attic | replace:'=>',':'}} %}
+{% endif %}
