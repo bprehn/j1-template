@@ -525,6 +525,17 @@ cd /Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean
 GIT_REPO_DIRECTORY=/Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean npx decap-server
 ```
 
+### CMS image path convention (recommended)
+
+Uploads are stored in `packages/400_theme_site/assets/uploads` and published
+under `/assets/uploads`.
+
+Use an explicit path in AsciiDoc pages:
+
+``` sh
+image::/assets/uploads/<your-image-file>[]
+```
+
 ### Useful git checks
 
 ``` sh

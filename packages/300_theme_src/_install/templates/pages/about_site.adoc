@@ -40,12 +40,13 @@ resource_options:
 // =============================================================================
 // Enable the Liquid Preprocessor
 :page-liquid:
-// Use CMS upload folder as default base path for image::filename[] macros
-:imagesdir:                             /assets/uploads
 
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
+// CMS image usage (recommended):
+// image::/assets/uploads/<your-image-file>[
+// ]
 
 // Attribute settings for section control
 //

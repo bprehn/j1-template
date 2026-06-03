@@ -87,7 +87,7 @@ Nestled in the scenic Minnesota River Valley, Mount Kato Ski Area welcomes winte
 == Ski, Snowboard, Tube… Just South of Mankato!
 Escape the city and hit the slopes at Mount Kato, your convenient winter destination just outside Mankato. Our 19 diverse runs, combined with 8 chairlifts and 2 conveyor lifts, mean shorter wait times and more time enjoying the snow. Whether you're carving turns, catching air in the terrain parks, or zooming down the tubing lanes, Mount Kato promises winter fun for everyone. We offer lessons, rentals, and all the amenities you need for an unforgettable day on the slopes.
 
-image::mk-loc-map.jpg[]
+image::/assets/uploads/mk-loc-map.jpg[]
 
 [role="mt-5"]
 
