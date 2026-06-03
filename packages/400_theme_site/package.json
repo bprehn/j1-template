@@ -122,6 +122,7 @@
     "jekyll_build:build": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b --profile -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental",
 
     "develop": "run-p -s develop:*",
+    "develop:decap": "cross-env GIT_REPO_DIRECTORY=$(cd ../.. && pwd) npx decap-server",
     "develop:wds": "cd ../200_theme_js && cross-var cross-env WP_JEKYLL_PORT=$npm_package_jekyll_opt_wp_jekyll_port webpack serve --config $npm_package_wds_develop",
     "develop:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll s -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_skip_initial_build $npm_package_jekyll_opt_incremental 2>jekyll.log",
     "serve:incremental": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll s -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_skip_initial_build $npm_package_jekyll_opt_incremental 2>jekyll.log",
