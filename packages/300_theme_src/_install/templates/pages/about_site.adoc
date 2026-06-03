@@ -40,6 +40,8 @@ resource_options:
 // =============================================================================
 // Enable the Liquid Preprocessor
 :page-liquid:
+// Use CMS upload folder as default base path for image::filename[] macros
+:imagesdir:                             /assets/uploads
 
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
