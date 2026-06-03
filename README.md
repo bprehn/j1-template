@@ -467,6 +467,81 @@ and `build` process to manage an initial setup for the (Lerna) Monorepo.
 
 ## Running the Starter Web
 
+## Quick Command Reference
+
+Use this section as a copy/paste cheat sheet for the most common development
+commands.
+
+### Run from project root
+
+``` sh
+cd /Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean
+```
+
+### Initial setup
+
+``` sh
+yarn setup
+```
+
+### Start full development stack (webpack + jekyll serve)
+
+``` sh
+yarn site
+```
+
+### Fast incremental rebuilds
+
+First run may still be slower, but follow-up runs are usually much faster.
+
+``` sh
+npm run build:incremental
+```
+
+### Incremental serve mode only
+
+``` sh
+npm run site:incremental
+```
+
+### Full clean build timing (no profile table)
+
+``` sh
+cd packages/400_theme_site
+/usr/bin/time -l bundle exec jekyll build --config _config.yml
+```
+
+### Full profiled build timing (phase + file stats)
+
+``` sh
+cd packages/400_theme_site
+/usr/bin/time -l bundle exec jekyll build --config _config.yml --profile
+```
+
+### Start Decap CMS local backend
+
+``` sh
+cd /Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean
+GIT_REPO_DIRECTORY=/Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean npx decap-server
+```
+
+### Useful git checks
+
+``` sh
+git status --short
+git log --oneline -n 5
+```
+
+### When to use which command
+
+* First-time setup on a new machine: `yarn setup`
+* Daily full development workflow (webpack + jekyll watch): `yarn site`
+* Fast rebuild after content/template edits: `npm run build:incremental`
+* Keep only incremental jekyll server running: `npm run site:incremental`
+* Measure overall full build wall-clock time: `/usr/bin/time -l bundle exec jekyll build --config _config.yml`
+* Diagnose slow build phases/files: `/usr/bin/time -l bundle exec jekyll build --config _config.yml --profile`
+* Work on admin content locally with Decap: `GIT_REPO_DIRECTORY=/Users/bruceprehn/MyLocal/jekyll-one/j1-template-clean npx decap-server`
+
 Running the buildin **Starter Web** for development is done like so:
 
 ``` sh
