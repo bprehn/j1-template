@@ -35,6 +35,20 @@
 {% for lane in items %}
   {% for items in lane %}
 
+    {% comment %} Reset per-lane variables to avoid leaking values between lanes
+    -------------------------------------------------------------------------- {% endcomment %}
+    {% assign enabled = false %}
+    {% assign region = nil %}
+    {% assign comment = nil %}
+    {% assign type = nil %}
+    {% assign base = nil %}
+    {% assign path = nil %}
+    {% assign file = nil %}
+    {% assign id = nil %}
+    {% assign visibility_key = nil %}
+    {% assign class = nil %}
+    {% assign data = nil %}
+
     {% for parameters in items %}
       {% for parameter in parameters %}
         {% if parameter[0] %}
