@@ -143,7 +143,7 @@
     "link-default:sass": "shx ln -s ../100_theme_css/scss ./_sass",
     "link-default:install_files": "shx ln -s ../300_theme_src/_install ./_install",
     "link-osx:link-type": "echo use symlinks for MacOS",
-    "link-osx:apps": "shx ln -s ../300_theme_src/assets/app ./apps",
+    "link-osx:apps": "shx ln -s ../300_theme_src/assets/data/apps ./apps",
     "link-osx:assets": "shx ln -s ../300_theme_src/assets ./assets",
     "link-osx:includes": "shx ln -s ../300_theme_src/_includes ./_includes",
     "link-osx:layouts": "shx ln -s ../300_theme_src/_layouts ./_layouts",

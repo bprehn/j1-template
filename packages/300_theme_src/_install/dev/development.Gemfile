@@ -87,7 +87,7 @@ end
 # NOTE: The GEM will no longer be part of the default gems starting
 # from Ruby 3.4.0
 #
-install_if -> { RUBY_VERSION =~ /3.3/ } do
+install_if -> { RUBY_VERSION =~ /3\.[34]/ } do
    gem 'csv', '~> 3.0'
 end
 

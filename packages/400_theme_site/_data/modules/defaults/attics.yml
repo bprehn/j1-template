@@ -110,8 +110,8 @@ defaults:
   # currently NOT supported
   #
   logo_enabled:                         false
-  logo_url:                             /assets/image/module/icon/j1/j1-512x512.png
-  logo_alt:                             Jekyll-One-Template
+  logo_url:                             /assets/image/module/icon/mk/mk-512x512.png
+  logo_alt:                             Mount Kato
   logo_height:                          196
   logo_animate:                         animate__slideInDown
 

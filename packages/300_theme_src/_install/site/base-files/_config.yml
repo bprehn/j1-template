@@ -247,15 +247,15 @@ robots:
 # BRAND configuration
 # Set the brand image and favicon (located in /asset/images)
 brand:
-  image:                                icon/j1/j1-512x512.png
+  image:                                icon/mk/mk-512x512.png
   image_height:                         48px
-  text:                                 Jekyll One
+  text:                                 Mount Kato
   text_color:                           "#9E9E9E"
 
 # Set the favicon and type
 #
 favicon:
-  image:                                icon/j1/favicon.ico
+  image:                                icon/mk/favicon.ico
   type:                                 image/ico
 
 
