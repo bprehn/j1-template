@@ -3,9 +3,9 @@ settings:
   show_cookieconsent_icon: true
   show_buymeacoffee_icon: false
   show_translate_icon: false
-  show_facebook_icon: true
+  show_facebook_icon: false
   show_theme_toggler_icon: true
-  show_github_icon: true
+  show_github_icon: false
   show_disqus_icon: false
   show_home_icon: true
   show_site_search_icon: true
