@@ -30,5 +30,22 @@
       "error",
       "always"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "js/api/**/*.js"
+      ],
+      "rules": {
+        "no-prototype-builtins": "off",
+        "no-constant-condition": "off",
+        "no-empty": "off",
+        "no-cond-assign": "off",
+        "no-unused-vars": "warn",
+        "no-undef": "off",
+        "no-mixed-spaces-and-tabs": "off",
+        "semi": "warn"
+      }
+    }
+  ]
 }
