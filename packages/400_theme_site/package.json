@@ -71,12 +71,9 @@
     "app:rackup": "cross-var cross-env INTERFACE=$npm_package_jekyll_opt_interface PORT=$npm_package_jekyll_opt_app_port bundle exec puma -C _data/puma/config.rb",
     "_app:jekyll-build": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental --watch",
     "app:open": "npm run delay-3s && cross-var open-cli --background $npm_package_jekyll_opt_app_url",
-
     "audit": "npm audit",
-
     "algolia": "cross-env ALGOLIA_API_KEY=$npm_package_algolia_admin_key bundle exec jekyll algolia",
     "algolia-check": "cross-env ALGOLIA_API_KEY=$npm_package_algolia_admin_key bundle exec jekyll algolia --dry-run --verbose",
-
     "clean": "run-p -s clean:*",
     "clean-starter": "run-p -s clean:*",
     "clean:jekyll-conf": "shx rm -f _config* Gemfile* .jekyll-metadata",
@@ -86,7 +83,6 @@
     "clean:jekyll-links": "shx rm -rf _includes _layouts _plugins _install apps assets",
     "clean:jekyll-folders": "shx rm -f _sass",
     "clean:jekyll-folders-forced": "shx rm -rf _logs/* .jekyll-cache",
-
     "bundle": "run-s -s bundler:*",
     "bundler:info": "echo create bundle ..",
     "bundler:clean": "shx rm -f Gemfile.lock",
@@ -97,41 +93,33 @@
     "bundle_user:info": "echo bundle ruby gem using user path ..",
     "bundle_user:set-path": "bundle config set --local path ~/.gem",
     "bundle_user:bundle": "bundle install",
-
     "build": "run-s -s jekyll_build:*",
     "build:incremental": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental",
-
     "lint": "run-s -s lint:*",
     "lint:cp-es-lint-conf": "shx rm -f _site/assets/theme/j1/adapter/js/.eslintrc.json && shx cp .eslintrc.json _site/assets/theme/j1/adapter/js",
     "lint:adapter_js": "eslint --color _site/assets/theme/j1/adapter/js/*.js",
-
     "rebuild": "run-s -s rebuild:*",
     "rebuild:clean": "bundle exec jekyll clean",
     "rebuild:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b --profile -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental",
     "rebuild:lint": "npm run lint",
     "rebuild:tip": "shx echo && echo run \"yarn site\" to open the web.",
-
     "jekyll_files": "run-s -s jekyll_files:*",
     "jekyll_files:gemfile": "shx cp -f ../300_theme_src/_install/dev/development.Gemfile ./Gemfile",
     "jekyll_files:conf": "shx cp -f ../300_theme_src/_install/dev/base-files/_config.yml ./_config.yml",
     "jekyll_files:j1-conf": "shx cp -f ../300_theme_src/_install/dev/config/j1_config.yml ./_data",
     "jekyll_files:private-config": "shx cp -f ../300_theme_src/_install/dev/config/private.default.yml ./_data/private.yml",
     "jekyll_files:eslintfile": "shx cp -f ../300_theme_src/_install/dev/adapter.eslintrc.json ./.eslintrc.json",
-
     "jekyll_build:bundle": "cross-env BUNDLE_USERIZE=$npm_package_jekyll_userize npm run bundle",
     "jekyll_build:build": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll b --profile -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_incremental",
-
     "develop": "run-p -s develop:*",
     "develop:decap": "cross-env GIT_REPO_DIRECTORY=$(cd ../.. && pwd) npx decap-server",
-    "develop:wds": "cd ../200_theme_js && cross-var cross-env WP_JEKYLL_PORT=$npm_package_jekyll_opt_wp_jekyll_port webpack serve --config $npm_package_wds_develop",
-    "develop:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll s -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_skip_initial_build $npm_package_jekyll_opt_incremental 2>jekyll.log",
+    "develop:wds": "cd ../200_theme_js && cross-var cross-env WP_JEKYLL_PORT=$npm_package_config_jekyll_wp_port webpack serve --config wp4_configs/webpack.develop.js",
+    "develop:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_config_ruby_gemfile bundle exec jekyll s -c $npm_package_config_jekyll_config_file $npm_package_config_jekyll_option_initial_build $npm_package_config_jekyll_option_incremental 2>jekyll.log",
     "serve:incremental": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll s -c $npm_package_jekyll_configfile $npm_package_jekyll_opt_skip_initial_build $npm_package_jekyll_opt_incremental 2>jekyll.log",
-
     "delay-1s": "node ./node_modules/npm-delay 1000",
     "delay-2s": "node ./node_modules/npm-delay 2000",
     "delay-3s": "node ./node_modules/npm-delay 3000",
     "delay-5s": "node ./node_modules/npm-delay 5000",
-
     "setup-links": "cross-var if-env OS=Windows_NT && run-s -s link-default || cross-env OS=$(echo $(getos)) run-s -s switch-links",
     "switch-links": "if-env OS=darwin && run-s -s link-osx || run-s -s link-default",
     "link-default": "run-p -s link-default:*",
@@ -151,7 +139,6 @@
     "link-osx:sass": "shx ln -s ../100_theme_css/scss ./_sass",
     "link-osx:templates": "shx ln -s ../300_theme_src/_install ./_install",
     "remove-links": "shx rm -rf _includes _layouts _plugins _install apps assets",
-
     "get_version": "run-p -s get_version:*",
     "get_version:jekyll": "cross-var cross-env JEKYLL_ENV=$npm_package_config_mode BUNDLE_GEMFILE=$npm_package_ruby_gemfile bundle exec jekyll --version"
   },
