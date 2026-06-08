@@ -92,6 +92,7 @@ collections:
           - { label: Custom Content (Template Accordion), name: custom_content_template_accordion, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Custom Content (People Panel), name: custom_content_people_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Custom Content (Collection Panel), name: custom_content_collection_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
+          - { label: Custom Content (MK Trail Map Lite), name: custom_content_mk_trail_map_lite, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
 
   - name: homepage_slider
     label: Homepage Slider
