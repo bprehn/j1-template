@@ -1,268 +1,158 @@
-# ------------------------------------------------------------------------------
-# ~/_data/blocks/footer.yml
-# User configuration settings for site-wide footer
-#
-# Product/Info:
-# https://jekyll.one
-#
-# Copyright (C) 2023-2026 Juergen Adams
-#
-# J1 Template is licensed under the MIT License.
-# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE
-#
-# ------------------------------------------------------------------------------
-# NOTE: All footer id's has to be prefixed by 'footer_'
-#
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-# Description
-#
 description:
-
-  title:                                Footer
-  scope:                                User settings
-  location:                             _data/blocks/footer.yml
-
-# ------------------------------------------------------------------------------
-# SETTINGS
-#
+  title: Footer
+  scope: User settings
+  location: _data/blocks/footer.yml
 settings:
-  enabled:                              true
-
-  # ----------------------------------------------------------------------------
-  # FOOTER settings
-  #
-  active_footer:                        footer_uno
-
-  # ----------------------------------------------------------------------------
-  # FOOTER properties
-  #
+  enabled: true
+  active_footer: footer_uno
   footers:
-
-    # --------------------------------------------------------------------------
-    # Footer UNO
-    #
-    - name:                             Footer UNO
+    - name: Footer UNO
       footer:
-        enabled:                        true
-
-        id:                             footer_uno
-        comment:                        Footer UNO EN-EN
-        properties:                     mt-7
-
-        # ----------------------------------------------------------------------
-        # ISSUE settings
-        #
+        enabled: true
+        id: footer_uno
+        comment: Footer UNO EN-EN
+        properties: mt-7
         issue:
-          enabled:                      true
-          date:                         site.time
+          enabled: true
+          date: site.time
           en:
-            date_format:                "%A, %-d %B %Y"
-            text:                       Last modified
+            date_format: "%A, %-d %B %Y"
+            text: Last modified
           de:
-            date_format:                "%A, %-d %B %Y"
-            text:                       Letzte Änderung
-
-        # ----------------------------------------------------------------------
-        # ICON settings
-        #
+            date_format: "%A, %-d %B %Y"
+            text: Letzte Änderung
         icons:
           github:
-            enabled:                    true
-            href:                       //github.com/jekyll-one/j1-starter
+            enabled: false
+            href: //github.com/jekyll-one-org/j1-template
           facebook:
-            enabled:                    false
-            href:                       "#"
-#           href:                       //www.facebook.com/<your_profile>/
+            enabled: false
+            href: "#"
           twitter:
-            enabled:                    false
-            href:                       "#"
-#           href:                       //twitter.com/<your_profile>/
+            enabled: false
+            href: "#"
           twitter_x:
-            enabled:                    false
-            href:                       "#"
-#           href:                       //twitter.com/<your_profile>/
-
+            enabled: false
+            href: "#"
           xing:
-            enabled:                    false
-            href:                       "#"
-#           href:                       //www.xing.com/profile/<your_profile>/
+            enabled: false
+            href: "#"
           linkedin:
-            enabled:                    false
-            href:                       "#"
-#           href:                       //www.linkedin.com/in/<your_profile>/
-
-        # ----------------------------------------------------------------------
-        # LEGAL settings
-        #
+            enabled: false
+            href: "#"
         legals:
-
-          - name:                       Copyright
+          - name: Copyright
             legal:
-              enabled:                  true
-
-              type:                     copyright
-              statement:                © 2023 - 2026 J1 · All rights reserved
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/copyright/
-
-          - name:                       Impress
+              enabled: true
+              type: copyright
+              statement: © 2023 - 2026 Mount Kato · All rights reserved
+              translate_statement: notranslate
+              href: /pages/public/legal/en/copyright/
+          - name: Impress
             legal:
-              enabled:                  false
-
-              type:                     impress
-              statement:                Impress
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/impress/
-
-          - name:                       Privacy
+              enabled: false
+              type: impress
+              statement: Impress
+              translate_statement: notranslate
+              href: /pages/public/legal/en/impress/
+          - name: Privacy
             legal:
-              enabled:                  true
-
-              type:                     privacy
-              statement:                Privacy
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/privacy/
-
-          - name:                       Comments
+              enabled: true
+              type: privacy
+              statement: Privacy
+              translate_statement: notranslate
+              href: /pages/public/legal/en/privacy/
+          - name: Comments
             legal:
-              enabled:                  false
-
-              type:                     comments
-              statement:                Comments
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/comment_policy/
-
-          - name:                       License
+              enabled: false
+              type: comments
+              statement: Comments
+              translate_statement: notranslate
+              href: /pages/public/legal/en/comment_policy/
+          - name: License
             legal:
-              enabled:                  false
-
-              type:                     license
-              statement:                License
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/license_agreement/
-
-          - name:                       Terms Of Use
+              enabled: false
+              type: license
+              statement: License
+              translate_statement: notranslate
+              href: /pages/public/legal/en/license_agreement/
+          - name: Terms Of Use
             legal:
-              enabled:                  false
-
-              type:                     terms
-              statement:                Terms Of Use
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/terms_of_use/
-
-          - name:                       Support
+              enabled: false
+              type: terms
+              statement: Terms Of Use
+              translate_statement: notranslate
+              href: /pages/public/legal/en/terms_of_use/
+          - name: Support
             legal:
-              enabled:                  false
-
-              type:                     support
-              statement:                Support
-              translate_statement:      notranslate                             # translate|notranslate
-              href:                     /pages/public/legal/en/terms_of_use/
-
-        # ----------------------------------------------------------------------
-        # BOXES
-        #
+              enabled: false
+              type: support
+              statement: Support
+              translate_statement: notranslate
+              href: /pages/public/legal/en/terms_of_use/
         boxes:
-
-          # --------------------------------------------------------------------
-          # ABOUT box
-          #
-          - name:                       About
-            type:                       about
-            enabled:                    true
-
-            title:                      J1 Template
-            title_translation:          notranslate
-            tagline:                    free bootstrap V5 theme for jekyll
+          - name: About
+            type: about
+            enabled: true
+            title: Mount Kato
+            title_translation: notranslate
+            tagline: Ski | Ride | Tube
             text: >
-                                        J1 Template is a complete theme for Jekyll. It helps you
-                                        build modern, responsive websites with Bootstrap V5. The
-                                        theme is clean and ready to use, so you can start a new
-                                        project of any kind right away.
-                                        <br><br>
-                                        Jekyll One is open-source and free for personal and
-                                        business use.
-
-            justify:                    false
-
-          # --------------------------------------------------------------------
-          # NEWS box
-          #
-          - name:                       News
-            type:                       news
-            enabled:                    true
-
-            title:                      Blog
-            title_translation:          notranslate                             # translate|notranslate
-            tagline:                    latest news
-            category:                   featured
-            max_posts:                  3
-
-          # --------------------------------------------------------------------
-          # LINKS box
-          #
-          - name:                       Links
-            type:                       references
-            enabled:                    true
-
-            title:                      Links
-            title_translation:          notranslate
-            tagline:                    top sites
-
+              Enjoy skiing, snowboarding, tubing, and Summer mountain biking in
+              the scenic Minnesota River Valley, just a mile south of Mankato. 
+            justify: false
+          - name: News
+            type: news
+            enabled: true
+            title: Mountain News
+            title_translation: notranslate
+            tagline: latest updates
+            category: featured
+            max_posts: 3
+          - name: Links
+            type: references
+            enabled: true
+            title: Mountain Links
+            title_translation: notranslate
+            tagline: quick access
             links:
-
-              - name:                   Jekyll Home
+              - name: Mountain Info
                 link:
-                  title:                Jekyll Home
-                  title_translation:    notranslate
-                  tagline:              Latest Jekyll news
-                  href:                 https://jekyllrb.com/
-
-              - name:                   Jekyll Tips
+                  title: Mountain Info
+                  title_translation: notranslate
+                  tagline: Hours, operations, and overview
+                  href: /pages/public/mountain/about/
+              - name: News Navigator
                 link:
-                  title:                Jekyll Tips
-                  title_translation:    notranslate
-                  tagline:              Learn from experts
-                  href:                 https://jekyll.tips/
-
-              - name:                   Stackoverflow
+                  title: News Navigator
+                  title_translation: notranslate
+                  tagline: Browse recent site updates
+                  href: /pages/public/blog/navigator/
+              - name: Contact & Legal
                 link:
-                  title:                Stackoverflow
-                  title_translation:    notranslate
-                  tagline:              Ask for help
-                  href:                 https://stackoverflow.com/questions/tagged/jekyll
-
-          # --------------------------------------------------------------------
-          # CONTACT box
-          #
-          - name:                       Contact
-            type:                       contact
-            enabled:                    false
-
-            title:                      Contact
-            title_translation:          notranslate                             # translate|notranslate
-            tagline:                    welcome
-
-            address:
-              enabled:                  true
-              address_1:                JekyllOne Ltd.
-              address_2:                789 Folsom Ave, Suite 456
-              address_3:                San Francisco, CA 98765
-
-            phone:
-              enabled:                  true
-              office_hours:             9am - 7pm
-              phone_1:                  (+123) 456 789-0
-              phone_2:                  (+123) 456 789-1
-
+                  title: Contact & Legal
+                  title_translation: notranslate
+                  tagline: Contact details and legal information
+                  href: /pages/public/legal/en/impress/
+          - enabled: true
             internet:
-              enabled:                  true
-              home_text:                JekyllOne
-              home_link:                https://jekyll.one/
-              mail_1:                   contact@jekyll.one
-              mail_2:                   webmaster@jekyll.one
-
-# ------------------------------------------------------------------------------
-# END config
+              enabled: true
+              home_text: JekyllOne
+              home_link: https://jekyll.one/
+              mail_1: contact@jekyll.one
+              mail_2: webmaster@jekyll.one
+            title_translation: notranslate
+            name: Contact
+            phone:
+              enabled: true
+              office_hours: 9am - 7pm
+              phone_1: (+123) 456 789-0
+              phone_2: (+123) 456 789-1
+            tagline: welcome
+            address:
+              enabled: true
+              address_1: JekyllOne Ltd.
+              address_2: 789 Folsom Ave, Suite 456
+              address_3: San Francisco, CA 98765
+            title: Contact
+            type: contact

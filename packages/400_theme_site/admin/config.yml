@@ -94,6 +94,99 @@ collections:
           - { label: Custom Content (Collection Panel), name: custom_content_collection_panel, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
           - { label: Custom Content (MK Trail Map Lite), name: custom_content_mk_trail_map_lite, widget: select, options: [{ label: Enable, value: 'true' }, { label: Disable, value: 'false' }], required: true }
 
+  - name: footer_content
+    label: Footer Content
+    label_singular: Footer Content
+    delete: false
+    files:
+      - name: site_footer
+        label: Site Footer
+        file: packages/400_theme_site/_data/blocks/footer.yml
+        fields:
+          - label: Settings
+            name: settings
+            widget: object
+            fields:
+              - { label: Footer Enabled, name: enabled, widget: boolean, required: true, default: true }
+              - { label: Active Footer ID, name: active_footer, widget: string, required: true }
+              - label: Footers
+                name: footers
+                widget: list
+                min: 1
+                allow_add: false
+                fields:
+                  - { label: Footer Name, name: name, widget: string }
+                  - label: Footer
+                    name: footer
+                    widget: object
+                    fields:
+                      - { label: Enabled, name: enabled, widget: boolean, required: true, default: true }
+                      - { label: Footer ID, name: id, widget: string, required: true }
+                      - { label: Comment, name: comment, widget: string, required: false }
+                      - { label: CSS Properties, name: properties, widget: string, required: false }
+                      - label: Issue
+                        name: issue
+                        widget: object
+                        fields:
+                          - { label: Enabled, name: enabled, widget: boolean, required: true, default: true }
+                          - { label: Date Source, name: date, widget: string, required: true }
+                          - label: English
+                            name: en
+                            widget: object
+                            fields:
+                              - { label: Date Format, name: date_format, widget: string, required: true }
+                              - { label: Label Text, name: text, widget: string, required: true }
+                      - label: Icons
+                        name: icons
+                        widget: object
+                        fields:
+                          - label: Github
+                            name: github
+                            widget: object
+                            fields:
+                              - { label: Enabled, name: enabled, widget: boolean, required: true }
+                              - { label: URL, name: href, widget: string, required: true }
+                      - label: Legal Links
+                        name: legals
+                        widget: list
+                        fields:
+                          - { label: Item Name, name: name, widget: string }
+                          - label: Legal
+                            name: legal
+                            widget: object
+                            fields:
+                              - { label: Enabled, name: enabled, widget: boolean, required: true }
+                              - { label: Type, name: type, widget: string, required: true }
+                              - { label: Statement, name: statement, widget: string, required: true }
+                              - { label: Translate Statement, name: translate_statement, widget: string, required: true }
+                              - { label: Link, name: href, widget: string, required: true }
+                      - label: Footer Boxes
+                        name: boxes
+                        widget: list
+                        fields:
+                          - { label: Box Name, name: name, widget: string }
+                          - { label: Box Type, name: type, widget: select, options: [{ label: About, value: about }, { label: News, value: news }, { label: References, value: references }, { label: Contact, value: contact }] }
+                          - { label: Enabled, name: enabled, widget: boolean, required: true }
+                          - { label: Title, name: title, widget: string, required: false }
+                          - { label: Title Translation, name: title_translation, widget: string, required: false }
+                          - { label: Tagline, name: tagline, widget: string, required: false }
+                          - { label: Text, name: text, widget: text, required: false }
+                          - { label: Category (News), name: category, widget: string, required: false }
+                          - { label: Max Posts (News), name: max_posts, widget: number, value_type: int, required: false }
+                          - label: Links (References)
+                            name: links
+                            widget: list
+                            required: false
+                            fields:
+                              - { label: Link Name, name: name, widget: string }
+                              - label: Link
+                                name: link
+                                widget: object
+                                fields:
+                                  - { label: Title, name: title, widget: string, required: true }
+                                  - { label: Tagline, name: tagline, widget: string, required: false }
+                                  - { label: URL, name: href, widget: string, required: true }
+
   - name: homepage_slider
     label: Homepage Slider
     label_singular: Homepage Slider
