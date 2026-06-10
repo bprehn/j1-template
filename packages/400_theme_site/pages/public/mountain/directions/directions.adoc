@@ -32,7 +32,7 @@ fab_menu_id:                            open_toc
 scrollbar:                              false
 toc:                                    true
 regenerate:                             false
-permalink:                              /pages/public/skeleton/simple/
+permalink:                              /pages/public/mountain/directions/
 
 resources:                              [ lightbox, rouge ]
 resource_options:

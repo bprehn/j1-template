@@ -41,7 +41,7 @@
     "deploy:mkdir-starter": "shx mkdir -p ../400_theme_site/assets/theme/j1/core/js",
     "deploy:rename-js": "shx mv dist/template.nomin.js dist/template.js",
     "deploy:core-js": "shx cp -rf dist/* ../400_theme_site/assets/theme/j1/core/js",
-    "postdeploy": "shx rm ../400_theme_site/assets/theme/j1/core/js/*.map && shx rm ../400_theme_site/assets/theme/j1/core/js/*.txt"
+    "postdeploy": "shx rm ../400_theme_site/assets/theme/j1/core/js/*.map"
   },
   "dependencies": {
     "@octokit/webhooks": "^6.1.0",

@@ -205,16 +205,16 @@ settings:
               cite_text_quotes:         false
               cite_text: >
                                         <strong>
-                                          <span class="text-primary">Making is</span>
-                                          <span class="text-light">like Wanting, <br> but even</span>
-                                          <span class="text-primary">Better</span>
+                                          <span class="text-primary">Mount Kato</span>
+                                          <span class="text-light">-Fun For Kids <br></span>
+                                          <span class="text-primary">Of All Ages</span>
                                         </strong>
 
               text_color:               var(--md-gray-300)
               gridify:                  true
               size_y:                   450
               darken:                   6
-              background_image:         /assets/image/module/attic/1920x1280/ideas-start-here-1920x1280.jpg
+              background_image:         /assets/uploads/devo-l2.jpg
 
 
   # ----------------------------------------------------------------------------
