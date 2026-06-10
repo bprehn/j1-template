@@ -1,14 +1,23 @@
 ---
-layout:                                 post
-
 title:                                  Gift Cards
 tagline:                                Give The GiftTagline
+
+
+description: >
+                                        Branding is a marketing practice that involves creating
+                                        a name, design, symbol, or other identifying features that
+                                        help differentiate a company's products or services from
+                                        its competitors.
+purpose: >
+                                        Use this area to describe what you're doing. Describing your purpose
+                                        typically involves clearly and concisely explaining your goals,
+                                        objectives, scope, timeline, and expected outcomes.
 
 categories:                             [ Gift Cards ]
 tags:                                   [ Give the gift of Fun! ]
 
 image:
-  path:                                 /assets/image/modules/attics/1920x1280/XmasGiftCards.png
+  path:                                 /assets/uploads/xmasgiftcards.png
   width:                                1920
   height:                               1280
   alt:                                  Photo by Adobe FireFly
@@ -30,7 +39,7 @@ resource_options:
   - attic:
       padding_top:                      630
       slides:
-        - url:                          /assets/image/modules/attics/1920x1280/XmasGiftCards.png
+        - url:                          /assets/uploads/xmasgiftcards.png
           alt:                          Photo by FireFly
           badge:
             type:                       unsplash
@@ -62,8 +71,8 @@ excerpt__end
 
 // Load page attributes
 // -----------------------------------------------------------------------------
-{% include {{load_attributes}} scope="global" %}
-
+//{% include {{load_attributes}} scope="global" %}
+{% include {{load_attributes}} scope="none" %}
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

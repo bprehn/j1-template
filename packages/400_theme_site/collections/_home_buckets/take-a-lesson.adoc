@@ -1,0 +1,80 @@
+---
+title:                                  Discounted Season Passes
+tagline:                                Available Online Now!
+description: >
+                                        The best time to buy next year's Season Pass? Right now. Prices only go up the closer we get to next season.
+keywords: >
+                                        SeasonPass
+                                        
+action_type:                            Contact Snowsports
+buy_online:                             tel:+1-507-625-3363
+
+category:                               [ seasonPass ]
+
+categories:                             [ seasonPass ]
+tags:                                   [ Available Online Now ]
+
+image:
+  path:                                 /assets/uploads/springsalebucket.jpeg
+  width:                                1920
+  height:                               1280
+  alt:                                  Home Buckets Image
+
+toc:                                    false
+fab_menu_id:                            default
+scrollbar:                              false
+regenerate:                             false
+
+resources:                              [ animate, masonry ]
+resource_options:
+  - attic:
+      padding_top:                      425
+      slides:
+        - url:                          /assets/uploads/springsalebucket.jpeg
+          alt:                          Photo by Mount Kato staff
+          badge:
+            type:                       unsplash
+            author:                     Mount Kato
+            href:                       //mountkato.com
+        
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+// Place an excerpt at the most top position
+// -----------------------------------------------------------------------------
+[role="dropcap mb-4"]
+The best time to buy next year's Season Pass? Right now. Prices only go up the closer we get to next season.
+
+excerpt__end
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++
+{% include spring_sale_modal.html %}
+++++
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+
+

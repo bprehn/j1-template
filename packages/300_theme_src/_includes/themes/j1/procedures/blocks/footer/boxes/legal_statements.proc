@@ -36,32 +36,34 @@ legals: {{legals | debug}}
 <ul class="list-inline terms-menu">
 
 {% for item in legals %}
+  {% assign legal_enabled = item.legal.enabled %}
+  {% assign legal_is_visible = legal_enabled == nil or legal_enabled == '' or legal_enabled == true or legal_enabled == 'true' %}
 
-  {% if item.legal.enabled and item.legal.type == 'copyright' %}
+  {% if legal_is_visible and item.legal.type == 'copyright' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'impress' %}
+  {% if legal_is_visible and item.legal.type == 'impress' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'terms' %}
+  {% if legal_is_visible and item.legal.type == 'terms' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'privacy' %}
+  {% if legal_is_visible and item.legal.type == 'privacy' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'licence' %}
+  {% if legal_is_visible and item.legal.type == 'licence' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'support' %}
+  {% if legal_is_visible and item.legal.type == 'support' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 
-  {% if item.legal.enabled and item.legal.type == 'comments' %}
+  {% if legal_is_visible and item.legal.type == 'comments' %}
     <li class="{{item.legal.translate_statement}}"><a class="link-no-decoration" href="{{item.legal.href}}">{{item.legal.statement}}</a></li>
   {% endif %}
 

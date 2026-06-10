@@ -39,10 +39,13 @@
   <ul class="list-unstyled link-news">
 
     {% for property in links %}
-      <li>
-        <a class="link-no-decoration" href="{{property.link.href}}" class="{{property.link.title_translation}}" target="_blank" rel="noopener noreferrer">{{property.link.title}}</a>
-        <div class="text-uppercase"><small>{{property.link.tagline}}</small></div>
-      </li>
+      {% assign link_enabled = property.link.enabled %}
+      {% if link_enabled == nil or link_enabled == '' or link_enabled == true or link_enabled == 'true' %}
+        <li>
+          <a class="link-no-decoration" href="{{property.link.href}}" class="{{property.link.title_translation}}" target="_blank" rel="noopener noreferrer">{{property.link.title}}</a>
+          <div class="text-uppercase"><small>{{property.link.tagline}}</small></div>
+        </li>
+      {% endif %}
     {% endfor %}
 
   </ul>

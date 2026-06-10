@@ -36,15 +36,19 @@
       "files": [
         "js/api/**/*.js"
       ],
+      "env": {
+        "browser": true,
+        "node": true
+      },
       "rules": {
-        "no-prototype-builtins": "off",
-        "no-constant-condition": "off",
-        "no-empty": "off",
-        "no-cond-assign": "off",
-        "no-unused-vars": "warn",
         "no-undef": "off",
-        "no-mixed-spaces-and-tabs": "off",
-        "semi": "warn"
+        "no-unused-vars": "warn",
+        "semi": "warn",
+        "no-mixed-spaces-and-tabs": "warn",
+        "no-prototype-builtins": "warn",
+        "no-constant-condition": "warn",
+        "no-empty": "warn",
+        "no-cond-assign": "warn"
       }
     }
   ]

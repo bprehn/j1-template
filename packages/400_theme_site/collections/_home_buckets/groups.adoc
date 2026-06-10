@@ -1,0 +1,114 @@
+---
+title:                                  Groups
+tagline:                                Book Your Group's Visit Today!
+description: >
+                                        Our group rates make it easy and affordable to enjoy a day on the slopes with friends, family, colleagues, or your organization. Whether you're organizing a school trip, corporate event, birthday party, or simply a fun day out with a large group, we offer special discounts and packages to suit your needs.
+purpose: >
+                                        Use this area to describe what you're doing. Describing your purpose
+                                        typically involves clearly and concisely explaining your goals,
+                                        objectives, scope, timeline, and expected outcomes.
+action_type:                            Book A Reservation
+
+buy_online:                             https://mountkato.com/?keyword=Tickets                            
+
+category:                               [ groups ]
+
+categories:                             [ groups ]
+tags:                                   [ Book Your Trip ]
+
+image:
+  path:                                 /assets/uploads/group1.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Group Image
+
+toc:                                    false
+fab_menu_id:                            default
+scrollbar:                              false
+regenerate:                             false
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      425
+      
+      slides:
+        - url:                          /assets/uploads/group1.jpg
+          alt:                          Photo by Mount Kato staff
+          badge:
+            type:                       unsplash
+            author:                     Mount Kato
+            href:                       //mountkato.com
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+// Place an excerpt at the most top position
+// -----------------------------------------------------------------------------
+== Planning A Group Outing To Mount Kato? 
+
+Our group rates make it easy and affordable to enjoy a day on the slopes with friends, family, colleagues, or your organization. Whether you're organizing a school trip, corporate event, birthday party, or simply a fun day out with a large group, we offer special discounts and packages to suit your needs.
+
+=== Benefits Of Booking A Group At Mount Kato
+
+
+carousel::group_benefits_text_carousel_parallax[role="mb-5"]
+
+
+[role="mt-5"]
+++++
+{% include groups_intro.html %}
+++++
+
+[role="mt-5"]
+=== Unlock The Fun With Mount Kato Group Rates
+
+Create lasting memories and enjoy the best value for your group outing at Mount Kato. 
+Contact our group sales team today to start planning your adventure and discover the 
+benefits of our exclusive group rates.
+
+[role-"mt-5"]
+++++
+{% include group-reservations.html %}
+++++
+
+---
+
+== Ski & Snowboard
+++++
+{% include mk_groups.html %}
+{% include groups-group-lesson.html%}
+{% include school_programs.html %}
+{% include march_madness.html %}
+{% include groups_food_service.html %}
+++++
+
+---
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+
+
+== Snow Tubing
+Snow Tubing is not always open, so please check below for days and hours of operation.
+
+++++
+{% include group-reservations.html %}
+
+{% include snow_tubing-group-rates.html %}
+
+{% include mk_tubing_hrs.html %}
+++++
+
+
+[role="mt-5"]
+++++
+
+{% include what2wear2.html %}
+++++

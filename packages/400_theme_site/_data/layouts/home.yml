@@ -185,8 +185,8 @@ lanes:
       region:                           body-header
       type:                             sync
       base:                             _includes/custom
-      path:                             templates
-      file:                             custom_header.html
+      path:                             static
+      file:                             info-list.html
 
   # ----------------------------------------------------------------------------
   # CONTENT region (region body-main)
@@ -310,6 +310,16 @@ lanes:
   # ----------------------------------------------------------------------------
   #
   - lane:
+      enabled:                          true
+      id:                               custom_content
+      visibility_key:                   custom_content_info_list
+      region:                           body-main
+      type:                             sync
+      base:                             _includes/custom
+      path:                             static
+      file:                             info-list.html
+  
+  - lane:
       enabled:                          false
       id:                               custom_content
       visibility_key:                   custom_content_static_accordion
@@ -348,6 +358,16 @@ lanes:
       base:                             _includes/custom
       path:                             templates
       file:                             collection_panel.html
+
+  - lane:
+      enabled:                          true
+      id:                               custom_content
+      visibility_key:                   custom_content_home_buckets
+      region:                           body-main
+      type:                             sync
+      base:                             _includes/custom
+      path:                             templates
+      file:                             home_buckets.html
 
   - lane:
       enabled:                          false
@@ -397,7 +417,7 @@ lanes:
   # ----------------------------------------------------------------------------
   #
   - lane:
-      enabled:                          false
+      enabled:                          true
       id:                               banner_home_parallax
       region:                           body-main
       type:                             async

@@ -103,7 +103,7 @@ settings:
             justify: false
           - name: News
             type: news
-            enabled: true
+            enabled: false
             title: Mountain News
             title_translation: notranslate
             tagline: latest updates
@@ -118,18 +118,21 @@ settings:
             links:
               - name: Mountain Info
                 link:
+                  enabled: true
                   title: Mountain Info
                   title_translation: notranslate
                   tagline: Hours, operations, and overview
                   href: /pages/public/mountain/about/
               - name: News Navigator
                 link:
+                  enabled: true
                   title: News Navigator
                   title_translation: notranslate
                   tagline: Browse recent site updates
                   href: /pages/public/blog/navigator/
               - name: Contact & Legal
                 link:
+                  enabled: true
                   title: Contact & Legal
                   title_translation: notranslate
                   tagline: Contact details and legal information

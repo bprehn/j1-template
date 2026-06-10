@@ -183,6 +183,7 @@ collections:
                                 name: link
                                 widget: object
                                 fields:
+                                  - { label: Enabled, name: enabled, widget: boolean, required: false, default: true }
                                   - { label: Title, name: title, widget: string, required: true }
                                   - { label: Tagline, name: tagline, widget: string, required: false }
                                   - { label: URL, name: href, widget: string, required: true }
@@ -465,14 +466,24 @@ collections:
   - name: about_pages
     label: MK Site Pages
     label_singular: MK Site Page
-    folder: packages/400_theme_site/pages/public/about
+    folder: packages/400_theme_site/pages/public
     create: true
     extension: adoc
     format: yaml-frontmatter
     slug: "{{slug}}"
-    preview_path: "pages/public/about/{{slug}}"
+    path: "{{subfolder}}/{{slug}}"
+    preview_path: "pages/public/{{subfolder}}/{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
+      - label: Public Subfolder
+        name: subfolder
+        widget: string
+        required: false
+        default: about
+        hint: "Subfolder under pages/public, e.g. about, ski, bike/trails. Do not start with /."
+        pattern:
+          - '^[A-Za-z0-9][A-Za-z0-9/_-]*$'
+          - "Use letters/numbers and optional /, _, - only."
       - { label: Tagline, name: tagline, widget: string, required: false }
       - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
       - { label: Description, name: description, widget: text, required: false }
@@ -502,6 +513,23 @@ collections:
       - { label: Description, name: description, widget: text, required: false }
       - { label: Tags, name: tags, widget: list, required: false }
       - { label: Body, name: body, widget: text }
+  
+  - name: home_buckets
+    label: MK Home Buckets
+    label_singular: MK Home Bucket Entry
+    folder: packages/400_theme_site/collections/_home_buckets
+    create: true
+    extension: adoc
+    format: yaml-frontmatter
+    slug: "{{slug}}"
+    preview_path: "collections/public/home_buckets/{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Body, name: body, widget: text }
+
 
   - name: people_entries
     label: MK Team

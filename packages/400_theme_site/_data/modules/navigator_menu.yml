@@ -879,15 +879,146 @@
       icon:                             bootstrap
 
 # ------------------------------------------------------------------------------
-# Menu ABOUT
+# Menu MOUNTAIN
 #
 - item:                                 Mountain
   sublevel:
 
     - title:                            About Mountain
-      icon:                             information-outline
+      icon:                             information
       href:                             /pages/public/mountain/about/
 
+    - title:                            First Timers
+      icon:                             map-marker
+      href:                             /pages/public/mountain/first-timers/
+    
+    - title:                            Snow Report
+      icon:                             list-status
+      href:                             /pages/public/mountain/snow-report/
+
+    - title:                            Trail Map
+      icon:                             map
+      href:                             /pages/public/mountain/trail-map/
+
+    - title:                            Tech Shop
+      icon:                             tools
+      href:                             /pages/public/mountain/tech-shop/
+
+    - title:                            Snow Friends
+      icon:                             snowflake
+      href:                             /pages/public/mountain/snow-friends/
+
+    - title:                            Mountain Biking
+      icon:                             bicycle
+      href:                             /pages/public/mountain/mountain-biking/
+
+    - title:                            Terrain Parks
+      icon:                             snowboard
+      href:                             /pages/public/mountain/terrain-parks/
+
+    - title:                            Lift Bar & Grill
+      icon:                             beer
+      href:                             /pages/public/mountain/lift-bar-n-grill/
+
+    - title:                            Safety
+      icon:                             alert
+      href:                             /pages/public/mountain/safety/
+
+    - title:                            Lodging
+      icon:                             bed
+      href:                             /pages/public/mountain/lodging/
+
+    - title:                            Directions
+      icon:                             directions
+      href:                             /pages/public/mountain/directions/
+
+
+# ------------------------------------------------------------------------------
+# Menu SKI & SNOWBOARD
+#
+- item:                                 Ski & Snowboard
+  sublevel:
+    - title:                            Hours
+      icon:                             clock
+      href:                             /pages/public/hours/
+
+    - title:                            Rates & Rentals
+      icon:                             ticket
+      href:                             /pages/public/rates-n-rentals/
+
+    - title:                            Group Rates
+      icon:                             bus
+      href:                             /pages/public/group-rates/
+
+    - title:                            Season Passes
+      icon:                             smart-card
+      href:                             /pages/public/season-passes/
+    
+    - title:                            Specials
+      icon:                             sale
+      href:                             /pages/public/specials/
+
+    - title:                            Racing
+      icon:                             timer
+      href:                             /pages/public/racing/
+
+    - title:                            DEVO Teams
+      icon:                             ski
+      href:                             /pages/public/devo-teams/
+
+    - title:                            4th Grade Passport
+      icon:                             id-card
+      href:                             /pages/public/4th-grade-passport/
+
+# ------------------------------------------------------------------------------
+# Menu LESSONS
+#
+- item:                                 Lessons
+  sublevel:
+    - title:                            Private Lessons
+      icon:                             information-outline
+      href:                             /pages/public/lessons/private/
+
+    - title:                            Group Lessons
+      icon:                             information-outline
+      href:                             /pages/public/lessons/group/
+
+    - title:                            Kids Lessons
+      icon:                             information-outline
+      href:                             /pages/public/lessons/kids/
+# ------------------------------------------------------------------------------
+# Menu SNOW TUBING
+#
+- item:                                 Snow Tubing
+  sublevel:
+    - title:                            Tubing Park
+      icon:                             information-outline
+      href:                             /pages/public/tubing/
+
+# ------------------------------------------------------------------------------
+# Menu EVENTS
+#
+- item:                                 Events
+  sublevel:
+    - title:                            Calendar
+      icon:                             calendar
+      href:                             /pages/public/events/
+
+    - title:                            Special Events
+      icon:                             calendar-star
+      href:                             /pages/public/special-events/
+
+# ------------------------------------------------------------------------------
+# Menu JOBS
+#
+- item:                                 Jobs
+  sublevel:
+    - title:                            Job Openings
+      icon:                             briefcase
+      href:                             /pages/public/jobs/
+# ------------------------------------------------------------------------------
+# Menu ABOUT
+#
 - item:                                 About
   sublevel:
 
