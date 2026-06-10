@@ -137,22 +137,22 @@ settings:
           - enabled: true
             internet:
               enabled: true
-              home_text: JekyllOne
-              home_link: https://jekyll.one/
-              mail_1: contact@jekyll.one
-              mail_2: webmaster@jekyll.one
+              home_text: Mount Kato
+              home_link: https://mountkat.com/
+              mail_1: mail@mountkato.com
+              mail_2: bruce.prehn@mountkato.com
             title_translation: notranslate
             name: Contact
             phone:
               enabled: true
-              office_hours: 9am - 7pm
-              phone_1: (+123) 456 789-0
+              office_hours: 9am - 3pm
+              phone_1: (507) 625 - 3363
               phone_2: (+123) 456 789-1
             tagline: welcome
             address:
               enabled: true
-              address_1: JekyllOne Ltd.
-              address_2: 789 Folsom Ave, Suite 456
-              address_3: San Francisco, CA 98765
+              address_1: Mount Kato LLC
+              address_2: 20461 Old Hwy 66
+              address_3: Mankato, MN 56001
             title: Contact
             type: contact
