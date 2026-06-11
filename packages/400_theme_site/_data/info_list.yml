@@ -124,6 +124,7 @@ cards:
     kind: hours
     icon_set: bs
     icon: clock-fill
+    icon_mdi: clock-time-four
     accent: "#7dd3fc"
     fallback: Check Calendar
     hide_in_seasons:
@@ -137,6 +138,7 @@ cards:
     kind: direct
     title: Trails
     icon: signpost-2-fill
+    icon_mdi: sign-direction
     source: ski_trails_status
     icon_set: bs
     close_with_hours: true
@@ -148,6 +150,7 @@ cards:
     kind: direct
     title: Lifts
     icon: chairlift-mk
+    icon_mdi: ski
     source: lifts_status
     icon_set: mk
     close_with_hours: true
@@ -156,6 +159,7 @@ cards:
     kind: trail_hours
     icon_set: bs
     icon: sun-fill
+    icon_mdi: white-balance-sunny
     accent: "#4ade80"
     fallback: Sunrise to Sunset
     show_in_seasons:
@@ -165,6 +169,7 @@ cards:
     kind: office_hours
     icon_set: bs
     icon: building-fill
+    icon_mdi: office-building
     accent: "#67e8f9"
     fallback: Call For Hours
     show_in_seasons:
@@ -177,6 +182,7 @@ cards:
     show_in_seasons:
       - summer
     icon: ticket-perforated-fill
+    icon_mdi: ticket-confirmation
     source: trail_passes_status
     icon_set: bs
   - fallback: Closed For The Season
@@ -187,5 +193,6 @@ cards:
     kind: tubing
     title: Tubing
     icon: disc-fill
+    icon_mdi: disc
     source: tubing
     icon_set: bs

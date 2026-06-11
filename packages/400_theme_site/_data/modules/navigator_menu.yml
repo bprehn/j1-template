@@ -940,35 +940,35 @@
   sublevel:
     - title:                            Hours
       icon:                             clock
-      href:                             /pages/public/hours/
+      href:                             /pages/public/ski-n-snowboard/hours/
 
     - title:                            Rates & Rentals
       icon:                             ticket
-      href:                             /pages/public/rates-n-rentals/
+      href:                             /pages/public/ski-n-snowboard/rates-n-rentals/
 
     - title:                            Group Rates
       icon:                             bus
-      href:                             /pages/public/group-rates/
+      href:                             /pages/public/ski-n-snowboard/group-rates/
 
     - title:                            Season Passes
       icon:                             smart-card
-      href:                             /pages/public/season-passes/
+      href:                             /pages/public/ski-n-snowboard/season-passes/
     
     - title:                            Specials
       icon:                             sale
-      href:                             /pages/public/specials/
+      href:                             /pages/public/ski-n-snowboard/specials/
 
     - title:                            Racing
       icon:                             timer
-      href:                             /pages/public/racing/
+      href:                             /pages/public/ski-n-snowboard/racing/
 
     - title:                            DEVO Teams
       icon:                             ski
-      href:                             /pages/public/devo-teams/
+      href:                             /pages/public/ski-n-snowboard/devo-teams/
 
     - title:                            4th Grade Passport
       icon:                             id-card
-      href:                             /pages/public/4th-grade-passport/
+      href:                             /pages/public/ski-n-snowboard/4th-grade-passport/
 
 # ------------------------------------------------------------------------------
 # Menu LESSONS

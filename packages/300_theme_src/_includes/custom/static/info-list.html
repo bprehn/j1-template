@@ -135,18 +135,14 @@
   .mk-info-strip .mk-info-icon {
     width: 1.8rem;
     height: 1.8rem;
+    min-width: 1.8rem;
     flex-shrink: 0;
     color: #fff;
-    fill: currentColor;
-    stroke: currentColor;
-    filter: brightness(0) invert(1);
-  }
-
-  .mk-info-strip .mk-info-icon use,
-  .mk-info-strip .mk-info-icon path,
-  .mk-info-strip .mk-info-icon g {
-    fill: currentColor !important;
-    stroke: currentColor;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mk-info-strip .mk-info-label {
@@ -214,11 +210,6 @@
 
     <div class="mk-info-grid">
       {% for card in info_list.cards %}
-        {% if card.icon_set == "mk" %}
-          {% assign icon_sprite = "/assets/vendor/mk_icons/mk_icons.svg#" %}
-        {% else %}
-          {% assign icon_sprite = "/assets/vendor/bs-icons/bootstrap-icons.svg#" %}
-        {% endif %}
 
         <a
           href="{{ card.href }}"
@@ -238,9 +229,7 @@
           data-show-in-seasons="{{ card.show_in_seasons | join: ',' }}"
           data-hide-in-seasons="{{ card.hide_in_seasons | join: ',' }}"
         >
-          <svg class="mk-info-icon" aria-hidden="true">
-            <use xlink:href="{{ icon_sprite }}{{ card.icon }}"></use>
-          </svg>
+          <i class="mk-info-icon mdib mdib-{{ card.icon_mdi | default: 'circle' }}" aria-hidden="true"></i>
 
           <div>
             <p class="mk-info-label" data-label-target>{{ card.title }}</p>

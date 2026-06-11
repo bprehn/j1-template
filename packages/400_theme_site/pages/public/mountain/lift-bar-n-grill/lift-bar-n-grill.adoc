@@ -1,16 +1,85 @@
 ---
-title: Lift Bar & Grill
-tagline: Your Après Ski Oasis
-date: 2026-06-08
-description: Recharge and refuel at the Lift Bar & Grill, Mount Kato's vibrant
-  hub for après ski relaxation and delicious fare.  Located on the second floor
-  of our main chalet, the Lift Bar & Grill offers a welcoming atmosphere with
-  stunning views of the slopes, making it the perfect spot to unwind after a day
-  of adventure.
-permalink: /pages/public/mountain/lift-bar-n-grill/
-comments: false
-regenerate: false
+title:                                  Lift Bar & Grill
+tagline:                                Your Après Ski Oasis
+
+date:                                   2026-06-11
+#last_modified:                         2026-06-11
+
+description: >
+                                        Recharge and refuel at the Lift Bar & Grill, Mount Kato's vibrant hub for après ski relaxation and delicious fare.  Located on the second floor of our main chalet, the Lift Bar & Grill offers a welcoming atmosphere with stunning views of the slopes, making it the perfect spot to unwind after a day of adventure.
+
+categories:                             [ Knowledge, Asciidoc ]
+tags:                                   [ Skeleton, SimpleDocument ]
+
+robots:
+  index:                                false
+  follow:                               false
+
+image:
+  path:                                 /assets/uploads/lifts123.jpg
+  width:                                1920
+  height:                               1280
+
+personalization:                        false
+comments:                               false
+exclude_from_search:                    false
+fab_menu_id:                            open_toc
+scrollbar:                              false
+toc:                                    true
+regenerate:                             false
+permalink:                              /pages/public/mountain/lift-bar-n-grill/
+
+resources:                              [ lightbox, rouge ]
+resource_options:
+  - toccer:
+      collapseDepth:                    3
+  - attic:
+      slides:
+        - url:                          /assets/uploads/lifts123.jpg
+          alt:                          Photo by Sigmund on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Sigmund
+            href:                       //unsplash.com/@sigmund
 ---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:url-fontawesome--home:                 https://fontawesome.com/
+:url-fontawesome--icons:                https://fontawesome.com/icons?d=gallery/
+:url-fontawesome--get-started:          https://fontawesome.com/get-started/
+
+:url-mdi--home:                         https://materialdesignicons.com/
+:url-mdi-icons--cheatsheet:             https://cdn.materialdesignicons.com/3.3.92/
+
+:url-iconify--home:                     https://iconify.design/
+:url-iconify--icon-sets:                https://iconify.design/icon-sets/
+:url-iconify--medical-icons:            https://iconify.design/icon-sets/medical-icon/
+:url-iconify--brand-icons:              https://iconify.design/icon-sets/logos/
+
+:url-roundtrip--mdi-icons:              /pages/public/tour/mdi_icon_font/#material-design-icons
+:url-roundtrip--fontawesome-icons:      /pages/public/tour/mdi_icon_font/#fontawesome-icons
+:url-roundtrip--iconify-icons:          /pages/public/tour/mdi_icon_font/#iconify-icons
+:url-roundtrip--asciidoc-extensions:    /pages/public/tour/asciidoc_extensions/
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 [role="dropcap"] 
 Recharge and refuel at the _Lift Bar & Grill_, Mount Kato's vibrant hub for après ski relaxation and delicious fare.  Located on the second floor of our main chalet, the _Lift Bar & Grill_ offers a welcoming atmosphere with stunning views of the slopes, making it the perfect spot to unwind after a day of adventure.
 
@@ -35,3 +104,6 @@ Recharge and refuel at the _Lift Bar & Grill_, Mount Kato's vibrant hub for apr�
 === Your Après Ski Headquarters
 
 Whether you're celebrating a day on the slopes, catching up with friends, or simply enjoying a delicious meal, the _Lift Bar & Grill_ is your ideal destination for après ski fun. Join us for good food, good drinks, and good times at Mount Kato!
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 ---
-title:                                  Directions
-tagline:                                How To Get To Mount Kato
+title:                                  First Timers
+tagline:                                Know Before You Go
 date:                                   2026-06-11
 #last_modified:                         2026-06-11
 
@@ -31,7 +31,7 @@ fab_menu_id:                            open_toc
 scrollbar:                              false
 toc:                                    true
 regenerate:                             false
-permalink:                              /pages/public/mountain/directions/
+permalink:                              /pages/public/mountain/first-timers/
 
 resources:                              [ lightbox, rouge ]
 resource_options:
