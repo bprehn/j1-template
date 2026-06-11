@@ -367,7 +367,7 @@ lanes:
       type:                             sync
       base:                             _includes/custom
       path:                             templates
-      file:                             home_buckets.html
+      file:                             nu_home_buckets.html
 
   - lane:
       enabled:                          false

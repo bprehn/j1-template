@@ -1,6 +1,6 @@
 ---
 title:                                  Gift Cards
-tagline:                                Give The GiftTagline
+tagline:                                Give The Gift of Fun!
 
 
 description: >

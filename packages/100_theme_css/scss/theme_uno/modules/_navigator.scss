@@ -483,9 +483,8 @@ li.dropdown.nav-sub-item:before {
   		> li {
   			float: left;
   			display: block;
-  			> a {
-          // jadams, 2022-07-21
-          color: $lighten-400;
+			> a {
+          color: #00487F;
   				display: block;
   				padding: 10px 5px;
   				position: relative;
@@ -502,8 +501,8 @@ li.dropdown.nav-sub-item:before {
   					height: 15px;
   					padding-top: 2px;
   				}
-  			} > a:hover {
-          color: $lighten-900 !important;
+			} > a:hover {
+					color: #00487F !important;
         }
   			&.dropdown ul.dropdown-menu {
   				border-radius: 0;
