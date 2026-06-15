@@ -172,6 +172,42 @@ settings:
     # --------------------------------------------------------------------------
     # CAROUSEL configurations
     # --------------------------------------------------------------------------
+    
+    # --------------------------------------------------------------------------
+    # area_images
+    #
+    - show:
+        enabled:                        true
+        provider:                       j1
+        id:                             area_images
+        lightbox:                       true
+        type:                           image
+        images_path:                    /assets/image/module/carousel/area_images
+        images:                         [
+                                          Back2.jpg, Sunset.jpg, learning-area.jpg, terrain-parks.jpg, instructors.jpg, bar.jpg
+                                        ]
+        links:                          [
+                                          "#", "#", "#", "#", "#", "#"
+                                        ]
+        lb_caption:                     [
+                                          "Our South facing slopes, we call the back side.",
+                                          "Our North facing slopes, the scenic river valleys in the background.",
+                                          "Mount Kato Snowsports Learning Area",
+                                          "Terrain Park Features",
+                                          "Friendly Instructors ready for their next lessons",
+                                          "The Lift Bar located on the second level of the main chalet."
+                                        ]
+        options:
+          autoPlay:                     3000
+          items:                        3
+          autoHeight :                  true
+          pagination:                   false
+          paginationNumbers:            false
+          itemsDesktop:                 "[1199,3]"
+          itemsDesktopSmall:            "[979,3]"
+
+
+
 
     # --------------------------------------------------------------------------
     # demo_text_carousel

@@ -29,7 +29,7 @@ toc:                                    true
 regenerate:                             false
 permalink:                              /pages/public/mountain/about/
 
-resources:                              [ lightbox, rouge ]
+resources:                              [ lightbox, carousel, rouge ]
 resource_options:
   - toccer:
       collapseDepth:                    3
@@ -81,6 +81,8 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 carousel::area_images[role="mb-5"]
+
+
 [role="dropcap"]
 Nestled in the scenic Minnesota River Valley, Mount Kato Ski Area welcomes winter enthusiasts of all ages and abilities. With 19 runs, a welcoming learning area, and exciting terrain parks, we've got something to thrill every skier and snowboarder in the family. From first-timers to seasoned veterans cruising down the slopes, Mount Kato fosters a passion for winter sports. Our dedicated instructors are ready to guide you, whether it's your first lesson or your hundredth. And when you need a break, warm up with cozy food and drinks in our Chalet's Food Court or Lift Bar & Grill!
 

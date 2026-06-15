@@ -856,7 +856,6 @@ resources:
       layout:                           [ home, page, post ]
       required:                         always
       script_load:                      defer
-      script_load:
       dependencies:                     false
       pass_init_data:                   false
 
@@ -1255,28 +1254,28 @@ resources:
   # Carousel, JS API for the built-in carousel used by J1 Theme
   # Owl Carousel V1 (1.3.3)
   #
-  # - name:                               J1 Carousel
-  #   resource:
-  #     enabled:                          true
+  - name:                                J1 Carousel
+    resource:
+      enabled:                          true
 
-  #     id:                               carousel
-  #     comment:                          Module Carousel
-  #     region:                           head
-  #     layout:                           [ home, page, post ]
-  #     required:                         ondemand
-  #     script_load:                      defer
-  #     dependencies:                     false
-  #     pass_init_data:                   true
+      id:                               carousel
+      comment:                          Module Carousel
+      region:                           head
+      layout:                           [ home, page, post ]
+      required:                         ondemand
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   true
 
-  #     data:
-  #       css:                            [
-  #                                         modules/carousel/css/carousel,
-  #                                         modules/carousel/css/carousel_transitions,
-  #                                         modules/carousel/css/theme/uno
-  #                                       ]
-  #       files:                          [ adapter/js/carousel.js ]
-  #       js:                             []
-  #       init_function:                  [ j1.adapter.carousel.init ]
+      data:
+        css:                            [
+                                           modules/carousel/css/carousel,
+                                           modules/carousel/css/carousel_transitions,
+                                           modules/carousel/css/theme/uno
+                                         ]
+        files:                          [ adapter/js/carousel.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.carousel.init ]
 
   # ----------------------------------------------------------------------------
   # MasterSlider.

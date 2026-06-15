@@ -881,7 +881,7 @@
 # ------------------------------------------------------------------------------
 # Menu MOUNTAIN
 #
-- item:                                 Mountain
+- item:                                 MOUNTAIN
   sublevel:
 
     - title:                            About Mountain
@@ -936,7 +936,7 @@
 # ------------------------------------------------------------------------------
 # Menu SKI & SNOWBOARD
 #
-- item:                                 Ski & Snowboard
+- item:                                 SKI & SNOWBOARD
   sublevel:
     - title:                            Hours
       icon:                             clock
@@ -973,32 +973,27 @@
 # ------------------------------------------------------------------------------
 # Menu LESSONS
 #
-- item:                                 Lessons
+- item:                                 LESSONS
   sublevel:
-    - title:                            Private Lessons
-      icon:                             information-outline
-      href:                             /pages/public/lessons/private/
-
-    - title:                            Group Lessons
-      icon:                             information-outline
-      href:                             /pages/public/lessons/group/
-
-    - title:                            Kids Lessons
-      icon:                             information-outline
-      href:                             /pages/public/lessons/kids/
+    - title:                            Lessons
+      href:                             /pages/public/lessons/lessons/
+      icon:                             ski
+    - title:                            Teams & Leagues
+      href:                             /pages/public/lessons/teams-n-leagues/
+      icon:                             medal
 # ------------------------------------------------------------------------------
 # Menu SNOW TUBING
 #
-- item:                                 Snow Tubing
+- item:                                 SNOW TUBING
   sublevel:
     - title:                            Tubing Park
       icon:                             information-outline
-      href:                             /pages/public/tubing/
+      href:                             /pages/public/snow-tubing/
 
 # ------------------------------------------------------------------------------
 # Menu EVENTS
 #
-- item:                                 Events
+- item:                                 EVENTS
   sublevel:
     - title:                            Calendar
       icon:                             calendar
@@ -1011,7 +1006,7 @@
 # ------------------------------------------------------------------------------
 # Menu JOBS
 #
-- item:                                 Jobs
+- item:                                 JOBS
   sublevel:
     - title:                            Job Openings
       icon:                             briefcase
