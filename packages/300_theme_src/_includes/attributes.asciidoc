@@ -616,6 +616,8 @@ tag::data[]
 :data-translator--icon:                           "assets/image/page/tools/translator-icon.jpg, QuickLinks - Translator Icon"
 
 :data-images-lightbox--standalone:                "assets/image/module/gallery/old_time/image/grand_pa/image-2.jpg, GrandPa's 80th Birthday"
+:data-images-lightbox--mk1-group:                 "module/carousel/area_images/Back2.jpg, Our south-facing slopes on the back side., module/carousel/area_images/Sunset.jpg, Our north-facing slopes with scenic river valley views., module/carousel/area_images/learning-area.jpg, Mount Kato Snowsports learning area., module/carousel/area_images/terrain-parks.jpg, Terrain Park features., module/carousel/area_images/instructors.jpg, Friendly instructors ready for their next lessons., module/carousel/area_images/bar.jpg, The Lift Bar on the second level of the main chalet."
+
 :data-images-lightbox--group:                     "assets/image/module/gallery/old_time/image/grand_pa/image-3.jpg, GrandPa's annual journey, assets/image/module/gallery/old_time/image/grand_pa/image-4.jpg, GrandPa's annual journey"
 
 :data-images--themes-menu:                        "assets/image/page/tour/bootswatch-themes.jpg, Bootswatch Themes"
@@ -648,13 +650,13 @@ end::tables[]
 tag::products[]
 :j1--license:                                     MIT License
 :j1--version:                                     2023.1.0
-:j1--site-name:                                   Jekyll One
+:j1--site-name:                                   Mount Kato
 end::products[]
 
 
 // AUTHORS, global author information (special variables)
 // -----------------------------------------------------------------------------
 tag::authors[]
-:author--adams--name:                             "Jürgen Adams"
-:author--adams--url:                              //jekyll.one
+:author--adams--name:                             "Bruce Prehn"
+:author--adams--url:                              //mountkato
 end::authors[]

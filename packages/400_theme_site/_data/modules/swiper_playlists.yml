@@ -569,6 +569,75 @@ settings:
 
 
     # --------------------------------------------------------------------------
+    # MOUNT KATO ABOUT
+    # --------------------------------------------------------------------------
+    #
+    - playlist:
+      enabled:                          true
+
+      name:                             mk_about_area_images
+      type:                             image/jpg
+
+      image_defaults:
+        base_folder:                    /assets/image/module/carousel/area_images
+        image_width:                    1920
+        image_height:                   1280
+
+      # ------------------------------------------------------------------------
+      # SLIDE settings
+      # ------------------------------------------------------------------------
+      #
+      items:
+
+        # slide 01
+        - item:
+          enabled:                      true
+          image:                        Back2
+          caption_text:                 Back Side Slopes
+          description: >
+                                        Our south-facing slopes on the back side.
+
+        # slide 02
+        - item:
+          enabled:                      true
+          image:                        Sunset
+          caption_text:                 River Valley Views
+          description: >
+                                        Our north-facing slopes with scenic river valley views.
+
+        # slide 03
+        - item:
+          enabled:                      true
+          image:                        learning-area
+          caption_text:                 Learning Area
+          description: >
+                                        Mount Kato Snowsports learning area.
+
+        # slide 04
+        - item:
+          enabled:                      true
+          image:                        terrain-parks
+          caption_text:                 Terrain Parks
+          description: >
+                                        Terrain Park features.
+
+        # slide 05
+        - item:
+          enabled:                      true
+          image:                        instructors
+          caption_text:                 Friendly Instructors
+          description: >
+                                        Friendly instructors ready for their next lessons.
+
+        # slide 06
+        - item:
+          enabled:                      true
+          image:                        bar
+          caption_text:                 Lift Bar
+          description: >
+                                        The Lift Bar on the second level of the main chalet.
+
+    # --------------------------------------------------------------------------
     # AUDIO Playlists
     # ==========================================================================
 

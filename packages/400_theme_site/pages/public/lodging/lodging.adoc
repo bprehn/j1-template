@@ -6,7 +6,6 @@ date: 2026-06-08
 description: A guide to lodging and overnight accommodations near Mount Kato.
   Provides information on local hotels, resorts, and partner stay options in the
   Greater Mankato area for winter and summer visitors.
-permalink: /pages/public/mountain/lodging/
 comments: false
 regenerate: false
 ---

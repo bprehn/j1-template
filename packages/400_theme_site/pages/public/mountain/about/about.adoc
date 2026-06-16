@@ -29,7 +29,7 @@ toc:                                    true
 regenerate:                             false
 permalink:                              /pages/public/mountain/about/
 
-resources:                              [ lightbox, carousel, rouge ]
+resources:                              [ swiperjs, rouge ]
 resource_options:
   - toccer:
       collapseDepth:                    3
@@ -80,8 +80,7 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-carousel::area_images[role="mb-5"]
-
+swiper::mk_about_slider[role="mb-4"]
 
 [role="dropcap"]
 Nestled in the scenic Minnesota River Valley, Mount Kato Ski Area welcomes winter enthusiasts of all ages and abilities. With 19 runs, a welcoming learning area, and exciting terrain parks, we've got something to thrill every skier and snowboarder in the family. From first-timers to seasoned veterans cruising down the slopes, Mount Kato fosters a passion for winter sports. Our dedicated instructors are ready to guide you, whether it's your first lesson or your hundredth. And when you need a break, warm up with cozy food and drinks in our Chalet's Food Court or Lift Bar & Grill!
@@ -89,7 +88,7 @@ Nestled in the scenic Minnesota River Valley, Mount Kato Ski Area welcomes winte
 == Ski, Snowboard, Tube… Just South of Mankato!
 Escape the city and hit the slopes at Mount Kato, your convenient winter destination just outside Mankato. Our 19 diverse runs, combined with 8 chairlifts and 2 conveyor lifts, mean shorter wait times and more time enjoying the snow. Whether you're carving turns, catching air in the terrain parks, or zooming down the tubing lanes, Mount Kato promises winter fun for everyone. We offer lessons, rentals, and all the amenities you need for an unforgettable day on the slopes.
 
-image::/assets/uploads/mk-loc-map.jpg[]
+image::/assets/uploads/mk-loc-map.jpg[ shadow-lg]
 
 [role="mt-5"]
 
@@ -97,5 +96,9 @@ image::/assets/uploads/mk-loc-map.jpg[]
 
 [role="mt-5"]
 
+++++
+{% include mk_about.html %}
+{% include custom/templates/mk_trail_map_lite.html %}
+++++ 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------

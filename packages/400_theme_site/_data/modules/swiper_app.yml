@@ -1052,6 +1052,106 @@ settings:
     # ==========================================================================
 
     # --------------------------------------------------------------------------
+    # IMAGE Swiper|Layout Base, Mount Kato About
+    # --------------------------------------------------------------------------
+    #
+    - swiper:
+
+      # ------------------------------------------------------------------------
+      # GENERAL Options
+      # ------------------------------------------------------------------------
+      #
+      enabled:                          true
+      id:                               mk_about_slider
+      layout:                           image/panorama
+      playlist:                         mk_about_area_images
+      swiper_classes:                   panorama-slider
+      container_classes:                false
+      wrapper_styles:                   "height: 240px; padding: 14px 0;"
+
+      # ------------------------------------------------------------------------
+      # CAPTION Options
+      # ------------------------------------------------------------------------
+      #
+      captions:
+        enabled:                        false
+        css_class:                      swp-caption-content
+
+      # ------------------------------------------------------------------------
+      # CORE Options
+      # ------------------------------------------------------------------------
+      #
+      parameters:
+        centeredSlides:                 true
+        effect:                         panorama
+        grabCursor:                     true
+        loop:                           true
+        breakpoints: {
+                                        480: {
+                                          slidesPerView: 2,
+                                          panoramaEffect: {
+                                            rotate: 35,
+                                            depth: 150,
+                                          },
+                                        },
+                                        640: {
+                                          slidesPerView: 3,
+                                          panoramaEffect: {
+                                            rotate: 30,
+                                            depth: 150,
+                                          },
+                                        },
+                                        1024: {
+                                          slidesPerView: 4,
+                                          panoramaEffect: {
+                                            rotate: 30,
+                                            depth: 200,
+                                          },
+                                        },
+                                        1200: {
+                                          slidesPerView: 4,
+                                          panoramaEffect: {
+                                            rotate: 25,
+                                            depth: 250,
+                                          },
+                                        }
+        }
+
+      # ------------------------------------------------------------------------
+      # MODULE Options
+      # ------------------------------------------------------------------------
+      #
+      module_settings:
+        panorama:
+          on_click:                     next
+          depth:                        200
+          rotate:                       30
+        pagination:
+          type:                         bullets
+          el:                           .swiper-pagination-outer
+          dynamicBullets:               false
+          clickable:                    true
+
+      # ------------------------------------------------------------------------
+      # EVENT Options
+      # ------------------------------------------------------------------------
+      #
+      events:
+        enabled:                        false
+
+      # ------------------------------------------------------------------------
+      # LIGHTBOX Options
+      # ------------------------------------------------------------------------
+      #
+      lightbox:
+
+        # ----------------------------------------------------------------------
+        # GENERAL Options
+        # ----------------------------------------------------------------------
+        #
+        enabled:                        false
+
+    # --------------------------------------------------------------------------
     # AUDIO Swiper, MP3 (Pop)
     # --------------------------------------------------------------------------
     #

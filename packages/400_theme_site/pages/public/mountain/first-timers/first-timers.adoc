@@ -83,18 +83,19 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Asciidoc skeleton *simple-document* a helper for setting up a base file
-and folder structure for simple-document AsciiDoc pages based on _Jekyll_ and
-_J1 Template_. You need *both* to use this skeleton creating AsciiDoc
-documents from it.
+== Experience in catering since YYYY
 
-[NOTE]
-====
-.Moving documents based on a J1 Skeleton
+lorem:sentences[5]
+lorem:sentences[7]
 
-All J1 Asciidoc Skeletons are fully *relocateable* and can be placed in any
-subfolder of your Jekyll site.
-====
+== Our services
+
+lorem:sentences[7]
+lorem:sentences[5]
+
+=== Large selection of national and internal dishes
+
+lorem:sentences[5]
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
