@@ -42,6 +42,7 @@ exclude_from_search:                    true
 {% assign navigator_settings    = modules.navigator.settings %}
 {% assign navigator_defaults    = modules.defaults.navigator.defaults %}
 {% assign navigator_menu_config = modules.navigator_menu %}
+{% assign nav_menu_visibility   = modules.nav_menu_visibility.settings %}
 
 {% assign themes_defaults       = modules.defaults.themes.defaults %}
 {% assign themes_settings       = modules.themes.settings %}
@@ -105,6 +106,36 @@ exclude_from_search:                    true
     <ul id="menu_mmenu" class="partial tex2jax_ignore" style="display:none">
 
     {% for menu in navigator_menu_config %}
+
+      {% comment %} Resolve per-top-level menu visibility from CMS config
+      ---------------------------------------------------------------------- {% endcomment %}
+      {% assign show_menu_item = true %}
+
+      {% if menu.item == 'Mountain' %}
+        {% assign show_menu_item = nav_menu_visibility.show_mountain_menu %}
+      {% elsif menu.item == 'Tour' %}
+        {% assign show_menu_item = nav_menu_visibility.show_tour_menu %}
+      {% elsif menu.item == 'Learn' %}
+        {% assign show_menu_item = nav_menu_visibility.show_learn_menu %}
+      {% elsif menu.item == 'Blog' %}
+        {% assign show_menu_item = nav_menu_visibility.show_blog_menu %}
+      {% elsif menu.item == 'Manual' %}
+        {% assign show_menu_item = nav_menu_visibility.show_manual_menu %}
+      {% elsif menu.item == 'Chat' %}
+        {% assign show_menu_item = nav_menu_visibility.show_chat_menu %}
+      {% elsif menu.item == 'Online' %}
+        {% assign show_menu_item = nav_menu_visibility.show_online_menu %}
+      {% elsif menu.item == 'Theme' %}
+        {% assign show_menu_item = nav_menu_visibility.show_theme_menu %}
+      {% elsif menu.item == 'About' %}
+        {% assign show_menu_item = nav_menu_visibility.show_about_menu %}
+      {% endif %}
+
+      {% if show_menu_item == nil %}
+        {% assign show_menu_item = true %}
+      {% endif %}
+
+      {% if show_menu_item %}
 
       {% comment %} Identify the menu (item) type
       -------------------------------------------------------------------------- {% endcomment %}
@@ -403,6 +434,8 @@ exclude_from_search:                    true
           {% assign menu_type = '' %}
 
       {% endcase %}
+
+      {% endif %}
 
     {% endfor %}
     <!-- [INFO   ] [~/assets/data/mmenu.html              ] [nav_menu_settings: end menu] -->

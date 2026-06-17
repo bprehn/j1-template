@@ -117,6 +117,13 @@ exclude_from_search:                    true
                 <ul id="display_user_details" class="link">
                   {% for link in links %}
 
+                    {% assign link_enabled = true %}
+                    {% if link.enabled == false %}
+                      {% assign link_enabled = false %}
+                    {% endif %}
+
+                    {% if link_enabled %}
+
                     {% if link.icon == null %}
                       {% assign icon = '' %}
                     {% else %}
@@ -143,6 +150,8 @@ exclude_from_search:                    true
 
                     <li><a class="link-no-decoration" {{macro_id}} href="{{link.href|strip}}" {{target}} rel="noopener noreferrer">{{icon}} {{link_text}}</a></li>
 
+                    {% endif %}
+
                   {% endfor %}
                 </ul>
               </div>
@@ -167,6 +176,13 @@ exclude_from_search:                    true
                 <h3 class="heading">{{title}}</h3>
                 <ul class="link">
                 {% for link in links %}
+
+                  {% assign link_enabled = true %}
+                  {% if link.enabled == false %}
+                    {% assign link_enabled = false %}
+                  {% endif %}
+
+                  {% if link_enabled %}
 
                   {% if link.icon == null %}
                     {% assign icon = '' %}
@@ -194,6 +210,8 @@ exclude_from_search:                    true
 
                   <li><a class="link-no-decoration" {{macro_id}} href="{{link.href|strip}}" {{target}} rel="noopener noreferrer">{{icon}} {{link_text}}</a></li>
 
+                  {% endif %}
+
                 {% endfor %}
                 </ul>
               </div>
@@ -218,6 +236,14 @@ exclude_from_search:                    true
                 <h3 class="heading">{{title}}</h3>
                 <ul class="link">
                   {% for link in links %}
+
+                    {% assign link_enabled = true %}
+                    {% if link.enabled == false %}
+                      {% assign link_enabled = false %}
+                    {% endif %}
+
+                    {% if link_enabled %}
+
                     {% if link.icon == null %}
                       {% assign icon = "" %}
                     {% else %}
@@ -237,6 +263,8 @@ exclude_from_search:                    true
                     {% endif %}
 
                     <li><a class="link-no-decoration" href="{{link.href|strip}}" {{target}} rel="noopener noreferrer">{{icon}}{{link_text}}</a></li>
+
+                    {% endif %}
 
                   {% endfor %}
                 </ul>

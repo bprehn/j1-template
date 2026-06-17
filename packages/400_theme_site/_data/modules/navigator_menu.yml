@@ -21,6 +21,7 @@
 # Menu TOUR
 #
 - item:                                 Tour
+  enabled:                              false
   sublevel:
 
   # - title:                            Colors

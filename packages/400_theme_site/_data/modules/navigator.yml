@@ -141,7 +141,7 @@ settings:
             boxes:
 
               - box:
-                  enabled:              true
+                  enabled:              false
                   type:                 theme_info
                   title:                Theme
 
