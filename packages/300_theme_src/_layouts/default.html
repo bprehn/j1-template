@@ -272,6 +272,40 @@ debug:                                  false                                   
       });
     </script>
 
+    <div id="j1-chatbot-widget">
+        <!-- The Chat Window -->
+        <div id="j1-chat-window" class="j1-chat-window">
+            <div class="j1-chat-header">
+                <span>Site Assistant</span>
+                <button id="j1-chat-close-btn" class="j1-chat-close-btn" aria-label="Close Chat">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="j1-chat-messages" class="j1-chat-messages"></div>
+            
+            <div class="j1-chat-input-area">
+                <input type="text" id="j1-chat-input" placeholder="Type your question..." aria-label="Chat input">
+                <button id="j1-chat-send-btn" class="j1-chat-send-btn" aria-label="Send Message">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- The Floating Action Button -->
+        <button id="j1-chat-fab" class="j1-chat-fab" aria-label="Open Chat">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
+            </svg>
+        </button>
+    </div>
+    <script src="{{ '/assets/js/chatbot.js' | relative_url }}"></script>
+
   </body>
 
     <!-- [INFO   ] [j1.layout.default.html                ] [ end page processing ] -->
