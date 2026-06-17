@@ -297,12 +297,12 @@ debug:                                  false                                   
             </div>
         </div>
 
-        <!-- The Floating Action Button -->
-        <button id="j1-chat-fab" class="j1-chat-fab" aria-label="Open Chat">
+          <!-- Fallback trigger for the chatbot if FAB config is unavailable -->
+          <button id="j1-chat-fab" class="j1-chat-fab" aria-label="Open Chat" style="display: none;">
             <svg viewBox="0 0 24 24">
-                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
             </svg>
-        </button>
+          </button>
     </div>
     <script src="{{ '/assets/js/chatbot.js' | relative_url }}"></script>
 

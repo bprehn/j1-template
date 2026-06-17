@@ -28,7 +28,7 @@ settings:
   # GENERAL options
   # ----------------------------------------------------------------------------
   #
-  enabled:                              true
+  enabled:                              false
 
   # ----------------------------------------------------------------------------
   # FAB options
@@ -40,6 +40,30 @@ settings:
   # FAB settings
   # ----------------------------------------------------------------------------
   menus:
+
+    # --------------------------------------------------------------------------
+    # FAB for opening the site chatbot
+    #
+    - name:                             Chatbot
+      enabled:                          true
+      id:                               chatbot
+      icon:                             plus
+      icon_family:                      mdib
+      icon_color:                       md-gray-900
+      icon_hover:                       chevron-up
+      color:                            primary
+
+      # ------------------------------------------------------------------------
+      # MENU items
+      #
+      items:
+        - item:                         Open Chatbot
+          enabled:                      true
+          id:                           fam_open_chatbot
+          color:                        md-green
+          event_handler:                open_chatbot
+          icon:                         chat
+          icon_properties:
 
     # --------------------------------------------------------------------------
     # FAB for scrolling to the page top position (default)

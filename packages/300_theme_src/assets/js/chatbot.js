@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
-    const fab = document.getElementById('j1-chat-fab');
+    const fallbackFab = document.getElementById('j1-chat-fab');
     const chatWindow = document.getElementById('j1-chat-window');
     const closeBtn = document.getElementById('j1-chat-close-btn');
     const inputField = document.getElementById('j1-chat-input');
@@ -14,6 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Chatbot State
     let isChatOpen = false;
     let hasWelcomed = false;
+
+    function syncFabState() {
+        if (!fallbackFab) return;
+        fallbackFab.setAttribute('aria-expanded', String(isChatOpen));
+    }
+
+    function hasFabChatTrigger() {
+        // Chatbot FAB ids rendered by the FAB data adapter.
+        return !!(document.getElementById('chatbot_button') || document.getElementById('fam_open_chatbot'));
+    }
+
+    function enableFallbackFab() {
+        if (!fallbackFab) return;
+        fallbackFab.style.display = 'flex';
+        syncFabState();
+    }
 
     // Predefined FAQ Rules for Mount Kato
     const faqRules = [
@@ -75,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isChatOpen = !isChatOpen;
         if (isChatOpen) {
             chatWindow.classList.add('j1-chat-open');
-            fab.style.transform = 'scale(0)'; // hide FAB
+            syncFabState();
             inputField.focus();
             
             // Send welcome message if first time opening
@@ -87,13 +103,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             chatWindow.classList.remove('j1-chat-open');
-            fab.style.transform = 'scale(1)'; // show FAB
+            syncFabState();
+        }
+    }
+
+    function openChat() {
+        if (!isChatOpen) {
+            toggleChat();
+        }
+    }
+
+    function closeChat() {
+        if (isChatOpen) {
+            toggleChat();
         }
     }
 
     // Event Listeners for opening/closing
-    fab.addEventListener('click', toggleChat);
-    closeBtn.addEventListener('click', toggleChat);
+    if (fallbackFab) {
+        fallbackFab.addEventListener('click', toggleChat);
+
+        // Keep only one visible trigger: use FAB integration when available,
+        // and reveal the standalone button only as a safety fallback.
+        if (!hasFabChatTrigger()) {
+            setTimeout(() => {
+                if (!hasFabChatTrigger()) {
+                    enableFallbackFab();
+                }
+            }, 1200);
+        }
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', toggleChat);
+    }
+
+    window.j1Chatbot = {
+        open: openChat,
+        close: closeChat,
+        toggle: toggleChat,
+        isOpen: () => isChatOpen
+    };
 
     // Send Message Logic
     function handleSend() {

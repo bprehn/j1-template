@@ -213,6 +213,13 @@ j1.adapter.fab = ((j1, window) => {
     // -------------------------------------------------------------------------
     fabLoader: (fabOptions) => {
 
+      // Fallback to a known menu id when a page does not provide
+      // frontmatter option `fab_menu_id`.
+      if (!fabOptions.fab_menu_id || typeof fabOptions.fab_menu_id !== 'string') {
+        fabOptions.fab_menu_id = 'default';
+        logger.warn('fab_menu_id missing, fallback to default menu');
+      }
+
       _this.setState('loading');
       logger.info('set module state to: ' + _this.getState());
       logger.info('load HTML data for FAB: ' + fabOptions.fab_menu_id);
@@ -419,6 +426,16 @@ j1.adapter.fab = ((j1, window) => {
                 });
               } // END if eventHandler == scroll_to_top
 
+              if (eventHandler === 'open_chatbot') {
+                $actionButton.on('click', function (e) {
+                  if (window.j1Chatbot && typeof window.j1Chatbot.toggle === 'function') {
+                    window.j1Chatbot.toggle();
+                  } else {
+                    logger.warn('fab open_chatbot: chatbot widget API not available');
+                  }
+                });
+              } // END if eventHandler == open_chatbot
+
               if ( eventHandler === 'open_mmenu_toc' ) {
                 // check if toccer (toc_mgr) is available
                 if ($('#j1-toc-mgr').length) {
@@ -496,6 +513,16 @@ j1.adapter.fab = ((j1, window) => {
       // reload current page (skip cache)
       location.reload(true);
     }, // END reload_page
+
+    // -------------------------------------------------------------------------
+    // open_chatbot()
+    // open or close the site chatbot widget
+    // -------------------------------------------------------------------------
+    open_chatbot: () => {
+      if (window.j1Chatbot && typeof window.j1Chatbot.toggle === 'function') {
+        window.j1Chatbot.toggle();
+      }
+    }, // END open_chatbot
 
     // -------------------------------------------------------------------------
     // scroll_previous_section()
