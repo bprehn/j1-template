@@ -1,0 +1,246 @@
+/*
+ # -----------------------------------------------------------------------------
+ # Dark-theme-only overrides
+ #
+ # Migrated from: packages/300_theme_src/assets/css/custom.scss
+ # Colors are tuned for dark surfaces where helpful.
+ # -----------------------------------------------------------------------------
+ */
+
+$tubing-bg-image-path: "/assets/image/glow-tubing-bg.jpg";
+$background-image-path: "/assets/image/backgrounds/roy-bg-light.svg";
+
+.glow-tubing-bg {
+	background-image: url($tubing-bg-image-path);
+}
+
+div.card-header h4 {
+	color: #fff;
+}
+
+h4.glow-header {
+	color: #adff2f !important;
+}
+
+.glow-bg {
+	background-color: #6da81a !important;
+}
+
+.article-caption {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+h2 {
+	color: #7cc7ff !important;
+}
+
+#wrapper-inner {
+	background: url($background-image-path) no-repeat center center fixed;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+.responsive-iframe-container .responsive-iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.mm-spn ul {
+	height: 100%;
+	overflow-y: visible;
+}
+
+.lesson-name {
+	font-family: "Roboto Slab";
+}
+
+.card-header img.img-fluid {
+	max-height: 40px;
+}
+
+.responsive-iframe-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 56.25%;
+}
+
+.bg-image-card {
+	background-image: url("/assets/image/AerialView_Summer1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #f8f9fa;
+}
+
+.bg-image-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+}
+
+#cardWithDynamicBackground {
+	background-image: url("/assets/image/AerialView_Summer1.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 0;
+}
+
+.card-cover {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.masonry-article-caption-heading {
+	font-family: "Roboto Slab";
+}
+
+.masonry-article-caption-subheading {
+	font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.masonry-article-caption {
+	background-color: #0b6fcf !important;
+}
+
+.mk-trans-table {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-custom-yellow,
+.text-bg-custom-yellow,
+.bg-custom-yellow {
+	background-color: #efa207;
+	border-color: #efa207;
+}
+
+.btn-custom-yellow:hover,
+.btn-custom-yellow:focus {
+	background-color: #b77f09;
+	border-color: #b77f09;
+}
+
+.btn-custom-yellow:active {
+	background-color: #efa207;
+	border-color: #efa207;
+}
+
+.btn-custom-red,
+.text-bg-custom-red,
+.bg-custom-red {
+	background-color: rgb(208, 65, 36);
+	border-color: rgb(208, 65, 36);
+}
+
+.btn-custom-red:hover,
+.btn-custom-red:focus {
+	background-color: rgb(154, 48, 27);
+	border-color: rgb(154, 48, 27);
+}
+
+.btn-custom-red:active {
+	background-color: rgb(208, 65, 36);
+	border-color: rgb(208, 65, 36);
+}
+
+.btn-custom-orange,
+.text-bg-custom-orange,
+.bg-custom-orange {
+	background-color: #fd8204;
+	border-color: #fd8204;
+}
+
+.btn-custom-orange:hover,
+.btn-custom-orange:focus {
+	background-color: #bd5f00;
+	border-color: #bd5f00;
+}
+
+.btn-custom-orange:active {
+	background-color: #fd8204;
+	border-color: #fd8204;
+}
+
+.btn-custom-blue,
+.text-bg-custom-blue,
+.bg-custom-blue {
+	background-color: #013593;
+	border-color: #013593;
+}
+
+.btn-custom-blue:hover,
+.btn-custom-blue:focus {
+	background-color: #012669;
+	border-color: #012669;
+}
+
+.btn-custom-blue:active {
+	background-color: #013593;
+	border-color: #013593;
+}
+
+.btn-custom-grey,
+.text-bg-custom-grey,
+.bg-custom-grey {
+	background-color: #76787b;
+	border-color: #76787b;
+}
+
+.btn-custom-grey:hover,
+.btn-custom-grey:focus {
+	background-color: #5a5c5f;
+	border-color: #5a5c5f;
+}
+
+.btn-custom-grey:active {
+	background-color: #76787b;
+	border-color: #76787b;
+}
+
+.btn-custom-violet,
+.text-bg-custom-violet,
+.bg-custom-violet {
+	background-color: #671e75;
+	border-color: #671e75;
+}
+
+.btn-custom-violet:hover,
+.btn-custom-violet:focus {
+	background-color: #4e1759;
+	border-color: #4e1759;
+}
+
+.btn-custom-violet:active {
+	background-color: #671e75;
+	border-color: #671e75;
+}
+
+.btn-custom-brown,
+.text-bg-custom-brown,
+.bg-custom-brown {
+	background-color: #774212;
+	border-color: #774212;
+}
+
+.btn-custom-brown:hover,
+.btn-custom-brown:focus {
+	background-color: #5a310d;
+	border-color: #5a310d;
+}
+
+.btn-custom-brown:active {
+	background-color: #774212;
+	border-color: #774212;
+}
+

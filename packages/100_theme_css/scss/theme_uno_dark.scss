@@ -40,6 +40,10 @@ $theme: "UnoDark" !default;
 // -----------------------------------------------------------------------------
 @import "theme_uno_dark/modules";
 
+// Theme-specific custom overrides (UnoDark only)
+// -----------------------------------------------------------------------------
+@import "theme_uno_dark/custom/overrides";
+
 // Vendor
 // -----------------------------------------------------------------------------
 @import "theme_uno_dark/vendor";
