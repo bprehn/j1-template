@@ -1,0 +1,191 @@
+title: Know Before You Go
+status_alert:
+  enabled: false
+  apply_bg_danger: false
+  title: The General Status Changed
+  message: Weather-related closure in effect. Check current status below before
+    visiting.
+tone_rules:
+  ratio_open_min: 0.9
+  ratio_limited_min: 0.01
+  open_keywords:
+    - open
+    - available
+    - operating
+  limited_keywords:
+    - limited
+    - partly
+    - partial
+    - delayed
+    - hold
+    - weather hold
+    - wind hold
+  closed_keywords:
+    - closed
+    - not available
+    - unavailable
+    - sold out
+    - cancelled
+    - for the season
+    - on hold
+    - maintenance
+  info_keywords:
+    - check
+    - calendar
+    - loading
+season_profiles:
+  winter:
+    months:
+      - 10
+      - 11
+      - 0
+      - 1
+      - 2
+      - 3
+    tone_rules:
+      ratio_open_min: 0.9
+      ratio_limited_min: 0.01
+      open_keywords:
+        - open
+        - available
+        - operating
+      limited_keywords:
+        - limited
+        - partly
+        - partial
+        - delayed
+        - hold
+        - weather hold
+        - wind hold
+      closed_keywords:
+        - closed
+        - not available
+        - unavailable
+        - sold out
+        - cancelled
+        - for the season
+        - on hold
+        - maintenance
+      info_keywords:
+        - check
+        - calendar
+        - loading
+    card_overrides:
+      Today's Hours:
+        accent: "#7dd3fc"
+      Trails:
+        accent: "#86efac"
+      Lifts:
+        accent: "#f9a8d4"
+      Tubing:
+        accent: "#fde68a"
+  summer:
+    months:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+    tone_rules:
+      ratio_open_min: 0.95
+      ratio_limited_min: 0.05
+      open_keywords:
+        - open
+        - available
+        - open daily
+      limited_keywords:
+        - limited
+        - reduced
+        - weather dependent
+        - weekend only
+      closed_keywords:
+        - closed
+        - off season
+        - not available
+        - cancelled
+      info_keywords:
+        - check
+        - calendar
+        - updates soon
+        - loading
+    card_overrides:
+      Today's Hours:
+        accent: "#67e8f9"
+      Trails:
+        accent: "#4ade80"
+      Lifts:
+        accent: "#fda4af"
+      Tubing:
+        accent: "#fca5a5"
+cards:
+  - title: Today's Hours
+    href: /pages/public/ski-n-snowboard/hours/index.html
+    kind: hours
+    icon_set: bs
+    icon: clock-fill
+    accent: "#7dd3fc"
+    fallback: Check Calendar
+    hide_in_seasons:
+      - summer
+  - fallback: Check Snow Report
+    summer_title: Bike Trails
+    source_winter: ski_trails_status
+    accent: "#86efac"
+    href: /pages/public/mountain/snow-report/index.html
+    source_summer: bike_trails_status
+    kind: direct
+    title: Trails
+    icon: signpost-2-fill
+    source: ski_trails_status
+    icon_set: bs
+    close_with_hours: true
+  - fallback: Check Snow Report
+    accent: "#f9a8d4"
+    href: /pages/public/mountain/snow-report/index.html
+    hide_in_seasons:
+      - summer
+    kind: direct
+    title: Lifts
+    icon: chairlift-mk
+    source: lifts_status
+    icon_set: mk
+    close_with_hours: true
+  - title: Trail Hours
+    href: /pages/public/ski-n-snowboard/hours/index.html
+    kind: trail_hours
+    icon_set: bs
+    icon: sun-fill
+    accent: "#4ade80"
+    fallback: Sunrise to Sunset
+    show_in_seasons:
+      - summer
+  - title: Office Hours
+    href: /pages/public/ski-n-snowboard/hours/index.html
+    kind: office_hours
+    icon_set: bs
+    icon: building-fill
+    accent: "#67e8f9"
+    fallback: Call For Hours
+    show_in_seasons:
+      - summer
+  - fallback: Daily passes available at self service kiosk.
+    accent: "#fcd34d"
+    href: /assets/video/MTB_tickets.mp4
+    kind: direct
+    title: Trail Passes
+    show_in_seasons:
+      - summer
+    icon: ticket-perforated-fill
+    source: trail_passes_status
+    icon_set: bs
+  - fallback: Closed For The Season
+    accent: "#fde68a"
+    href: /pages/public/snow-tubing/snow-tubing/index.html
+    hide_in_seasons:
+      - summer
+    kind: tubing
+    title: Tubing
+    icon: disc-fill
+    source: tubing
+    icon_set: bs

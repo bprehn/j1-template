@@ -1,0 +1,73 @@
+trails_status: 0 / 19 Open
+ski_trails_status: 0 / 19 Open
+bike_trails_status: Trail System Open
+trail_passes_status: Daily passes available at self service kiosk.
+lifts_status: 0 / 8 Available
+mk-lift-status:
+  open-lifts: 0
+  ski-conveyor: Closed
+  lift-1: Closed
+  lift-2: Closed
+  lift-3: Closed
+  lift-4: Closed
+  lift-5: Closed
+  lift-6: Closed
+  lift-7: Closed
+  lift-8: Closed
+  tubing-conveyor: Closed
+mk-snow-report:
+  snow-last-24-hrs: 0"
+  snow-last-7-days: 10.5"
+  total-snow-this-season: 56.5"
+  snow-base: 12" to 30"
+  open-trails: 0
+  available-lifts: 0
+  comments: Closed For The Season
+mk-patrol-weather:
+  reporter: 265548
+  chalet-temp: 15°
+  snow-surface: Powder
+  precipitation: Sunny
+  report-time: 11:25:00 AM
+  report-date: 12/27/2025
+  base-depth: 14" to 40"
+  summit-wind: 20
+  chalet-wind-direction: W
+  new-snow: 4.75
+  visibility: 1
+  summit-temp: 16°
+  comments: "The Terrain Park on Timberwolf Trail in now open. Little Beaver,
+    Timberwolf Trail, Wolf Ridge, Big Brave, Brave Chute, Little Brave, Wild
+    Deer, Eagle Ridge, and Sundance Terrain Park are open. The Tubing Park open.
+    Snowmaking Update: Snowmaking has mainly  moving to the back runs. There is
+    still some snowmaking on the front. specifically Sundance & Wild Deer."
+  chalet-wind: 2.5
+  summit-wind-direction: NW
+mk-trail-status:
+  birch-coulee: Closed
+  big-bear: Closed
+  eagle-ridge: Closed
+  timberwolf-trail: Closed
+  wolf-chute: Closed
+  sundance: Closed
+  little-brave: Closed
+  birch-pass: Closed
+  little-crow: Closed
+  open-trails: 0
+  tomahawk-chute: Closed
+  wolf-ridge: Closed
+  wild-deer: Closed
+  sleepy-creek: Closed
+  big-brave: Closed
+  little-forest: Closed
+  brave-chute: Closed
+  big-hawk-ridge: Closed
+  sleepy-hollow: Closed
+  little-beaver: Closed
+tubing-status:
+  lane-1: Closed
+  lane-2: Closed
+  lane-3: Closed
+  lane-4: Closed
+  lane-5: Closed
+  terrain-park: Closed

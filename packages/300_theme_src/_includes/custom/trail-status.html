@@ -1,0 +1,63 @@
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Load Custom CSS and JS -->
+<link rel="stylesheet" href="{{ '/assets/custom/css/trail-status.css' | relative_url }}">
+<script src="{{ '/assets/custom/js/firebase-config.js' | relative_url }}"></script>
+<script src="{{ '/assets/custom/js/trail-status.js' | relative_url }}"></script>
+
+<!-- The Status Widget -->
+<!-- You can pass a variant class like 'widget-desktop', 'widget-horizontal', 'widget-micro', or 'widget-overlay' -->
+{% if include.variant contains 'widget-modal' %}
+<div class="trail-status-modal-wrapper">
+    <button class="status-modal-trigger badge-closed" id="mtb-modal-trigger">Loading MTB Status...</button>
+    <div class="status-modal-overlay hidden" id="status-modal-overlay">
+        <div class="status-modal-content">
+            <button class="status-modal-close" id="status-modal-close" aria-label="Close Modal">&times;</button>
+{% endif %}
+
+<div class="trail-status-widget {{ include.variant }}">
+    <div class="widget-header">
+        <h2>Lift & Trail Status</h2>
+        <span class="widget-last-updated last-updated">Updating...</span>
+    </div>
+
+    <div class="widget-standard-view">
+        <div class="widget-tabs">
+            <button class="widget-tab active" data-target="widget-lifts">Lifts</button>
+            <button class="widget-tab" data-target="widget-trails">Winter Trails</button>
+            <button class="widget-tab" data-target="widget-mtb">MTB Trails</button>
+        </div>
+
+        <div class="widget-content active widget-lifts">
+            <div class="status-grid public-lifts-list">
+                <!-- Lifts will be injected here -->
+                <div class="loading-spinner">Loading status...</div>
+            </div>
+        </div>
+
+        <div class="widget-content widget-trails">
+            <div class="status-grid public-trails-list">
+                <!-- Trails will be injected here -->
+            </div>
+        </div>
+
+        <div class="widget-content widget-mtb">
+            <div class="status-grid public-mtb-list">
+                <!-- MTB Trails will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="widget-overlay-view">
+        <div class="overlay-row overlay-front"></div>
+        <div class="overlay-row overlay-back"></div>
+    </div>
+</div>
+
+{% if include.variant contains 'widget-modal' %}
+        </div>
+    </div>
+</div>
+{% endif %}

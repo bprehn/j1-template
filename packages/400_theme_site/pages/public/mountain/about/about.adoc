@@ -80,6 +80,10 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++
+{% include custom/trail-status.html variant="widget-overlay" %}
+++++
+
 swiper::mk_about_slider[role="mb-4"]
 
 [role="dropcap"]

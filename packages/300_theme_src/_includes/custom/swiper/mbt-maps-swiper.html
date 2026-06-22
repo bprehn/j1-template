@@ -1,0 +1,88 @@
+<div class="swiper mk-mtb-swiper mb-5" id="mkMtbMapsSwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-1-scaled.jpg" alt="MTB Trail System" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-2-scaled.jpg" alt="MTB Trails North" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-3-scaled.jpg" alt="MTB Trails West" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-4-scaled.jpg" alt="MTB Trails South" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-5-scaled.jpg" alt="MTB Trails East" loading="lazy">
+    </div>
+  </div>
+  <div class="swiper-button-prev" aria-label="Previous map"></div>
+  <div class="swiper-button-next" aria-label="Next map"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  (function () {
+    var swiperId = 'mkMtbMapsSwiper';
+    var maxRetries = 80;
+    var retryDelayMs = 100;
+    var retries = 0;
+
+    function initSwiper() {
+      var el = document.getElementById(swiperId);
+      if (!el || el.dataset.swiperReady === 'true') {
+        return true;
+      }
+
+      if (typeof Swiper === 'undefined') {
+        return false;
+      }
+
+      el.dataset.swiperReady = 'true';
+
+      new Swiper(el, {
+        loop: true,
+        speed: 450,
+        slidesPerView: 1,
+        spaceBetween: 12,
+        pagination: {
+          el: el.querySelector('.swiper-pagination'),
+          clickable: true
+        },
+        navigation: {
+          nextEl: el.querySelector('.swiper-button-next'),
+          prevEl: el.querySelector('.swiper-button-prev')
+        },
+        keyboard: {
+          enabled: true
+        },
+        a11y: {
+          enabled: true
+        }
+      });
+
+      return true;
+    }
+
+    function tryInitSwiper() {
+      if (initSwiper()) {
+        return;
+      }
+
+      if (retries >= maxRetries) {
+        return;
+      }
+
+      retries += 1;
+      window.setTimeout(tryInitSwiper, retryDelayMs);
+    }
+
+    tryInitSwiper();
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', tryInitSwiper);
+    }
+
+    window.addEventListener('load', tryInitSwiper);
+  })();
+</script>

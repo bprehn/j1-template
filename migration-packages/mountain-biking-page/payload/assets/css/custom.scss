@@ -1,0 +1,298 @@
+--- 
+
+--- 
+.glow-tubing-bg{
+    background-image: url("/assets/image/glow-tubing-bg.jpg");
+} 
+div.card-header h4{
+    color: #fff;
+}
+h4.glow-header{
+    color:chartreuse!important;
+}
+.glow-bg{
+    background-color: chartreuse!important;
+}
+.article-caption{
+    /* background-color: #2196f3!important; */
+    background-color: transparent;
+}
+h2{
+    color: #2196f3!important;
+}
+
+$tubing-bg-image-path: "/assets/image/glow-tubing-bg.jpg";
+.glow-tubing-bg{
+    background-image: url($tubing-bg-image-path);
+}
+
+$background-image-path: "/assets/image/backgrounds/roy-bg-light.svg";
+#wrapper-inner {
+  background: url($background-image-path) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh; 
+}
+
+.responsive-iframe-container .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Ensures frameborder="0" is respected visually if CSS overrides */
+}
+
+.mm-spn ul {
+  height: 100%;
+  overflow-y:visible;
+}
+
+.lesson-name {
+  font-family: 'Roboto Slab';
+}
+
+#cardWithDynamicBackground .accordion-button:focus {
+    /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */ /* Default BS shadow */
+}
+
+/* Ensure logo is reasonably sized */
+.card-header img.img-fluid {
+  max-height: 40px; /* Adjust as needed */
+}
+
+.responsive-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Or a max-width if you prefer, e.g., max-width: 700px; margin: auto; */
+  padding-top: 56.25%; /* Aspect Ratio 16:9 (height/width = 360/640 = 0.5625 or 56.25%) */
+}
+
+.bg-image-card {
+  background-image: url('/assets/image/AerialView_Summer1.jpg'); /* Replace with the actual path to your image */
+  background-size: cover; /* Adjust as needed: contain, auto, pixel values, etc. */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white; /* Adjust text color for better visibility if needed */
+}
+
+/* Optional: Add an overlay to improve text readability */
+.bg-image-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity */
+  z-index: -1; /* Place the overlay behind the card content */
+}
+
+/*.card {
+  position: relative; /* Needed for the pseudo-element to position correctly */
+  /* z-index: 1; /* Ensure card content is above the background and overlay */
+  /* Add any other existing card styles if needed */
+/*}*/
+
+
+.article-caption{
+  box-shadow: none;
+}
+
+
+#cardWithDynamicBackground {
+  background-image: url('/assets/image/AerialView_Summer1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0; /* Remove padding if the inner card handles it, or set desired padding */
+  /* No fixed height - its height will be determined by the inner .card */
+  /* border: none; /* Optional: if you don't want the default card border */
+}
+
+/* Style the inner card that holds the accordion */
+#cardWithDynamicBackground .card.bg-light-subtle {
+  /* The opacity-75 class is already applied in HTML for transparency */
+  /* The m-0 and border-0 classes in HTML help it sit flush if #cardWithDynamicBackground has padding */
+  /* This card will naturally expand with the accordion content */
+}
+
+/* Styling for accordion items if needed for better blending or readability */
+#cardWithDynamicBackground .accordion-item {
+  /* If the inner card is bg-light-subtle, accordion items might not need specific background adjustments
+     unless you want them more or less transparent than the inner card itself. */
+  /* background-color: transparent; */ /* Example if you want them fully transparent to the inner card's bg */
+  /* border: none; */ /* Remove accordion item borders if desired */
+}
+
+#cardWithDynamicBackground .accordion-button:not(.collapsed) {
+    /* color: #0c63e4; */ /* Default BS color */
+    /* background-color: #e7f1ff; */ /* Default BS color */
+}
+
+/*.ratio { */
+/*    --bs-aspect-ratio: 56.25%; /* Default, you can change this */ 
+/*    @include media-breakpoint-up(sm) {*/  /* Adjust 'md' to your desired breakpoint */
+/*        --bs-aspect-ratio: 300%; */  /* 1x3 aspect ratio */
+/*    }} */
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.masonry-article-caption-heading{
+  font-family: 'Roboto Slab';
+}
+
+.masonry-article-caption-subheading {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+.masonry-article-caption {
+  background-color: #2196f3 !important;
+}
+
+.mk-trans-table {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* skisafety.us css for buttons */
+/* btn-custom-yellow */
+.btn-custom-yellow, .text-bg-custom-yellow, .bg-custom-yellow {
+    /* Normal state background color */
+    background-color: #efa207; 
+    border-color: #efa207; /* Match border color */
+}
+
+.btn-custom-yellow:hover,
+.btn-custom-yellow:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #f4d28e; 
+    border-color: #f4d28e; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-yellow:active {
+    background-color: #efa207; 
+    border-color: #efa207; 
+}
+
+/* btn-custom-red */
+.btn-custom-red, .text-bg-custom-red, .bg-custom-red {
+    /* Normal state background color */
+    background-color: rgb(208, 65, 36); 
+    border-color: rgb(208, 65, 36); /* Match border color */
+}
+
+.btn-custom-red:hover,
+.btn-custom-red:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: rgb(206, 146, 134); 
+    border-color: rgb(206, 146, 134); /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-red:active {
+    background-color: rgb(208, 65, 36); 
+    border-color: rgb(208, 65, 36); 
+}
+
+/* btn-custom-orange */
+.btn-custom-orange, .text-bg-custom-orange, .bg-custom-orange {
+    /* Normal state background color */
+    background-color: #fd8204; 
+    border-color: #fd8204; /* Match border color */
+}
+
+.btn-custom-orange:hover,
+.btn-custom-orange:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #fbcc9d; 
+    border-color: #fbcc9d; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-orange:active {
+    background-color: #fd8204; 
+    border-color: #fd8204; 
+}
+
+/* btn-custom-blue */
+.btn-custom-blue, .text-bg-custom-blue, .bg-custom-blue {
+    /* Normal state background color */
+    background-color: #013593; 
+    border-color: #013593; /* Match border color */
+}
+
+.btn-custom-blue:hover,
+.btn-custom-blue:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #60708f; 
+    border-color: #60708f; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-blue:active {
+    background-color: #013593; 
+    border-color: #013593; 
+}
+
+/* btn-custom-grey */
+.btn-custom-grey, .text-bg-custom-grey, .bg-custom-grey {
+    /* Normal state background color */
+    background-color: #76787b; 
+    border-color: #76787b; /* Match border color */
+}
+
+.btn-custom-grey:hover,
+.btn-custom-grey:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #bebfc2; 
+    border-color: #bebfc2; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-grey:active {
+    background-color: #76787b; 
+    border-color: #76787b; 
+}
+
+/* btn-custom-violet */
+.btn-custom-violet, .text-bg-custom-violet, .bg-custom-violet {
+    /* Normal state background color */
+    background-color: #671e75; 
+    border-color: #671e75; /* Match border color */
+}
+
+.btn-custom-violet:hover,
+.btn-custom-violet:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #6d4a74; 
+    border-color: #6d4a74; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-violet:active {
+    background-color: #671e75; 
+    border-color: #671e75; 
+}
+
+/* btn-custom-brown */
+.btn-custom-brown, .text-bg-custom-brown, .bg-custom-brown {
+    /* Normal state background color */
+    background-color: #774212; 
+    border-color: #774212; /* Match border color */
+}
+
+.btn-custom-brown:hover,
+.btn-custom-brown:focus {
+    /* Hover/Focus state background color - make it slightly darker */
+    background-color: #746150; 
+    border-color: #746150; /* Match border color */
+}
+
+/* Optional: Keep the default Bootstrap active/down state behavior */
+.btn-custom-violet:active {
+    background-color: #774212; 
+    border-color: #774212; 
+}

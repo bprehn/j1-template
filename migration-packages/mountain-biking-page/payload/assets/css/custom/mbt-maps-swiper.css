@@ -1,0 +1,33 @@
+.mk-mtb-swiper {
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  background: #0d2135;
+}
+
+.mk-mtb-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #091727;
+}
+
+.mk-mtb-swiper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mk-mtb-swiper .swiper-button-prev,
+.mk-mtb-swiper .swiper-button-next {
+  color: #ffffff;
+}
+
+.mk-mtb-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.mk-mtb-swiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+}

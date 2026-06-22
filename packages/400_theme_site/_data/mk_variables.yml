@@ -1,0 +1,51 @@
+# ------------------------------------------------------------------------------
+# mk_variables.yml
+# Mount Kato Site Info & Global Alert
+#
+# NOTE: Large data groups have been split into separate files:
+#   _data/mk_hours.yml    - Hours of operation & schedule
+#   _data/mk_prices.yml   - Lift tickets, rentals & season passes
+#   _data/mk_status.yml   - Live lift/trail/tubing status, snow report
+#   _data/mk_programs.yml - Lessons, programs, groups & tubing
+# ------------------------------------------------------------------------------
+
+version: 2
+
+# ------------------------------------------------------------------------------
+# Global Alert Message
+# ------------------------------------------------------------------------------
+alert_message:
+  active: true
+  title: Weather Alert
+  body: Mountain Bike Trails Closed Due To Wet Trail Conditions
+
+# ------------------------------------------------------------------------------
+# Site Identity
+# ------------------------------------------------------------------------------
+mk-url: mountkato.com
+mk-name: Mount Kato
+mk-address: 20461 Old State Hwy 66, Mankato, MN 56001
+mk-phone-main: 507-625-3363
+mk-phone-tollfree: 800-668-5286
+mk-fax: null
+mk-season: 2023-24
+
+# ------------------------------------------------------------------------------
+# Taglines
+# ------------------------------------------------------------------------------
+mk-tagline-0: Mount Kato -Fun For Kids Of All Ages
+mk-tagline-1: Ski Great Snow At Mount Kato
+mk-tagline-2: Ski | Ride | Tube
+mk-tagline-3: Know Before You Go
+
+# ------------------------------------------------------------------------------
+# Descriptions
+# ------------------------------------------------------------------------------
+mk-basic-desc: 19 Trails | 8 Chairlifts | 2 Terrain Parks 2 Conveyor Lifts
+  (beginner area & tubing park) Lower Food Court | The Lift Bar & Grill
+  Certified Ski/Snowboard School | 100% Snow Making Full Service Rental Shop |
+  Tuning Center & Accessory Shop Summer Mountain Biking
+mk-desc-loc: Just a mile south of Mankato, Minnesota. Nestled in the valleys
+  created by the confluence of the Le Sueur, Blue Earth, and Minnesota rivers,
+  making great terrain for… skiing, snowboarding, tubing, & mountain biking.
+mk-desc-loc-short: Located just one mile south of Mankato in the scenic Minnesota River Valley.

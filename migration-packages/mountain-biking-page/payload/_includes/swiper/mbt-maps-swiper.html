@@ -1,0 +1,58 @@
+<div class="swiper mk-mtb-swiper mb-5" id="mkMtbMapsSwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-1-scaled.jpg" alt="MTB Trail System" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-2-scaled.jpg" alt="MTB Trails North" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-3-scaled.jpg" alt="MTB Trails West" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-4-scaled.jpg" alt="MTB Trails South" loading="lazy">
+    </div>
+    <div class="swiper-slide">
+      <img src="/assets/image/modules/carousel/mbt_maps/MK-MBT-Map-5-scaled.jpg" alt="MTB Trails East" loading="lazy">
+    </div>
+  </div>
+  <div class="swiper-button-prev" aria-label="Previous map"></div>
+  <div class="swiper-button-next" aria-label="Next map"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  (function () {
+    if (typeof Swiper === 'undefined') {
+      return;
+    }
+
+    var el = document.querySelector('#mkMtbMapsSwiper');
+    if (!el || el.dataset.swiperReady === 'true') {
+      return;
+    }
+
+    el.dataset.swiperReady = 'true';
+
+    new Swiper(el, {
+      loop: true,
+      speed: 450,
+      slidesPerView: 1,
+      spaceBetween: 12,
+      pagination: {
+        el: '#mkMtbMapsSwiper .swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '#mkMtbMapsSwiper .swiper-button-next',
+        prevEl: '#mkMtbMapsSwiper .swiper-button-prev'
+      },
+      keyboard: {
+        enabled: true
+      },
+      a11y: {
+        enabled: true
+      }
+    });
+  })();
+</script>

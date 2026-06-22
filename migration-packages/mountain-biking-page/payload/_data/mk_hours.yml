@@ -1,0 +1,41 @@
+# ------------------------------------------------------------------------------
+# mk_hours.yml
+# Mount Kato Hours of Operation
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Operating Hours
+# ------------------------------------------------------------------------------
+mk-hours:
+  mk-hours-night-rate: 4 pm
+  mk-early-season-fri-sat: 10:00 am - 9 pm
+  mk-hours-fri-sat: 10 am - 7 pm
+  mk-hours-mtthsu: 10 am - 7 pm
+  mk-early-season-mtth: 4:00 pm - 9 pm
+  mk-mlk-day: Jan 19, 9:30 am - 9 pm
+  mk-pres-day: Feb 16, 9:30 am - 9 pm
+  mk-xmas-vacation: Dec 22 - Jan 2
+  mk-xmas: Closed
+  mk-early-season-sun: Noon - 9 pm
+  mk-xmas-eve: Dec 24, 9:30 am - 3 pm
+  mk-xmas-wed: Dec 24, 31, Closed
+
+# ------------------------------------------------------------------------------
+# General Schedule (Mon - Sun)
+# ------------------------------------------------------------------------------
+hours:
+  Monday: 10 am - 7 pm
+  Tuesday: 10 am - 7 pm
+  Wednesday: Closed
+  Thursday: 10:00 am - 7 pm
+  Friday: 10 am - 7 pm
+  Saturday: 10 am - 7 pm
+  Sunday: 10 am - 7 pm
+
+# ------------------------------------------------------------------------------
+# Tubing Status Messages
+# ------------------------------------------------------------------------------
+tubing:
+  Friday: Closed For The Season
+  Saturday: Closed For The Season
+  Sunday: Closed For The Season

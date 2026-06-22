@@ -1,0 +1,79 @@
+.glow-tubing-bg{
+    background-image: url("/assets/image/glow-tubing-bg.jpg");
+} 
+div.card-header h4{
+    color: #fff;
+}
+h4.glow-header{
+    color:chartreuse!important;
+}
+.glow-bg{
+    background-color: chartreuse!important;
+}
+.article-caption{
+    background-color: #2196f3!important;
+}
+h2{
+    color: #2196f3!important;
+}
+#themes_menu, #themes_mmenu{
+    display:none!important;
+}
+
+/* In your stylesheet */
+#cardWithDynamicBackground {
+  /* --- PRIMARY SUSPECT FOR IMAGE NOT SHOWING --- */
+  background-image: url('/assets/image/AerialView_Summer1.jpg');
+  /*
+     absolument_double_check_this_path_as_described_above
+    try_a_public_url_like_https_via_placeholder_com_100x100_png_to_test
+  */
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0; /* Or e.g., padding: 1rem; if you want space between image edge and inner card */
+  /* background-color: transparent !important; */ /* You can try this if you suspect BS .card bg is winning */
+}
+
+/* Inner card styling (already using Bootstrap classes mostly) */
+#cardWithDynamicBackground .card.bg-light-subtle {
+  /* opacity-75 is from Bootstrap and should be working */
+}
+
+/* Optional: Make accordion items/buttons have a slightly more transparent background
+   if you want more of the main background image to bleed through them. */
+#cardWithDynamicBackground .accordion-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */ /* Example: if bg-light-subtle is too opaque */
+  /* border: none; */
+}
+
+/* Ensure logo is reasonably sized */
+.card-header img.img-fluid {
+  max-height: 40px; /* Adjust as needed */
+}
+
+.responsive-iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Or a max-width if you prefer, e.g., max-width: 700px; margin: auto; */
+  padding-top: 56.25%; /* Aspect Ratio 16:9 (height/width = 360/640 = 0.5625 or 56.25%) */
+}
+
+.responsive-iframe-container .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Ensures frameborder="0" is respected visually if CSS overrides */
+}
+
+.mm-spn ul {
+	height: 100%;
+  overflow-y:visible;
+}
+
+.article-caption, .article-link {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);;
+}

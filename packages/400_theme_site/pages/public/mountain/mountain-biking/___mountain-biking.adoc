@@ -1,0 +1,109 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++
+
+{% include custom/static/info-list.html %}
+
+
+
+<!-- <center>
+<iframe
+  id="ytplayer"
+  type="text/html"
+  width="640" height="360"
+  src="https://www.youtube.com/embed/Q-EjM550f7Y?autoplay=1&amp;rel=0&amp;showinfo=0&amp;showsearch=0&amp;controls=0&amp;loop=1&amp;enablejsapi=1&amp;playlist=Q-EjM550f7Y&amp;mute=1&amp;origin=https%3A%2F%2Fmountkato.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fmountkato.com%2Fmountain%2Fmountain-biking%2F&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Fmountkato.com%2F&amp;vf=1"
+  frameborder="0">
+</iframe>
+</center> -->
+<div class="responsive-iframe-container mb-5">
+  <iframe
+    id="ytplayer"
+    class="responsive-iframe"
+    src="https://www.youtube.com/embed/Q-EjM550f7Y?autoplay=1&rel=0&showinfo=0&showsearch=0&controls=0&loop=1&enablejsapi=1&playlist=Q-EjM550f7Y&mute=1&origin=https%3A%2F%2Fmountkato.com&widgetid=1&forigin=https%3A%2F%2Fmountkato.com%2Fmountain%2Fmountain-biking%2F&aoriginsup=1&gporigin=https%3A%2F%2Fmountkato.com%2F&vf=1" frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+++++
+
+
+[role="dropcap mt-5 mb-5"]
+== Mountain Bike Trail System Open For The Season.
+
+
+Experience the thrill of mountain biking at Mount Kato! Our diverse terrain and meticulously maintained trails offer an exhilarating adventure for riders of all levels, from beginners to seasoned pros.
+
+[role="mt-5"]
+
+++++
+{% include swiper/mbt-maps-swiper.html %}
+++++
+
+[role="mt-5"]
+
+++++
+
+{% include ambient-mk-chalet-station.html %}
+
+++++
+
+[role="mt-5"]
+
+video::/assets/video/MTB_tickets.mp4[poster=/assets/image/MTB_tickets.jpeg]
+
+[role="mt-5"]
+
+++++
+
+{% include mtb_cards.html %}
+
+++++
+
+[role="mt-5"]
+
+++++
+{% include lnt_card_copy.html %}
+++++
+
+[role="mt-5"]
+
+== Code Of Conduct: ==
+We want you to achieve maximum fun in your bicycling experience. To preserve both your own safety and the fragile environment, it’s important to follow certain guidelines.
+
+[role="mt-5"]
+
+++++
+
+{% include mtb_code.html %}
+
+++++
+
+
+[role="mt-5"]
+Be aware that your safety is directly affected by your judgment.
+Know your ability and ride within it.
+When in doubt walk.
+Approved bicycle helmets are required.
+Eye protection, enclosed footwear and water are highly recommended.
+Ride only on designated trails to avoid trampling. vegetation and minimize potential erosion.
+Ride in control and be prepared to stop at any time.
+Slow down if you do not have clear vision of the trail in front of you.
+Portions of the trail may require vehicular traffic. It is not advisable to ride alone as our trails are not continuously patrolled or cleared at the end of the day.
+Never ride under the influence of drugs or alcohol.
+Smoking is strictly prohibited on trails.
+Make your presence known and slow down when approaching or overtaking another rider.
+Do not stop where you obstruct a trail or where you are not visible to other riders.
+Pets are not permitted on trails.
+Let your experience and ability determine your route and travel speed.
+
+++++ 
+
+{% include downloads_card-summer.html %}
+
+++++
+
+
+
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+
