@@ -1,0 +1,125 @@
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Load Live Status JS -->
+<script src="{{ '/assets/custom/js/firebase-config.js?v=2' | relative_url }}"></script>
+<script src="{{ '/assets/custom/js/trail-status.js?v=2' | relative_url }}"></script>
+
+<div class="container text-center">
+  <!-- Top Row -->
+  <div class="row mt-5">
+    <div class="col-lg mt-3">
+      <!-- SNOW REPORT CARD -->
+      <div class="card plan-card raised-z2 mb-5">
+        <div class="card-body">
+          <h5 class="card-title">Snow Report</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Last 24 Hours: <strong>{{ site.data.mk-variables.mk-snow-report.snow-last-24-hrs }}</strong> inches </li>
+            <li class="list-group-item">Snow Last 7 Days: <strong>{{ site.data.mk-variables.mk-snow-report.snow-last-7-days }}</strong> inches</li>
+            <li class="list-group-item">Total Snow This Season: <strong>{{ site.data.mk-variables.mk-snow-report.total-snow-this-season }}</strong> inches</li>
+            <li class="list-group-item">Snow Base: <strong>{{ site.data.mk-variables.mk-snow-report.snow-base }}</strong> inches</li>
+            <li class="list-group-item">Total Trails: <strong>{{ site.data.mk-variables.mk-snow-report.open-trails }}</strong></li>
+            <li class="list-group-item">Lifts Available: <strong>{{ site.data.mk-variables.mk-snow-report.available-lifts }}</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg mt-3">
+      <!-- AMBIENT WEATHER -->
+      <div id="weatherData" style="display:none;" data-temperature="" data-humidity="" data-feelslike="" data-windspeed="" data-winddirection="" data-iconcode=""></div>
+      <div class="card mb-5 plan-card raised-z2 mb-5">
+          <div class="card-body">
+              <div class="weather-section">
+                  <iframe width="100%" height="450" frameborder="0" src="https://ambientweather.net/devices/public/d148752c5c5d44cc6cda55d60eced5e6?embed=true"></iframe>
+              </div>
+          </div>    
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Row: Lifts & Trails -->
+  <div class="row mt-5">
+    <div class="col-lg mt-3">
+      <!-- FRONT TRAILS -->
+      <div class="card h-100 plan-card raised-z2 mb-5">
+          <div class="card-body">
+            <h5 class="card-title">Front Trails</h5>
+            <ul class="list-group">
+              <li class="list-group-item bg-success text-light text-end">Little Beaver<span data-trail-id="little-beaver" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Timberwolf Trail<span data-trail-id="timberwolf" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Wolf Chute<span data-trail-id="wolf-chute" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Wolf Ridge<span data-trail-id="wolf-ridge" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Big Brave<span data-trail-id="big-brave" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Brave Chute<span data-trail-id="brave-chute" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Little Brave<span data-trail-id="little-brave" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Wild Deer<span data-trail-id="wild-deer" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Eagle Ridge<span data-trail-id="eagle-ridge" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li data-bg-trail-id="sundance-park" class="list-group-item bg-primary text-light text-end">Sundance<span data-trail-id="sundance" class="badge rounded-pill ml-2">Loading...</span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-lg mt-3">
+      <!-- LIFTS CARD -->
+      <div class="card h-100 plan-card raised-z2 mb-5">
+          <div class="card-body">
+            <h5 class="card-title">Lifts Status</h5>
+            <ul class="list-group">
+              <li class="list-group-item bg-success text-light text-end">Lift One<span data-lift-id="lift-1" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Two<span data-lift-id="lift-2" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Three<span data-lift-id="lift-3" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Four<span data-lift-id="lift-4" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Five<span data-lift-id="lift-5" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Six<span data-lift-id="lift-6" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Seven<span data-lift-id="lift-7" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lift Eight<span data-lift-id="lift-8" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Ski Conveyor<span data-lift-id="ski-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Tubing Conveyor<span data-lift-id="tube-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-lg mt-3">
+      <!-- BACK TRAILS -->
+      <div class="card h-100 plan-card raised-z2 mb-5">
+          <div class="card-body">
+            <h5 class="card-title">Back Trails</h5>
+            <ul class="list-group">
+              <li class="list-group-item bg-primary text-light text-end">Big Hawk Ridge<span data-trail-id="big-hawk-ridge" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Little Forest<span data-trail-id="little-forest" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Sleepy Creek<span data-trail-id="sleepy-creek" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Birch Pass<span data-trail-id="birch-pass" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Birch Coulee<span data-trail-id="birch-coulee" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Sleepy Hollow<span data-trail-id="sleepy-hollow" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-primary text-light text-end">Little Crow<span data-trail-id="little-crow" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Tomahawk Chute<span data-trail-id="tomahawk-chute" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-black text-light text-end">Big Bear<span data-trail-id="big-bear" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item invisible">Blank</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <!-- Bottom Full Row -->
+    <div class="col-lg mt-3">
+      <!-- TUBING -->
+      <div class="card h-100 plan-card raised-z2 mb-5">
+          <div class="card-body">
+            <h5 class="card-title">Tubing Status</h5>
+            <ul class="list-group">
+              <li class="list-group-item bg-success text-light text-end">Tubing Park<span data-tubing-id="mk-tubing-park" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Tubing Conveyor<span data-lift-id="tube-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lane One<span data-tubing-id="lane-1" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lane Two<span data-tubing-id="lane-2" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lane Three<span data-tubing-id="lane-3" class="badge rounded-pill ml-2">Loading...</span></li>
+              <li class="list-group-item bg-success text-light text-end">Lane Four<span data-tubing-id="lane-4" class="badge rounded-pill ml-2">Loading...</span></li>  
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>   
+</div>

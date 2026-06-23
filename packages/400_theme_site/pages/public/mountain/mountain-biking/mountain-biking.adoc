@@ -21,7 +21,7 @@ robots:
   follow:                               false
 
 image:
-  path:                                 /assets/image/module/attic/sigmund-1920x1280.jpg
+  path:                                 /assets/image/module/attic/1920x1280/MBTopen.jpg
   width:                                1920
   height:                               1280
 
@@ -41,12 +41,12 @@ resource_options:
       collapseDepth:                    3
   - attic:
       slides:
-        - url:                          /assets/image/module/attic/sigmund-1920x1280.jpg
-          alt:                          Photo by Sigmund on Unsplash
+        - url:                          /assets/image/module/attic/1920x1280/MBTopen.jpg
+          alt:                          Photo by Mount Kato Staff
           badge:
             type:                       unsplash
-            author:                     Sigmund
-            href:                       //unsplash.com/@sigmund
+            author:                     Mount Kato
+            href:                       //mountkato.com
 ---
 
 // Page Initializer
@@ -88,8 +88,6 @@ resource_options:
 
 {% include custom/static/info-list.html %}
 
-
-
 <!-- <center>
 <iframe
   id="ytplayer"
@@ -97,8 +95,8 @@ resource_options:
   width="640" height="360"
   src="https://www.youtube.com/embed/Q-EjM550f7Y?autoplay=1&amp;rel=0&amp;showinfo=0&amp;showsearch=0&amp;controls=0&amp;loop=1&amp;enablejsapi=1&amp;playlist=Q-EjM550f7Y&amp;mute=1&amp;origin=https%3A%2F%2Fmountkato.com&amp;widgetid=1&amp;forigin=https%3A%2F%2Fmountkato.com%2Fmountain%2Fmountain-biking%2F&amp;aoriginsup=1&amp;gporigin=https%3A%2F%2Fmountkato.com%2F&amp;vf=1"
   frameborder="0">
-</iframe>
-</center> -->
+</iframe> -->
+
 <div class="responsive-iframe-container mb-5">
   <iframe
     id="ytplayer"
@@ -117,7 +115,13 @@ resource_options:
 
 Experience the thrill of mountain biking at Mount Kato! Our diverse terrain and meticulously maintained trails offer an exhilarating adventure for riders of all levels, from beginners to seasoned pros.
 
+[role="mt-5"]
 
+++++
+{% include swiper/mbt-maps-swiper.html %}
+++++
+
+[role="mt-5"]
 
 ++++
 
@@ -185,11 +189,3 @@ Let your experience and ability determine your route and travel speed.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
-
-[role="mt-5"]
-
-++++
-{% include swiper/mbt-maps-swiper.html %}
-++++
-
-[role="mt-5"]

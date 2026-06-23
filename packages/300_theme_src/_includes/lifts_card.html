@@ -1,0 +1,33 @@
+<!--
+ # -----------------------------------------------------------------------------
+ # ~/_includes/lifts_card.html
+ #
+ # Copyright (C) 2024 Mount Kato
+ #
+ # -----------------------------------------------------------------------------
+-->
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Load Live Status JS -->
+<script src="{{ '/assets/custom/js/firebase-config.js' | relative_url }}"></script>
+<script src="{{ '/assets/custom/js/trail-status.js' | relative_url }}"></script>
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Lifts Status</h5>
+      <ul class="list-group">
+        <li class="list-group-item bg-success text-light text-end">Lift One<span data-lift-id="lift-1" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Two<span data-lift-id="lift-2" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Three<span data-lift-id="lift-3" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Four<span data-lift-id="lift-4" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Five<span data-lift-id="lift-5" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Six<span data-lift-id="lift-6" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Seven<span data-lift-id="lift-7" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lift Eight<span data-lift-id="lift-8" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Ski Conveyor<span data-lift-id="ski-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Tubing Conveyor<span data-lift-id="tube-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+      </ul>
+    </div>
+</div>

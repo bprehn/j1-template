@@ -1,0 +1,25 @@
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Load Live Status JS -->
+<script src="{{ '/assets/custom/js/firebase-config.js?v=2' | relative_url }}"></script>
+<script src="{{ '/assets/custom/js/trail-status.js?v=2' | relative_url }}"></script>
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Back Trails</h5>
+      <ul class="list-group">
+        <li class="list-group-item bg-primary text-light text-end">Big Hawk Ridge<span data-trail-id="big-hawk-ridge" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-primary text-light text-end">Little Forest<span data-trail-id="little-forest" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-primary text-light text-end">Sleepy Creek<span data-trail-id="sleepy-creek" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Birch Pass<span data-trail-id="birch-pass" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-primary text-light text-end">Birch Coulee<span data-trail-id="birch-coulee" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Sleepy Hollow<span data-trail-id="sleepy-hollow" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-primary text-light text-end">Little Crow<span data-trail-id="little-crow" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-black text-light text-end">Tomahawk Chute<span data-trail-id="tomahawk-chute" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-black text-light text-end">Big Bear<span data-trail-id="big-bear" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item invisible">Blank</li>
+      </ul>
+    </div>
+</div>

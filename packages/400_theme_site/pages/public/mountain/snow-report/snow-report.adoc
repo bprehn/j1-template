@@ -83,6 +83,39 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[role="dropcap"]
+
+Stay informed and plan your perfect day on the slopes with the Mount Kato Snow Report! This dynamic page provides up-to-the-minute information on everything you need to know before hitting the slopes.
+[role="mt-5"]
+
 ++++
-{% include custom/trail-status.html %}
+{% include snow_report_container.html %}
+++++
+
+[role="mt-5"]
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+[role="mt-5"]
+== Stay Updated on Mountain Conditions:
+
+*Fresh Snowfall:* Get the latest snowfall totals to know how much powder awaits you.
+
+*Base Depth:* Check the current snow base for optimal riding conditions.
+
+*Open Trails & Lifts:* Discover which runs and lifts are ready for action.
+Weather Forecast: Prepare for your adventure with a detailed outlook for temperature, wind, and precipitation.
+
+*Grooming Report:* See which trails have been freshly groomed for a smooth ride.
+Webcams: Get a live glimpse of the mountain's beauty and conditions.
+
+== Plan Your Perfect Day:
+
+With the Mount Kato Snow Report, you'll always have the most accurate information to plan your ski or snowboard outing. Whether you're seeking fresh powder, carving on groomed runs, or exploring the terrain park, our snow report empowers you to make the most of every moment on the mountain.
+
+[role="mt-5"]
+
+++++
+{% include custom/templates/mk_trail_map_lite.html %}
 ++++

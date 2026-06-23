@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const database = firebase.database();
     const widgets = document.querySelectorAll('.trail-status-widget');
+    const globalLiftBadges = document.querySelectorAll('[data-lift-id]');
+    const globalTrailBadges = document.querySelectorAll('[data-trail-id]');
+    const globalTubingBadges = document.querySelectorAll('[data-tubing-id]');
 
-    if (widgets.length === 0) return;
+    if (widgets.length === 0 && globalLiftBadges.length === 0 && globalTrailBadges.length === 0 && globalTubingBadges.length === 0) return;
 
     let liftsData = null;
     let trailsData = null;
@@ -157,6 +160,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (listContainer) renderPublicList(liftsData, listContainer, widget, true);
             }
         });
+        
+        // Update any standalone data-lift-id badges globally
+        document.querySelectorAll('[data-lift-id]').forEach(badge => {
+            const liftId = badge.dataset.liftId;
+            const item = liftsData[liftId];
+            if (item) {
+                badge.textContent = item.status;
+                if (item.status === 'Open') {
+                    badge.className = 'badge bg-white text-success rounded-pill ml-2';
+                } else if (item.status === 'Hold') {
+                    badge.className = 'badge bg-warning text-dark rounded-pill ml-2';
+                } else {
+                    badge.className = 'badge bg-danger text-white rounded-pill ml-2';
+                }
+            }
+        });
+
         updateLastModifiedText();
     });
 
@@ -170,7 +190,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (listContainer) renderPublicList(trailsData, listContainer, widget, false);
             }
         });
+        
+        // Update standalone badges
+        document.querySelectorAll('[data-trail-id]').forEach(badge => {
+            const trailId = badge.dataset.trailId;
+            const item = trailsData[trailId];
+            if (item) {
+                badge.textContent = item.status;
+                if (item.status === 'Open') {
+                    badge.className = 'badge bg-white text-success rounded-pill ml-2';
+                } else if (item.status === 'Hold') {
+                    badge.className = 'badge bg-warning text-dark rounded-pill ml-2';
+                } else {
+                    badge.className = 'badge bg-danger text-white rounded-pill ml-2';
+                }
+            }
+        });
+
+        // Update standalone list items that change background color (e.g. Sundance Park)
+        document.querySelectorAll('[data-bg-trail-id]').forEach(li => {
+            const trailId = li.dataset.bgTrailId;
+            const item = trailsData[trailId];
+            if (item) {
+                if (item.status === 'Open') {
+                    li.className = 'list-group-item bg-warning text-black text-end';
+                } else {
+                    li.className = 'list-group-item bg-primary text-light text-end';
+                }
+            }
+        });
+
         updateLastModifiedText();
+    });
+
+    database.ref('tubingTrails').on('value', snapshot => {
+        let tubingData = snapshot.val();
+        
+        // Update standalone badges
+        if (tubingData) {
+            // Fix malformed nested imports (e.g. if the user imported the file and it nested under "seed_tubing")
+            if (tubingData['seed_tubing']) {
+                tubingData = tubingData['seed_tubing'];
+            }
+
+            document.querySelectorAll('[data-tubing-id]').forEach(badge => {
+                const tubingId = badge.dataset.tubingId;
+                const item = tubingData[tubingId];
+                if (item) {
+                    badge.textContent = item.status;
+                    if (item.status === 'Open') {
+                        badge.className = 'badge bg-white text-success rounded-pill ml-2';
+                    } else if (item.status === 'Hold') {
+                        badge.className = 'badge bg-warning text-dark rounded-pill ml-2';
+                    } else {
+                        badge.className = 'badge bg-danger text-white rounded-pill ml-2';
+                    }
+                }
+            });
+        }
     });
 
     database.ref('mtbTrails').on('value', snapshot => {

@@ -1,0 +1,29 @@
+<!--
+ # -----------------------------------------------------------------------------
+ # ~/_includes/tubing_card.html
+ #
+ # Copyright (C) 2024 Mount Kato
+ #
+ # -----------------------------------------------------------------------------
+-->
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- Load Live Status JS -->
+<script src="{{ '/assets/custom/js/firebase-config.js?v=2' | relative_url }}"></script>
+<script src="{{ '/assets/custom/js/trail-status.js?v=2' | relative_url }}"></script>
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Tubing Status</h5>
+      <ul class="list-group">
+        <li class="list-group-item bg-success text-light text-end">Tubing Park<span data-tubing-id="mk-tubing-park" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Tubing Conveyor<span data-lift-id="tube-conveyor" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lane One<span data-tubing-id="lane-1" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lane Two<span data-tubing-id="lane-2" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lane Three<span data-tubing-id="lane-3" class="badge rounded-pill ml-2">Loading...</span></li>
+        <li class="list-group-item bg-success text-light text-end">Lane Four<span data-tubing-id="lane-4" class="badge rounded-pill ml-2">Loading...</span></li>  
+      </ul>
+    </div>
+</div>
