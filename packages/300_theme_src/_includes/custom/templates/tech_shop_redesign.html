@@ -1,0 +1,151 @@
+<!-- Tech Shop Redesign using mk-themes (Bootstrap based) -->
+<!-- Phosphor Icons for modern vector icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+<style>
+    /* Minimal custom CSS to ensure glassmorphism effect and dark mode overrides without breaking mk-themes */
+    .tech-card {
+        background: rgba(33, 37, 41, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 1rem;
+        color: #f8f9fa;
+    }
+    .tech-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    .tech-icon {
+        color: #00e5ff;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .tech-section-title {
+        color: #f8f9fa;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .tech-section-subtitle {
+        color: #adb5bd;
+        margin-bottom: 2rem;
+    }
+    .tech-bg-dark {
+        background-color: #1a1d20; /* Darker bg for contrast against site's main theme if it's light */
+        padding: 3rem 0;
+        border-radius: 1rem;
+        color: #f8f9fa;
+    }
+</style>
+
+<div class="tech-bg-dark mb-5">
+    <div class="container text-center">
+        <h2 class="tech-section-title">Our Services</h2>
+        <p class="tech-section-subtitle">Professional care for your winter equipment.</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-wrench tech-icon"></i>
+                        <h4 class="card-title text-white">Binding Mounting</h4>
+                        <p class="card-text text-light">Ensure a secure and comfortable fit with our professional binding mounting and adjustment services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-bandaids tech-icon"></i>
+                        <h4 class="card-title text-white">Ski & Snowboard Repair</h4>
+                        <p class="card-text text-light">From minor fixes to major base repairs, our technicians have the expertise to bring your gear back to life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-sparkle tech-icon"></i>
+                        <h4 class="card-title text-white">Tuning & Waxing</h4>
+                        <p class="card-text text-light">Enhance your speed and control with precision tuning and expert waxing for an optimal, smooth glide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tech-bg-dark mb-5">
+    <div class="container text-center">
+        <h2 class="tech-section-title">Gear Up</h2>
+        <p class="tech-section-subtitle">Everything you need for your next adventure.</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-hand-palm tech-icon"></i>
+                        <h4 class="card-title text-white">Gloves & Mittens</h4>
+                        <p class="card-text text-light">Keep your hands warm and protected with our high-quality gloves designed for extreme winter sports.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-sunglasses tech-icon"></i>
+                        <h4 class="card-title text-white">Goggles & Glasses</h4>
+                        <p class="card-text text-light">Protect your eyes from the sun and snow with stylish, fog-resistant, and functional eyewear.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tech-card h-100 p-4 text-center">
+                    <div class="card-body">
+                        <i class="ph ph-baseball-cap tech-icon"></i>
+                        <h4 class="card-title text-white">Helmets & Hats</h4>
+                        <p class="card-text text-light">Prioritize safety and comfort with our range of industry-standard helmets and warm winter hats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tech-bg-dark mb-5">
+    <div class="container text-center">
+        <h2 class="tech-section-title">Why Mount Kato Tech Shop?</h2>
+        <p class="tech-section-subtitle">The best equipment, convenient location, and expert staff.</p>
+        
+        <div class="row g-4 mt-2 text-start">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start text-light">
+                    <i class="ph ph-gear-fine tech-icon me-3"></i>
+                    <div>
+                        <h5 class="text-white">Grind Rite Equipment</h5>
+                        <p class="small">We are an authorized GRINDrite Service Center giving us the best tuning equipment in the area.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start text-light">
+                    <i class="ph ph-map-pin tech-icon me-3"></i>
+                    <div>
+                        <h5 class="text-white">Convenient Location</h5>
+                        <p class="small">Located right on-site at Mount Kato, making it easy to get your gear serviced and get back on the slopes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start text-light">
+                    <i class="ph ph-certificate tech-icon me-3"></i>
+                    <div>
+                        <h5 class="text-white">Experienced Technicians</h5>
+                        <p class="small">Our certified technicians are passionate about winter sports and have extensive knowledge of equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
