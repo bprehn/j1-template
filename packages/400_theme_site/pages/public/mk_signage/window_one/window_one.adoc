@@ -1,0 +1,149 @@
+---
+title:                                  ticket window 1
+tagline:                                ticket window signage
+
+layout:                                 landing
+
+
+
+date:                                   2025-07-31
+#last_modified:                         2025-07-31
+
+description: >
+                                        Main display page for Mount Kato's ticket window one.
+
+categories:                             [ mk-signage ]
+tags:                                   [ ticket windows ]
+
+robots:
+  index:                                false
+  follow:                               false
+header:                                 true
+footer:                                 true
+
+personalization:                        false
+comments:                               false
+exclude_from_search:                    false
+fab_menu_id:                            open_toc
+scrollbar:                              false
+toc:                                    true
+regenerate:                             false
+permalink:                              /pages/public/mk_signage/window_one/
+
+resources:                              [ animate, carousel ]
+
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set page (local) attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+{% comment %} Liquid procedures
+-------------------------------------------------------------------------------- {% endcomment %}
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+{% capture create_collection_article_preview %}themes/{{site.template.name}}/procedures/collections/create_collection_article_preview.proc{% endcapture %}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+{% comment %} Debugging
+site.biography: {{ site.biography | debug }}
+-------------------------------------------------------------------------------- {% endcomment %}
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++
+{% include signageTest.html %}
+
+<!-- Weather Closed Modal -->
+<div class="modal fade" id="weatherClosedModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content" style="background-color: rgba(0, 72, 127, 0.75); color: white; border: none; backdrop-filter: blur(12px);">
+      <div class="modal-body d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 id="weather-line1" class="display-1 fw-bold text-danger mb-4" style="font-size: 8rem; text-shadow: 4px 4px 8px rgba(0,0,0,0.5);">CLOSED</h1>
+        <h2 id="weather-line2" class="display-3 fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Due to Weather Conditions</h2>
+        <p id="weather-line3" class="h1 mt-5">Please check our website for updates.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="{{ '/assets/custom/js/firebase-config.js?v=2' | relative_url }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Modal Controller Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const weatherModalEl = document.getElementById('weatherClosedModal');
+    let weatherModal = null;
+    
+    // Elements for dynamic text
+    const line1El = document.getElementById('weather-line1');
+    const line2El = document.getElementById('weather-line2');
+    const line3El = document.getElementById('weather-line3');
+
+    // Listen to the node in Firebase
+    const database = firebase.database();
+    database.ref('systemStatus/weatherClosed').on('value', snapshot => {
+        const data = snapshot.val();
+        
+        let isEnabled = false;
+        let line1 = 'CLOSED';
+        let line2 = 'Due to Weather Conditions';
+        let line3 = 'Please check our website for updates.';
+
+        if (data) {
+            // Handle backwards compatibility with the old boolean format during migration
+            if (typeof data === 'boolean' || typeof data === 'string') {
+                isEnabled = (data === true || data === "true" || data === "Closed");
+            } else {
+                isEnabled = data.enabled === true || data.enabled === "true";
+                line1 = data.line1 || line1;
+                line2 = data.line2 || line2;
+                line3 = data.line3 || line3;
+            }
+        }
+        
+        // Update DOM text
+        line1El.textContent = line1;
+        line2El.textContent = line2;
+        line3El.textContent = line3;
+
+        // Initialize modal only when needed
+        if (!weatherModal) {
+            weatherModal = new bootstrap.Modal(weatherModalEl);
+        }
+        
+        if (isEnabled) {
+            weatherModal.show();
+        } else {
+            weatherModal.hide();
+        }
+    });
+
+    // TEST HELPER: Expose a global function to easily toggle this from the browser console
+    window.toggleWeatherClosure = function(isClosed) {
+        database.ref('systemStatus/weatherClosed').set({
+            enabled: isClosed,
+            line1: "TEST CLOSURE",
+            line2: "This is a test from the console.",
+            line3: "Check back later!"
+        })
+        .then(() => console.log('Weather closure set to:', isClosed))
+        .catch(e => console.error('Error:', e));
+    };
+});
+</script>
+++++
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------

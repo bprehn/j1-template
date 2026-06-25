@@ -106,8 +106,9 @@ resource_options:
   </iframe>
 </div>
 
-++++
 
+{% include custom/trail-status.html variant="widget-mtb" %}
+++++
 
 [role="dropcap mt-5 mb-5"]
 == Mountain Bike Trail System Open For The Season.
@@ -118,7 +119,9 @@ Experience the thrill of mountain biking at Mount Kato! Our diverse terrain and 
 [role="mt-5"]
 
 ++++
+
 {% include swiper/mbt-maps-swiper.html %}
+
 ++++
 
 [role="mt-5"]

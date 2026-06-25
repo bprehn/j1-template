@@ -1,0 +1,318 @@
+<!-- 
+  KIOSK SIGNAGE SNIPPET 
+  Instructions: Include this file in your J1-Starter site layout or page.
+  Dependencies: Bootstrap 5 (Link included below, remove if your site already loads it)
+-->
+
+<!-- Font & Bootstrap (Remove if already present in your site's <head>) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+
+<style>
+    /* Global overrides for Kiosk Mode 
+       These target the 'body' of the page this snippet is included on.
+    */
+    body {
+        font-family: 'Inter', sans-serif;
+        overflow: hidden; /* Prevents scrollbars on kiosk displays */
+        background-color: #00487F;
+        color: white;
+        cursor: none; /* Hides cursor for true kiosk experience */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Video Background Styling */
+    /* #bg-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1; */ /* Place behind everything */
+        /*object-fit: cover; /* Ensure it covers the screen without stretching */
+    /*}*/
+    
+    /* Image Background Styling */
+    /*#bg-image {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1; /* Place behind everything */
+        /* object-fit: cover; /* Ensure it covers the screen without stretching */
+    /*}*/
+
+    /* Full screen kiosk container - Now transparent to show video */
+    .signage-container {
+        width: 100vw;
+        height: 100vh;
+        background: transparent; /* Changed from gradient to transparent */
+        position: fixed; 
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    /* Custom Glassmorphism Card 
+       Increased opacity slightly (0.5 -> 0.7) for better contrast against video 
+    */
+    .glass-card {
+        background-color: rgba(0, 0, 0, 0.7); 
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.5rem;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        height: 100%; 
+    }
+
+    .display-super {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added shadow for readability */
+    }
+
+    .text-kato-blue {
+        color: #60a5fa;
+    }
+    
+    .border-kato-blue {
+        border-bottom: 4px solid #2563eb;
+    }
+
+    .liquid-variable-zone {
+        font-weight: 500;
+        color: #93c5fd;
+    }
+    
+    .section-header {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0rem;
+    }
+    #navigator_nav_navbar {
+        visibility: hidden;
+    }
+
+    .modal-dialog {
+        width: 100%!important;
+    }
+</style>
+
+<!-- BACKGROUND VIDEO -->
+<!-- <video autoplay muted loop playsinline id="bg-video">
+    <source src=# type="video/mp4">
+</video> -->
+
+<!-- BACKGROUND IMAGE -->
+<!-- <img src="/assets/image/Sunset2.jpg" class="img-fluid" alt="image of Mount Kato at Sunset" id="bg-image"> -->
+
+<div class="signage-container d-flex flex-column justify-content-between p-3 position-relative">
+    
+    <!-- TOP BAR / HEADER -->
+    <header class="d-flex justify-content-between align-items-center border-kato-blue pb-0 mb-0">
+        <div>
+            <h4 class="display-super text-uppercase text-white mb-0">
+                Mount Kato
+            </h4>
+            <p class="h2 text-kato-blue fw-bold mt-2 letter-spacing-wide text-uppercase">Lift Tickets & Rentals</p>
+        </div>
+        
+        <!-- Dynamic Clock -->
+        <div class="text-end" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+            <div id="clock-time" class="display-4 fw-bold">12:00</div>
+            <div id="clock-date" class="h3 text-light mt-1 text-uppercase">OCT 24</div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow-1 w-100 d-flex flex-column justify-content-center">
+        
+        <div class="row h-100 g-4">
+            
+            <!-- LEFT COLUMN: 66% (col-8) - TICKET PRICES -->
+            <div class="col-7">
+                <div class="glass-card p-2">
+                    <div class="section-header text-kato-blue">Weekends & Holidays</div>
+                    
+                    <!-- LIQUID VARIABLE FOR TICKETS -->
+                    <div class="liquid-variable-zone">
+                         
+                            <!-- <table class='table table-dark table-borderless fs-3 bg-transparent'>
+                                <tbody>
+                                    <tr><td><span class="fs-3 fw-bold">Adult</span> • 13 & over • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>${{site.data.mk-variables["mk-lift-tickets"].mk-lift-adult-wh}}</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Child</span> • 12 & under • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>${{site.data.mk-variables["mk-lift-tickets"].mk-lift-chsr-wh}}</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Senior</span> • (62+) • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>${{site.data.mk-variables["mk-lift-tickets"].mk-lift-chsr-wh}}</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">After 4:00 PM</span> • All Ages</td><td class='text-end fw-bold'><span class="fs-3">${{site.data.mk-variables["mk-lift-tickets"].mk-lift-nights}}</span></td></tr>
+                                </tbody>
+                            </table> -->
+                            <table class='table table-dark table-borderless fs-3 bg-transparent'>
+                                <tbody>
+                                    <tr><td><span class="fs-3 fw-bold">Adult</span> • 13 & over • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>$44 +tax</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Child</span> • 12 & under • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>$35 +tax</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Senior</span> • (62+) • Full Day Weekend & Holiday</td><td class='text-end fw-bold'>$35 +tax</td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">After 4:00 PM</span> • All Ages</td><td class='text-end fw-bold'><span class="fs-3">$35 +tax</span></td></tr>
+                                </tbody>
+                            </table>
+                         
+                    </div>
+                    <div class="section-header text-kato-blue">Weekdays</div>
+                    
+                    <!-- LIQUID VARIABLE FOR TICKETS -->
+                    <div class="liquid-variable-zone">
+                         
+                            <!-- <table class='table table-dark table-borderless fs-3 bg-transparent'> 
+                                <tbody>
+                                    <tr><td><span class="fs-3 fw-bold">Adult</span> • 13 & over • Full Day</td><td class='text-end fw-bold'><span class="fs-3">${{site.data.mk-variables["mk-lift-tickets"].mk-lift-adult-weekdays}}</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Child</span> • 12 & under • Full Day</td><td class='text-end fw-bold'><span class="fs-3">${{site.data.mk-variables["mk-lift-tickets"].mk-lift-chsr-weekdays}}</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Senior</span> • (62+) • Full Day</td><td class='text-end fw-bold'><span class="fs-3">${{site.data.mk-variables["mk-lift-tickets"].mk-lift-chsr-weekdays}}</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">After 4:00 PM</span> • All Ages </td><td class='text-end fw-bold'><span class="fs-3">${{site.data.mk-variables["mk-lift-tickets"].mk-lift-nights}}</span></td></tr>
+                                </tbody>
+                            </table>-->
+                            <table class='table table-dark table-borderless fs-3 bg-transparent'> 
+                                <tbody>
+                                    <tr><td><span class="fs-3 fw-bold">Adult</span> • 13 & over • Full Day</td><td class='text-end fw-bold'><span class="fs-3">$35 +tax</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Child</span> • 12 & under • Full Day</td><td class='text-end fw-bold'><span class="fs-3">$35 +tax</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">Senior</span> • (62+) • Full Day</td><td class='text-end fw-bold'><span class="fs-3">$35 +tax</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">After 4:00 PM</span> • All Ages </td><td class='text-end fw-bold'><span class="fs-3">$35 +tax</span></td></tr>
+                                </tbody>
+                            </table>
+                    </div>
+                    <!-- <div class="section-header text-kato-blue">Tubing</div>-->
+                    <div class="section-header text-danger">Tubing Closed For The Season</div>
+                    
+                    <!-- LIQUID VARIABLE FOR TICKETS -->
+                    <div class="liquid-variable-zone">
+                         
+                            <table class='table table-dark table-borderless fs-3 bg-transparent'>
+                                <tbody>
+                                    <!--<tr><td><span class="fs-3 fw-bold">2 Hour Session</span></td><td class='text-end fw-bold'><span class="fs-3">${{site.data["mk-variables"]["mk-tubing"]["mk-tubing-2hr"]}}</span></td></tr> -->
+                                    <tr><td><span class="fs-3 fw-bold">2 Hour Session</span></td><td class='text-end fw-bold'><span class="fs-3">${{site.data["mk-variables"]["mk-tubing"]["mk-tubing-2hr"]}}</span></td></tr>
+                                    <tr><td><span class="fs-3 fw-bold">2 Hour Glow Tubing</span></td><td class='text-end fw-bold'><span class="fs-3">${{site.data["mk-variables"]["mk-tubing"]["mk-tubing-2hr-glow"]}}</span></td></tr>
+                                    
+                                </tbody>
+                            </table>
+                         
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Column Gap-->
+            <div class="col-1"></div>
+            <!-- RIGHT COLUMN: 33% (col-4) - RENTAL PRICES -->
+            <div class="col-4">
+                <div class="glass-card p-2">
+                    <div class="section-header text-white">Rentals</div>
+                    
+                    <!-- LIQUID VARIABLE FOR RENTALS -->
+                    <div class="liquid-variable-zone">
+                        
+                            <ul class='list-unstyled fs-4'>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Ski Rental Skis, Boots, & Poles</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-std}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>After 4:00 PM</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-std-night}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Snowboard Rental Board & Boots</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-std}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>After 4:00 PM</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-std-night}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Performance Skis & Boots</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-perf}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Performance Skis Only</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-skis-only}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Boots Only</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-boots-only}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Snowblades & Boots</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-blades-boots}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Snowblades Only</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-blades-only}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Helmet Rental</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rentals-helmet}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Ski Poles Only</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-poles-only}}</span>
+                                </li>
+                                <li class='d-flex justify-content-between mb-3 border-bottom border-secondary pb-2'>
+                                    <span>Rental Switch</span>
+                                    <span class='fw-bold'>${{site.data.mk-variables["mk-rentals"].mk-rental-switch}}</span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <div class="misc-info">
+                        <div>
+                            <p>
+                                Note: All Equipment MUST Have Metal Edges & Safety Devices
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+
+            
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-4 border-top border-secondary pt-2 d-flex justify-content-between align-items-end opacity-75 text-shadow">
+        <div class="h4 mb-0">
+            One Child Age 5 & Under Ticket Free With Paid Adult Ticket
+        </div>
+        <div class="h4 mb-0">
+            mountkato.com
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    // Clock Logic
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const dateString = now.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' });
+        
+        const timeEl = document.getElementById('clock-time');
+        const dateEl = document.getElementById('clock-date');
+        
+        if(timeEl) timeEl.textContent = timeString;
+        if(dateEl) dateEl.textContent = dateString.toUpperCase();
+    }
+    
+    // Start Clock
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
