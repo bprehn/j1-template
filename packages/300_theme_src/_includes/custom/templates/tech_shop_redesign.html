@@ -5,22 +5,32 @@
 <style>
     /* Minimal custom CSS to ensure glassmorphism effect and dark mode overrides without breaking mk-themes */
     .tech-card {
-        background: rgba(33, 37, 41, 0.8);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 1rem;
-        color: #f8f9fa;
+        background: rgba(25, 28, 31, 0.8) !important; /* Ensure dark background for cards */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 1.25rem !important;
+        color: #f8f9fa !important;
+    }
+    .tech-card .card-body {
+        background-color: transparent !important;
+        color: inherit !important;
     }
     .tech-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        border-color: rgba(0, 229, 255, 0.4) !important;
+        box-shadow: 0 10px 30px rgba(0, 229, 255, 0.15), 0 0 20px rgba(0, 229, 255, 0.05);
     }
     .tech-icon {
         color: #00e5ff;
-        font-size: 3rem;
-        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        margin-bottom: 1.25rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .tech-card:hover .tech-icon {
+        transform: scale(1.1);
+        color: #00ffd5;
     }
     .tech-section-title {
         color: #f8f9fa;
@@ -32,10 +42,12 @@
         margin-bottom: 2rem;
     }
     .tech-bg-dark {
-        background-color: #1a1d20; /* Darker bg for contrast against site's main theme if it's light */
-        padding: 3rem 0;
-        border-radius: 1rem;
+        background: linear-gradient(145deg, #14171a 0%, #1f232b 100%);
+        padding: 4rem 2rem;
+        border-radius: 1.5rem;
         color: #f8f9fa;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 </style>
 
