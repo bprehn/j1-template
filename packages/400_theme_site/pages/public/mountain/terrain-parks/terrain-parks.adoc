@@ -83,367 +83,44 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Asciidoc skeleton *simple-document* a helper for setting up a base file
-and folder structure for simple-document AsciiDoc pages based on _Jekyll_ and
-_J1 Template_. You need *both* to use this skeleton creating AsciiDoc
-documents from it.
 
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------== Explore the Mount Kato Terrain Parks!
+
+Mount Kato is home to a variety of terrain parks designed for every skill level, from first-timers to seasoned shredders. Sundance is our main park, offering a diverse range of small, medium, and large features to challenge and excite. You'll find jumps, rails, boxes, and more, all meticulously shaped and maintained by our dedicated park crew.
+
+Before the entire mountain is blanketed in snow, we often kick off the season with a mini-park setup in the Tubing Park, providing an early opportunity to get your freestyle fix. As the season progresses and snowmaking ramps up, you'll discover additional park features scattered across other trails. Keep an eye out for features on Little Forest and Sleepy Creek Cutoff.
+
+For those just dipping their toes into the world of freestyle, our Progression Parks located at the top of Birch Coulee and the beginning of Timberwolf Trail are the perfect starting point. These parks are designed with smaller, more approachable features to help you comfortably learn new tricks and build confidence.
+
+== Sundance Spring Jam 2025
+
+++++
+
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+
+       <img src="/assets/image/Sundance-Spring-Jam.jpg" class="img-fluid shadow" alt="Sundance Spring Jam Poster Image">
+
+    </div>
+  </div>
+</div>
+
+++++
+
+[role="mt-5"]
+.Photos of some of the action.
+masonry::sundance_jam_2025[]
+
+[role="mt-5"]
 [NOTE]
 ====
-.Moving documents based on a J1 Skeleton
+.Important Note:
 
-All J1 Asciidoc Skeletons are fully *relocateable* and can be placed in any
-subfolder of your Jekyll site.
+For your safety and the longevity of our equipment, rental equipment is not permitted in any of the Mount Kato Terrain Parks. You'll notice stickers on rental gear clearly stating, "No Rentals In Parks." Please ensure you're using your own personal equipment when entering any of our terrain parks.
 ====
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
-[role="mt-5"]
-== Synopsis
-
-_Jekyll_ is a *robot*, an *engine* to generate a site from a site *scaffold*.
-The _Jekyll_ Ruby *Gem* provides an  *executable*  named `jekyll` to be used
-at the commandline.
-
-Several *commands* and related *options* are available to control how the
-*engine* `jekyll` generates a *site*.
-
-[source, sh]
-----
-jekyll <command> [options]
-----
-
-Find all commands available for the  *executable*  `jekyll` with the following
-sections below.
-
-
-[role="mt-5"]
-== Commands
-
-To change Jekyll’s default behavior generating *sites*, have a look through
-the configuration options. All *general* options can be found with the section
-<<General commands>>. All specific commands and options to control *build*
-and *serve* processes for a *site*, see the sections for the <<Build command>>
-and the <<Serve command>>.
-
-[role="mt-4"]
-=== General commands
-
-The *executable* `jekyll` provides some *general* commands to create e.g. a
-new site *scaffold* from the scratch (based on the default gem-based theme
-*Minima*) or some *support* commands like `doctor` to check the configuration
-of a site or `clean` to reset an existing, already generated *site*.
-
-Have a look through the commands and options available this section.
-
-.General commands
-[cols="2a,2a,8a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Command |Options |Description
-
-|`new`
-|`--blank`
-|Creates a new Jekyll site with default gem-based theme. Using option
-`--blank` to create a new blank Jekyll site scaffold.
-
-|`doctor` \| `hyde`
-|`na`
-|Outputs any deprecation or configuration issues.
-
-|`new-theme`
-|`na`
-|Creates a new Jekyll theme scaffold.
-
-|`clean`
-|`na`
-|Removes the generated site (folder `_site`) and all Jekyll metadata files.
-
-|`help`
-|`<subcommand>`
-|Shows help, optionally for a given subcommand like *build*.
-Example: `jekyll help build`.
-
-|===
-
-[role="mt-4"]
-=== Build command
-
-Performs a one off build your site. For default, site pages gets written
-to the folder *./_site*
-
-.Synopsis
-[source, sh]
-----
-jekyll build | b [options] +
-----
-
-[NOTE]
-====
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-====
-
-.Build commands
-[cols="4a,8a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Option |Description
-
-|`-c`, `--config` *CONFIG_FILE [,CONFIG_FILE2, ..]*
-|Use custom configuration file.
-
-|`-d, --destination` *DESTINATION*
-|The current folder will be generated into DESTINATION.
-
-|`-s` \| `--source` *SOURCE*
-|Custom source directory.
-
-|`--future`
-|Publishes posts with a future date.
-
-|`--limit_posts` *MAX_POSTS*
-|Limits the number of posts to parse and publish.
-
-|`-w` \| `--[no-]watch`
-|Watch for changes and rebuild
-
-|`-b` \| `--baseurl` *URL*
-|Serve the website from the given base URL.
-
-|`--force_polling`
-|Force watch to use polling.
-
-|`--lsi`
-|Use LSI for improved related posts.
-
-|`-D` \| `--drafts`
-|Render posts in the _drafts folder.
-
-|`--unpublished`
-|Render posts that were marked as unpublished.
-
-|`-q` \| `--quiet`
-|Silence output.
-
-|`-V` \| `--verbose`
-|Print verbose output
-
-|`-i` \| `--incremental`
-|Enable incremental rebuild.
-
-|`--strict_front_matter`
-|Fail if errors are present in front matter.
-
-|`-h` \| `--help`
-|Show detailed options an flags.
-
-|`-s` \| `--source` *DIR*
-|Source directory. Defaults to current directory `./`.
-
-|`-d` \| `--destination` *DIR*
-|Destination directory. Defaults to `./_site`.
-
-|`--safe`
-|Safe mode. Defaults to `false`
-
-|`-p` \| `--plugins` *PLUGINS_DIR1[,PLUGINS_DIR2[,...]]*
-|Plugins directory. Defaults to `./_plugins`
-
-|`--layouts` *DIR*
-|Layouts directory. Defaults to `./_layouts`.
-
-|`--profile`
-|Generate a Liquid rendering profile.
-
-|`-t` \| `--trace`
-|Show the full backtrace when an error occurs.
-
-|`-v` \| `--version`
-|Print the name and version.
-
-|===
-
-[role="mt-4"]
-=== Serve command
-
-Create your site any time a source file changes and serves it locally using
-builtin web server *WEBRick*.
-
-For default, site pages gets writen to *./_site*
-
-.Synopsis
-[source, sh]
-----
-jekyll serve | s [options]
-----
-
-[NOTE]
-====
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-====
-
-.Serve Commands
-[cols="6a,6a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Options |Description
-
-|`-c`, `--config` CONFIG_FILE [,CONFIG_FILE2, ..]
-|Use custom configuration file.
-
-|`-d, --destination` *DESTINATION*
-|The current folder will be generated into DESTINATION
-
-|`-s` \| `--source` *SOURCE*
-|Custom source directory.
-
-|`--future`
-|Publishes posts with a future date
-
-|`--limit_posts` *MAX_POSTS*
-|Limits the number of posts to parse and publish.
-
-|`-w` \| `--[no-]watch`
-|Watch for changes and rebuild.
-
-|`-b` \| `--baseurl` *URL*
-|Serve the website from the given base URL.
-
-|`--force_polling`
-|Force watch to use polling.
-
-|`--lsi`
-|Use `LSI` for improved related posts.
-
-|`-D` \| `--drafts`
-|Render posts in the _drafts folder
-
-|`--unpublished`
-|Render posts that were marked as unpublished.
-
-|`-q` \| `--quiet`
-|Silence the output.
-
-|`-V` \| `--verbose`
-|Print verbose output
-
-|`-i` \| `--incremental`
-|Enable incremental rebuild.
-
-|`--strict_front_matter`
-|Fail if errors are present in front matter.
-
-|`--ssl-cert` *CERT*
-|X.509 (SSL) certificate neede for HTTPS connections.
-
-|`--ssl-key` *KEY*
-|X.509 (SSL) Private Key needed for HTTPS connections.
-
-|`-H` \| `--host` *HOST*
-|Host to bind to.
-
-|`-o` \| `--open-url`
-|Launch your site in a browser.
-
-|`-B` \| `--detach`
-|Run the server in the background. *Not* available for the Windows operating
-system.
-
-|`-P` \| `--port` *PORT*
-|Port to listen on.
-
-|`--show-dir-listing`
-|Show a directory listing instead of loading your index file.
-
-|`--skip-initial-build`
-|Skips the initial site build which occurs before the server is started
-
-|`-l` \| `--livereload`
-|Use LiveReload to automatically refresh browsers.
-
-|`--livereload-ignore` *GLOB1[,GLOB2[,...]]*
-|Files for LiveReload to ignore. Remember to quote the values so your
-shell won't expand them.
-
-|`--livereload-min-delay` *SECONDS*
-|Minimum reload delay.
-
-|`--livereload-max-delay` *SECONDS*
-|Maximum reload delay.
-
-|`--livereload-port` *PORT*
-|Port for LiveReload to listen on.
-
-|`-h` \| `--help`
-|Show detailed options an flags.
-
-|`-s` \| `--source` *DIR*
-|Source directory. Defaults to current directory `./`.
-
-|`-d` \| `--destination` *DIR*
-|Destination directory. Defaults to `./_site`.
-
-|`--safe`
-|Safe mode. Defaults to `false`.
-
-|`-p` \| `--plugins` *PLUGINS_DIR1[,PLUGINS_DIR2[,...]]*
-|Plugins directory. Defaults to `./_plugins`.
-
-|`--layouts` *DIR*
-|Layouts directory. Defaults to `./_layouts`.
-
-|`--profile`
-|Generate a Liquid rendering profile.
-
-|`-t` \| `--trace`
-|Show the full backtrace when an error occurs.
-
-|`-v` \| `--version`
-|Print the name and version.
-
-|===
-
-
-[role="mt-5"]
-== Examples
-
-Find some typical use case running Jekyll from commandline below.
-
-=== Build a site from custom configuration
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll b -c ./site_configs/_config.yml
-----
-
-=== Build a site in mode incremental
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll b --incremental
-----
-
-[role="mt-4"]
-=== Run a site in mode incremental
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll s --incremental
-----
-
-[role="mt-5"]
-== Summary
-
-[role="mb-7"]
-Simple documents are used quite often for documents of a website. If the number
-of chapters is about or less than three and the document is small in size,
-simple documents should fit. This document type is based on a *single* Asciidoc
-document and does *not* use any (local) Asciidoc include files or attributes.

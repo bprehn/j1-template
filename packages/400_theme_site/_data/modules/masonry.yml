@@ -588,6 +588,288 @@ settings:
     #       height:                       1861           
     #       caption:                      Shangri-La Hotel Jakarta - Indonesia
 
+    # Terrain Parks
+    # --------------------------------------------------------------------------
+    # Images + Fixed Height + Gutters + Captions + Lightbox
+    #
+    - grid:
+      enabled:                          true
+
+      id:                               sundance_jam_2025
+      type:                             image
+      gutters:                          3
+
+      image_base_path:                  /assets/image/modules/gallery/terrain_parks
+      image_styles:                     img-fluid
+      image_height:                     300px
+
+      # ------------------------------------------------------------------------
+      # Bootstrap responsive options
+      #
+      responsive:
+        xs:                             12
+        sm:                             12
+        md:                             6
+        lg:                             4
+        xl:                             4
+
+      # ------------------------------------------------------------------------
+      # lightbox settings
+      # ------------------------------------------------------------------------
+      #
+      lightbox:
+        enabled:                        true
+        type:                           lb                                      # lb | lg
+
+      # ------------------------------------------------------------------------
+      # caption options
+      #
+      caption:
+        enabled:                        false
+        position:                       bottom                                  # top|bottom|center
+
+      # ------------------------------------------------------------------------
+      # masonry options
+      #
+      options:
+        originTop:                      true
+        originLeft:                     true
+        initLayout:                     true
+        percentPosition:                true
+
+      # ------------------------------------------------------------------------
+      # Images
+      #
+      images:
+
+        - image:                        # image 1
+          file:                         0K2A0158.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 2
+          file:                         0K2A0642.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 3
+          file:                         Sundance-Jam-5.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 4
+          file:                         Sundance-Jam-9.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 5
+          file:                         Sundance-Jam-13.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 6
+          file:                         Sundance-Jam-17.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 7
+          file:                         Sundance-Jam-19.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 8
+          file:                         Sundance-Jam-22.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 9
+          file:                         Sundance-Jam-27.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 10
+          file:                         Sundance-Jam-32.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 11
+          file:                         Sundance-Jam-35.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 12
+          file:                         Sundance-Jam-40.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 13
+          file:                         Sundance-Jam-46.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 14
+          file:                         Sundance-Jam-60.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 15
+          file:                         Sundance-Jam-64.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 16
+          file:                         Sundance-Jam-65.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 17
+          file:                         Sundance-Jam-66.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 18
+          file:                         Sundance-Jam-72.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 19
+          file:                         Sundance-Jam-77.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 20
+          file:                         Sundance-Jam-79.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 21
+          file:                         Sundance-Jam-82.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 22
+          file:                         Sundance-Jam-84.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 23
+          file:                         Sundance-Jam-86.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 24
+          file:                         Sundance-Jam-88.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 25
+          file:                         Sundance-Jam-90.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 26
+          file:                         Sundance-Jam-97.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 27
+          file:                         Sundance-Jam-100.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 28
+          file:                         Sundance-Jam-103.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 29
+          file:                         Sundance-Jam-106.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 30
+          file:                         Sundance-Jam-108.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 31
+          file:                         Sundance-Jam-115.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 32
+          file:                         Sundance-Jam-117.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 33
+          file:                         Sundance-Jam-119.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 34
+          file:                         Sundance-Jam-121.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 35
+          file:                         Sundance-Jam-123.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 36
+          file:                         Sundance-Jam-126.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 37
+          file:                         Sundance-Jam-127.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 38
+          file:                         Sundance-Jam-141.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 39
+          file:                         Sundance-Jam-145.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 40
+          file:                         Sundance-Jam-147.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 41
+          file:                         Sundance-Jam-148.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 42
+          file:                         Sundance-Jam-149.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 43
+          file:                         Sundance-Jam-151.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 44
+          file:                         Sundance-Jam-157.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 45
+          file:                         Sundance-Jam-161.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 46
+          file:                         Sundance-Jam-165.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 47
+          file:                         Sundance-Jam-166.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 48
+          file:                         Sundance-Jam-180.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 49
+          file:                         Sundance-Jam-196.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 50
+          file:                         Sundance-Jam-199.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 51
+          file:                         Sundance-Jam-203.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 52
+          file:                         Sundance-Jam-206.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 53
+          file:                         Sundance-Jam-207.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 54
+          file:                         Sundance-Jam-209.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 55
+          file:                         Sundance-Jam-210.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 56
+          file:                         Sundance-Jam-216.jpg
+          caption:                      © Amanda Hoechst
+
+        - image:                        # image 57
+          file:                         Sundance-Jam-222.jpg
+          caption:                      © Amanda Hoechst 
+
 
     # --------------------------------------------------------------------------
     # VIDEOS
