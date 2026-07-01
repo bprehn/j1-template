@@ -5,15 +5,11 @@ date:                                   2026-06-11
 #last_modified:                         2026-06-11
 
 description: >
-                                        J1 Template is a Bootstrap V5 website template for the static
-                                        site generator Jekyll.
-                                        Simple documents are used quite often. If the number
-                                        of chapters is about or less than three and the document
-                                        is small in size. This document type does not use any
-                                        (local) Asciidoc include files or attributes.
+                                        This document provides guidance for first-time skiers and snowboarders, covering various aspects to ensure a fun and safe experience. It includes tips on choosing appropriate clothing, renting equipment, purchasing lift tickets, and taking lessons. The document also emphasizes the importance of planning ahead, checking the weather and snow conditions, and familiarizing oneself with the facilities at Mount Kato. Additionally, it provides information on types of lessons offered, safety tips, and recommendations for parents to help their children enjoy snow sports.
 
 categories:                             [ Knowledge, Asciidoc ]
-tags:                                   [ Skeleton, SimpleDocument ]
+tags:                                   first-time skiers, first-time snowboarders,
+                                        Mount Kato, ski lessons, snowboard lessons, equipment rental, lift tickets, snow sports ]
 
 robots:
   index:                                false
@@ -33,18 +29,18 @@ toc:                                    true
 regenerate:                             false
 permalink:                              /pages/public/mountain/first-timers/
 
-resources:                              [ lightbox, rouge ]
+resources:                              [ animate, lightbox, rouge ]
 resource_options:
   - toccer:
       collapseDepth:                    3
   - attic:
       slides:
-        - url:                          /assets/uploads/lifts123.jpg
-          alt:                          Photo by Sigmund on Unsplash
+        - url:                          /assets/image/module/attic/1920x1280/first-timer.jpg
+          alt:                          Photo by Mount Kato
           badge:
             type:                       unsplash
-            author:                     Sigmund
-            href:                       //unsplash.com/@sigmund
+            author:                     Mount Kato
+            href:                       //mountkato.com
 ---
 
 // Page Initializer
@@ -83,368 +79,70 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-== Experience in catering since YYYY
+[role="dropcap"]
+Trying a new sport can be daunting, regardless of if you are 6 years old, 36 or 66. Here are some things to help make your first time fun and memorable. 
 
-lorem:sentences[5]
-lorem:sentences[7]
-
-== Our services
-
-lorem:sentences[7]
-lorem:sentences[5]
-
-=== Large selection of national and internal dishes
-
-lorem:sentences[5]
-
-// Include sub-documents (if any)
-// -----------------------------------------------------------------------------
-[role="mt-5"]
-== Synopsis
-
-_Jekyll_ is a *robot*, an *engine* to generate a site from a site *scaffold*.
-The _Jekyll_ Ruby *Gem* provides an  *executable*  named `jekyll` to be used
-at the commandline.
-
-Several *commands* and related *options* are available to control how the
-*engine* `jekyll` generates a *site*.
-
-[source, sh]
-----
-jekyll <command> [options]
-----
-
-Find all commands available for the  *executable*  `jekyll` with the following
-sections below.
-
+++++
+{% include brochure_n_map_downloads.html %}
+{% include first_timer_intro.html %}
+++++
 
 [role="mt-5"]
-== Commands
+++++
+{% include plan_ahead.html %}
+++++
 
-To change Jekyll’s default behavior generating *sites*, have a look through
-the configuration options. All *general* options can be found with the section
-<<General commands>>. All specific commands and options to control *build*
-and *serve* processes for a *site*, see the sections for the <<Build command>>
-and the <<Serve command>>.
+[role="mt-5"]
+++++
+{% include what2wear.html %}
+++++
 
-[role="mt-4"]
-=== General commands
+[role="mt-5"]
 
-The *executable* `jekyll` provides some *general* commands to create e.g. a
-new site *scaffold* from the scratch (based on the default gem-based theme
-*Minima*) or some *support* commands like `doctor` to check the configuration
-of a site or `clean` to reset an existing, already generated *site*.
+== ONCE YOU ARRIVE AT MOUNT KATO
 
-Have a look through the commands and options available this section.
+[role="dropcap"]
+You can explore Mount Kato virtually right here on this interactive trail map. Just click on the map for more information about the trails and facilities.
 
-.General commands
-[cols="2a,2a,8a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Command |Options |Description
+Just a mile south of Mankato, Minnesota. Nestled in the valleys created by the confluence of the Le Sueur, Blue Earth, and Minnesota rivers, making great terrain for... skiing, snowboarding, tubing, & mountain biking
 
-|`new`
-|`--blank`
-|Creates a new Jekyll site with default gem-based theme. Using option
-`--blank` to create a new blank Jekyll site scaffold.
+++++
+{% include custom/templates/mk_trail_map_lite.html %}
+++++
 
-|`doctor` \| `hyde`
-|`na`
-|Outputs any deprecation or configuration issues.
+[role="mt-5"]
+.Mount Kato Features
+carousel::mount_kato_features[role="mb-5"]
 
-|`new-theme`
-|`na`
-|Creates a new Jekyll theme scaffold.
+++++
 
-|`clean`
-|`na`
-|Removes the generated site (folder `_site`) and all Jekyll metadata files.
 
-|`help`
-|`<subcommand>`
-|Shows help, optionally for a given subcommand like *build*.
-Example: `jekyll help build`.
+{% include ticket_window.html %}
 
-|===
+{% include rental_card.html %}
 
-[role="mt-4"]
-=== Build command
+++++
 
-Performs a one off build your site. For default, site pages gets written
-to the folder *./_site*
+[role="mt-5"]
+image::snowsports.jpg[Tubing Panorama, role="img-fluid"]
 
-.Synopsis
-[source, sh]
-----
-jekyll build | b [options] +
-----
+++++
+
+{% include lessons_panel.html %}
+
+{% include tips_4_parents.html %}
+
+++++
 
 [NOTE]
+[role=mt-2]
 ====
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-====
-
-.Build commands
-[cols="4a,8a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Option |Description
-
-|`-c`, `--config` *CONFIG_FILE [,CONFIG_FILE2, ..]*
-|Use custom configuration file.
-
-|`-d, --destination` *DESTINATION*
-|The current folder will be generated into DESTINATION.
-
-|`-s` \| `--source` *SOURCE*
-|Custom source directory.
-
-|`--future`
-|Publishes posts with a future date.
-
-|`--limit_posts` *MAX_POSTS*
-|Limits the number of posts to parse and publish.
-
-|`-w` \| `--[no-]watch`
-|Watch for changes and rebuild
-
-|`-b` \| `--baseurl` *URL*
-|Serve the website from the given base URL.
-
-|`--force_polling`
-|Force watch to use polling.
-
-|`--lsi`
-|Use LSI for improved related posts.
-
-|`-D` \| `--drafts`
-|Render posts in the _drafts folder.
-
-|`--unpublished`
-|Render posts that were marked as unpublished.
-
-|`-q` \| `--quiet`
-|Silence output.
-
-|`-V` \| `--verbose`
-|Print verbose output
-
-|`-i` \| `--incremental`
-|Enable incremental rebuild.
-
-|`--strict_front_matter`
-|Fail if errors are present in front matter.
-
-|`-h` \| `--help`
-|Show detailed options an flags.
-
-|`-s` \| `--source` *DIR*
-|Source directory. Defaults to current directory `./`.
-
-|`-d` \| `--destination` *DIR*
-|Destination directory. Defaults to `./_site`.
-
-|`--safe`
-|Safe mode. Defaults to `false`
-
-|`-p` \| `--plugins` *PLUGINS_DIR1[,PLUGINS_DIR2[,...]]*
-|Plugins directory. Defaults to `./_plugins`
-
-|`--layouts` *DIR*
-|Layouts directory. Defaults to `./_layouts`.
-
-|`--profile`
-|Generate a Liquid rendering profile.
-
-|`-t` \| `--trace`
-|Show the full backtrace when an error occurs.
-
-|`-v` \| `--version`
-|Print the name and version.
-
-|===
-
-[role="mt-4"]
-=== Serve command
-
-Create your site any time a source file changes and serves it locally using
-builtin web server *WEBRick*.
-
-For default, site pages gets writen to *./_site*
-
-.Synopsis
-[source, sh]
-----
-jekyll serve | s [options]
-----
-
-[NOTE]
-====
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-====
-
-.Serve Commands
-[cols="6a,6a", width="100%", options="header", role="rtable mt-4"]
-|===
-|Options |Description
-
-|`-c`, `--config` CONFIG_FILE [,CONFIG_FILE2, ..]
-|Use custom configuration file.
-
-|`-d, --destination` *DESTINATION*
-|The current folder will be generated into DESTINATION
-
-|`-s` \| `--source` *SOURCE*
-|Custom source directory.
-
-|`--future`
-|Publishes posts with a future date
-
-|`--limit_posts` *MAX_POSTS*
-|Limits the number of posts to parse and publish.
-
-|`-w` \| `--[no-]watch`
-|Watch for changes and rebuild.
-
-|`-b` \| `--baseurl` *URL*
-|Serve the website from the given base URL.
-
-|`--force_polling`
-|Force watch to use polling.
-
-|`--lsi`
-|Use `LSI` for improved related posts.
-
-|`-D` \| `--drafts`
-|Render posts in the _drafts folder
-
-|`--unpublished`
-|Render posts that were marked as unpublished.
-
-|`-q` \| `--quiet`
-|Silence the output.
-
-|`-V` \| `--verbose`
-|Print verbose output
-
-|`-i` \| `--incremental`
-|Enable incremental rebuild.
-
-|`--strict_front_matter`
-|Fail if errors are present in front matter.
-
-|`--ssl-cert` *CERT*
-|X.509 (SSL) certificate neede for HTTPS connections.
-
-|`--ssl-key` *KEY*
-|X.509 (SSL) Private Key needed for HTTPS connections.
-
-|`-H` \| `--host` *HOST*
-|Host to bind to.
-
-|`-o` \| `--open-url`
-|Launch your site in a browser.
-
-|`-B` \| `--detach`
-|Run the server in the background. *Not* available for the Windows operating
-system.
-
-|`-P` \| `--port` *PORT*
-|Port to listen on.
-
-|`--show-dir-listing`
-|Show a directory listing instead of loading your index file.
-
-|`--skip-initial-build`
-|Skips the initial site build which occurs before the server is started
-
-|`-l` \| `--livereload`
-|Use LiveReload to automatically refresh browsers.
-
-|`--livereload-ignore` *GLOB1[,GLOB2[,...]]*
-|Files for LiveReload to ignore. Remember to quote the values so your
-shell won't expand them.
-
-|`--livereload-min-delay` *SECONDS*
-|Minimum reload delay.
-
-|`--livereload-max-delay` *SECONDS*
-|Maximum reload delay.
-
-|`--livereload-port` *PORT*
-|Port for LiveReload to listen on.
-
-|`-h` \| `--help`
-|Show detailed options an flags.
-
-|`-s` \| `--source` *DIR*
-|Source directory. Defaults to current directory `./`.
-
-|`-d` \| `--destination` *DIR*
-|Destination directory. Defaults to `./_site`.
-
-|`--safe`
-|Safe mode. Defaults to `false`.
-
-|`-p` \| `--plugins` *PLUGINS_DIR1[,PLUGINS_DIR2[,...]]*
-|Plugins directory. Defaults to `./_plugins`.
-
-|`--layouts` *DIR*
-|Layouts directory. Defaults to `./_layouts`.
-
-|`--profile`
-|Generate a Liquid rendering profile.
-
-|`-t` \| `--trace`
-|Show the full backtrace when an error occurs.
-
-|`-v` \| `--version`
-|Print the name and version.
-
-|===
-
-
-[role="mt-5"]
-== Examples
-
-Find some typical use case running Jekyll from commandline below.
-
-=== Build a site from custom configuration
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll b -c ./site_configs/_config.yml
-----
-
-=== Build a site in mode incremental
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll b --incremental
-----
-
-[role="mt-4"]
-=== Run a site in mode incremental
-
-Typically you’ll use `jekyll serve` while developing locally and
-`jekyll build` when you need to generate the site for production.
-
-[source, sh]
-----
-jekyll s --incremental
-----
-
-[role="mt-5"]
-== Summary
-
-[role="mb-7"]
-Simple documents are used quite often for documents of a website. If the number
-of chapters is about or less than three and the document is small in size,
-simple documents should fit. This document type is based on a *single* Asciidoc
-document and does *not* use any (local) Asciidoc include files or attributes.
+If you have any questions after reading this page, Mount Kato's staff is here to help you. Give us a call at *(507)625-3363* 
+==== 
+
+++++
+{% include no_rentals.html %}
+{% include stay_on_trails.html %}
+{% include no_drones.html %}
+{% include brochure_n_map_downloads.html %}
+++++
