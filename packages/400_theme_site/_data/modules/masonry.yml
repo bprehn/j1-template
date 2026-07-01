@@ -597,11 +597,11 @@ settings:
 
       id:                               sundance_jam_2025
       type:                             image
-      gutters:                          3
+      gutters:                          8
 
-      image_base_path:                  /assets/image/modules/gallery/terrain_parks
+      image_base_path:                  /assets/image/module/gallery/terrain_parks 
       image_styles:                     img-fluid
-      image_height:                     300px
+      image_height:                     75px
 
       # ------------------------------------------------------------------------
       # Bootstrap responsive options
