@@ -33,7 +33,7 @@ toc:                                    true
 regenerate:                             false
 permalink:                              /pages/public/mountain/trail-map/
 
-resources:                              [ lightbox, rouge ]
+resources:                              [ swiperjs, lightbox, rouge ]
 resource_options:
   - toccer:
       collapseDepth:                    3
@@ -92,18 +92,11 @@ resource_options:
 {% include brochure_n_map_downloads.html %}
 {% include custom/templates/mk_trail_map_lite.html %}
 ++++
-=== Key Features:
 
-*Dynamic Trail Information:* Click on any trail button to reveal its difficulty level, length, grooming status, and other essential details.
-Real-Time Updates: Stay informed about which lifts and trails are open, so you can make the most of your day on the mountain.
+[role="mt-5"]
+.Mount Kato Features
+swiper::swiper_text_parallax[role="mt-4 mb-5"]
 
-*Customizable Views:* Filter trails by difficulty, terrain type, or other preferences to tailor the map to your interests.
-Zoom and Pan: Navigate seamlessly across the entire mountain, zooming in for detailed views or zooming out for a broader perspective.
-Mobile-Friendly Design: Access the interactive map on your smartphone or tablet for convenient on-the-go planning.
-
-=== Plan Your Perfect Day:
-
-Whether you're a seasoned pro or a first-time visitor, the Mount Kato Interactive Trail Map is your essential companion for navigating the slopes. Use it to plan your ideal route, discover hidden gems, and make the most of your winter adventure at Mount Kato.
 
 ++++ 
 
