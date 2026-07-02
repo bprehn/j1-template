@@ -102,7 +102,7 @@ settings:
       id:                               swiper_text_parallax
       layout:                           text/parallax
       gridify:                          true
-      # background-image:               /assets/image/quote/default.jpg
+      background-image:                 /assets/image/Sunset2.jpg
       # quote-text-color:               rgba(255, 255, 255, .75)
       playlist:                         text_playlist
       swiper_classes:                   false

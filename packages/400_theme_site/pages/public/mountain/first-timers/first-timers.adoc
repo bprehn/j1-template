@@ -29,7 +29,7 @@ toc:                                    true
 regenerate:                             false
 permalink:                              /pages/public/mountain/first-timers/
 
-resources:                              [ animate, lightbox, rouge ]
+resources:                              [ swiperjs, lightbox, rouge ]
 resource_options:
   - toccer:
       collapseDepth:                    3
@@ -112,7 +112,7 @@ Just a mile south of Mankato, Minnesota. Nestled in the valleys created by the c
 
 [role="mt-5"]
 .Mount Kato Features
-carousel::mount_kato_features[role="mb-5"]
+swiper::swiper_text_parallax[role="mt-4 mb-5"]
 
 ++++
 

@@ -39,6 +39,11 @@ settings:
       name:                             text_playlist
       type:                             text/html
 
+      image_defaults:
+        base_folder:                    /assets/image/module/swiper/simple/free_animal/image
+        image_width:                    810
+        image_height:                   490
+
       # ------------------------------------------------------------------------
       # SLIDE settings
       # ------------------------------------------------------------------------
@@ -48,41 +53,53 @@ settings:
         - item:
           enabled:                      true
           text: >
-                                        <big>Jekyll One Template</big>
-                                        </br> 
-                                        <i>Responsive Template made for Jekyll</i>
+                                        <big>• 19 Trails</big>
 
         # slide 02
         - item:
           enabled:                      true
           text: >
-                                        <big>Explore this site</big>
-                                        </br>
-                                        <i>Learn what's possible if you go for Jekyll</i>
+                                        <big>• 55 Skiable Acres</big>
 
         # slide 03
         - item:
           enabled:                      true
           text: 
-                                        <big>Jekyll meets Bootstrap and Friends</big>
-                                        </br>
-                                        <i>Best Open Source software for the Web</i>
+                                        <big>• 240' Vertical Drops</big>
 
         # slide 04
         - item:
           enabled:                      true
           text: >
-                                        <big>J1 is Open Source</big>
-                                        </br>
-                                        <i>No pain for private or professional use</i>
-
+                                        <big>• Terrrain Parks</big>
         # slide 05
         - item:
           enabled:                      true
           text: > 
-                                        <big>Create modern static sites</big>
-                                        </br>
-                                        <i>Powerful, Secure, and Fast<i>
+                                        <big>• Tubing Park</big>
+        # slide 06
+        - item:
+          enabled:                      true
+          text: >
+                                        <big>• PSIA/AASI Snowsports School</big>
+
+        # slide 07
+        - item:
+          enabled:                      true
+          text: 
+                                        <big>• Rental Equipment</big>
+
+        # slide 08
+        - item:
+          enabled:                      true
+          text: >
+                                        <big>• Lift Bar & Grill</big>
+
+        # slide 09
+        - item:
+          enabled:                      true
+          text: > 
+                                        <big>• Food Court</big>
 
 
     # --------------------------------------------------------------------------

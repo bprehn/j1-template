@@ -106,3 +106,6 @@ image::/assets/uploads/mk-loc-map.jpg[ shadow-lg]
 ++++ 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
+[role="mt-5"]
+.Mount Kato Features
+swiper::swiper_text_parallax[role="mt-4 mb-5"]

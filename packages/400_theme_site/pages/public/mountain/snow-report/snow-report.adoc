@@ -119,3 +119,7 @@ With the Mount Kato Snow Report, you'll always have the most accurate informatio
 ++++
 {% include custom/templates/mk_trail_map_lite.html %}
 ++++
+
+[role="mt-5"]
+.Mount Kato Features
+swiper::swiper_text_parallax[role="mt-4 mb-5"]
